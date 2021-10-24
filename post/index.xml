@@ -8,21 +8,21 @@
     <language>zh-Hans</language>
     <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zacrous.top/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>BrainFuck解释器 Python 实现</title>
+      <link>https://zacrous.top/p/brainfuck-python/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacrous.top/p/brainfuck-python/</guid>
+      <description>前言 在B站冲浪时，看到这样的一个视频： 其中最吸引我的是BrainFuck语言类似图灵机的运行逻辑。 于是决定尝试用Python实现一个Brai</description>
+    </item>
+    
+    <item>
       <title>Math Typesetting</title>
       <link>https://zacrous.top/p/math-typesetting/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://zacrous.top/p/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>测试文章</title>
-      <link>https://zacrous.top/p/test-chinese/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://zacrous.top/p/test-chinese/</guid>
-      <description>奥斯特洛夫斯基曾经说过，共同的事业，共同的斗争，可以使人们产生忍受一切的力量。 带着这句话，我们还要更加慎重的审视这个问题： 一般来讲，我们都必</description>
     </item>
     
   </channel>
