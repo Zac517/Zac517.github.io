@@ -36,7 +36,6 @@
 其中最吸引我的是BrainFuck语言类似图灵机的运行逻辑。&lt;/p&gt;
 &lt;p&gt;于是决定尝试用Python实现一个Brainfuck语言的解释器&lt;/p&gt;
 &lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
-&lt;h3 id=&#34;简介&#34;&gt;简介&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	
 		class=&#34;gallery-image&#34; 
@@ -57,8 +56,7 @@
 	
 &lt;/figure&gt;
 Brainfuck是一种极小化的计算机语言，它是由Urban Müller在1993年创建的。由于fuck在英语中是脏话，这种语言有时被称为brainf*ck或brainf**k，甚至被简称为BF。&lt;/p&gt;
-&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
-&lt;p&gt;让我们先来看看Brainfuck的8种代码：&lt;/p&gt;
+&lt;p&gt;Brainfuck的8种代码：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
