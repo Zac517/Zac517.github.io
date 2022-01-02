@@ -34,7 +34,7 @@
 &lt;/div&gt;
 
 其中的BrainFuck语言引起了我的注意 (☄⊙ω⊙)☄&lt;/p&gt;
-&lt;p&gt;用这样的语言来加密内容会怎么样呢，那就来拿python实现一个解释器吧 ᕕ( ᐛ )ᕗ&lt;/p&gt;
+&lt;p&gt;下面用python实现一个解释器 ᕕ( ᐛ )ᕗ&lt;/p&gt;
 &lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
 &lt;p&gt;&lt;figure 
 	
