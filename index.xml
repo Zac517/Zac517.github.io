@@ -56,7 +56,7 @@
 	
 &lt;/figure&gt;
 Brainfuck是一种极小化的计算机语言，它是由Urban Müller在1993年创建的。由于fuck在英语中是脏话，这种语言有时被称为brainf*ck或brainf**k，甚至被简称为BF&lt;/p&gt;
-&lt;p&gt;Brainfuck的8种代码：&lt;/p&gt;
+&lt;p&gt;Brainfuck由8种代码组成：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -100,7 +100,7 @@ Brainfuck是一种极小化的计算机语言，它是由Urban Müller在1993年
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;同样 也可以通过BrainFuck的在线可视化运行的网站来增进理解：&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://fatiherikli.github.io/brainfuck-visualizer/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://mvalipour.github.io/ng-brainfuck/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Brainfuck Visualizer&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;了解清楚后 开始实现&lt;/p&gt;
 &lt;h2 id=&#34;实现&#34;&gt;实现&lt;/h2&gt;
@@ -288,7 +288,7 @@ Brainfuck是一种极小化的计算机语言，它是由Urban Müller在1993年
 &lt;blockquote&gt;
 &lt;p&gt;思维是灵魂的自我谈话    ——柏拉图&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;未完待续 (つω｀)～&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;未完待续 (￣o￣) . z Z&amp;hellip;&amp;hellip;&lt;/p&gt;
 </description>
         </item>
         <item>
