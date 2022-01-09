@@ -19,18 +19,26 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Zacrous&#39;s Studio">
-<meta property="og:url" content="https://zacrous.top/archives/index.html">
+    <meta name="description" content="尝试实现一个简单的程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BrainFuck解释器 Python 实现">
+<meta property="og:url" content="https://zacrous.top/2021/01/01/brainfuck/index.html">
 <meta property="og:site_name" content="Zacrous&#39;s Studio">
+<meta property="og:description" content="尝试实现一个简单的程序">
 <meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Zacrous/img/img/brainfuck.webp">
+<meta property="article:published_time" content="2020-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-09T08:16:15.946Z">
 <meta property="article:author" content="Zacrous">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="brainfuck">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Zacrous/img/img/brainfuck.webp">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/Zacrous/img/img/touxiang.webp">
     
-    <title>Zacrous&#39;s Studio</title>
+    <title>BrainFuck解释器 Python 实现 · Zacrous&#39;s Studio</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -230,6 +238,8 @@
         }
     </script>
     
+        <body class="post-body">
+    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -259,6 +269,17 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Zacrous&#39;s Studio.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">BrainFuck解释器 Python 实现</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
@@ -285,24 +306,93 @@
 
 
 
+    height:50vh;
+
 ">
     
     <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://cdn.jsdelivr.net/gh/Zacrous/img/img/html.webp)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+                BrainFuck解释器 Python 实现
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+                
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="笔记"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                笔记
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Python">Python</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="brainfuck">brainfuck</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.5k</span>阅读时长: <span class="post-count reading-time">6 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2021/01/01</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -432,90 +522,288 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2021/07/21/hello-world/">
-                
-                <span class="abstract-title-text">Hello World</span>
-            </a>
-            <div class="abstract-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+                <main class="main post-page">
+    <article class="article-entry">
+        <p>低技术力尝试 编写一个简单的程序</p>
+<span id="more"></span>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在B站冲浪时，看到这样的一个视频 o(<em>￣▽￣</em>)ブ：</p>
+<iframe src="//player.bilibili.com/player.html?aid=626976624&bvid=BV1at4y1S7zi&cid=231358482&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-More info: Writing
-Run server1$ hexo ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 1985/10/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/21</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2021/01/01/brainfuck/">
-                
-                <span class="abstract-title-text">BrainFuck解释器 Python 实现</span>
-            </a>
-            <div class="abstract-content">
-                <p>低技术力尝试 编写一个简单的程序</p>
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/01/09">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="笔记"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                笔记
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Python">Python</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="brainfuck">brainfuck</a>
-    
-</div>
+<p>其中的BrainFuck语言引起了我的注意 (☄⊙ω⊙)☄</p>
+<p>下面用python实现一个解释器 ᕕ( ᐛ )ᕗ</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p><img src="https://cdn.jsdelivr.net/gh/Zacrous/img/img/brainfuck.webp" alt="Brainfuck"><br>Brainfuck是一种极小化的计算机语言，它是由Urban Müller在1993年创建的。</p>
+<p>Brainfuck由8种代码组成：<br>| 字符 | 含义 |<br>| :—–| :—- |<br>| &gt; | 指针加一 |<br>| &lt; | 指针减一 |<br>| + | 指针指向的字节的值加一 |<br>| - | 指针指向的字节的值减一 |<br>| . | 输出指针指向的单元内容（ASCⅡ码） |<br>| , | 输入内容到指针指向的单元（ASCⅡ码） |<br>| [ | 如果指针指向的单元值为零，向后跳转到对应的]指令的次一指令处 |<br>| ] | 如果指针指向的单元值不为零，向前跳转到对应的[指令的次一指令处 |</p>
+<p>同样 也可以通过BrainFuck的在线可视化运行的网站来增进理解：</p>
+<p><a target="_blank" rel="noopener" href="http://mvalipour.github.io/ng-brainfuck/">Brainfuck Visualizer</a></p>
+<p>了解清楚后 开始实现</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>我的基本思路是 用Python列表来模拟纸带<br>首先来创建一个函数</p>
+<pre><code class="Python">def paper_tape_machine(code):
+</code></pre>
+<p>我们要写一个函数对八种代码进行读取并进行操作，当然这不是仅进行一次的，在while循环和递归这两种方式中我选择了前者 <del>绝对不是因为我在尝试后发现Python有最大递归深度</del><br>如下所示</p>
+<pre><code class="Python">def paper_tape_machine(code):
+    pointer = 0
+    paper_tape = [0]
+    position = 0
+    while position != len(code):
+        position += 1
+</code></pre>
+<p>分别创建<strong>纸带列表</strong> <strong>指针</strong> <strong>位置（执行代码的位置）</strong> 变量 </p>
+<p>当<code>position</code>等于代码的长度时，即代码执行完毕，退出循环</p>
+<p>然后加入对代码的判断 首先是<code>&gt;</code>和<code>&lt;</code></p>
+<p>指针移动，使其值加减1即可</p>
+<p>我没有提前规定纸带列表的长度 所以我在使指针右移前会判断一下是否需要增加纸带长度：</p>
+<pre><code class="Python"> if code[position] == &#39;&gt;&#39;:
+    if pointer + 2 &gt; len(paper_tape):
+        paper_tape.append(0)
+    pointer += 1
+</code></pre>
+<p>左移时也需要进行一定的判断。当指针已经出于纸带第一位时，则无法继续往前，此时报错结束函数：</p>
+<pre><code class="Python">elif code[position] == &#39;&lt;&#39;:
+            if pointer != 0:
+                pointer -= 1
+            else:
+                print(&#39;Data overflow!&#39;)
+                return
+</code></pre>
+<p><code>+</code>和<code>-</code>只需要加减列表中单个元素的值 只需要注意其特殊规则：</p>
+<p><code>255+1=0</code> <code>0-1=255</code></p>
+<pre><code class="Python">elif code[position] == &#39;+&#39;:
+            if paper_tape[pointer] != 255:
+                paper_tape[pointer] += 1
+            else:
+                paper_tape[pointer] = 0
+</code></pre>
+<pre><code class="Python">elif code[position] == &#39;-&#39;:
+            if paper_tape[pointer] != 0:
+                paper_tape[pointer] -= 1
+            else:
+                paper_tape[pointer] = 255
+</code></pre>
+<p><code>.</code>和<code>,</code>需要将整数通过ASSII编码与字符进行转化，Python中已有函数<code>chr()</code> <code>ord()</code>能实现 直接使用即可</p>
+<p>需要注意的是 输入时要检测一下字符串的长度</p>
+<pre><code class="Python">elif code[position] == &#39;.&#39;:
+            print(chr(paper_tape[pointer]),end=&#39;&#39;)
+</code></pre>
+<pre><code class="Python">elif code[position] == &#39;,&#39;:
+            text = input()
+            if len(text) == 1:
+                paper_tape[pointer] = ord(text)
+            else:
+                print(&#39;Invalid input!&#39;)
+                return
+</code></pre>
+<p>最后两个<code>[</code>和<code>]</code>实现起来有一些困难，不仅需要找到相对的括号，还必须是对应的</p>
+<p>我认为可以通过创建一个变量，在寻找对应符号的循环中来记录中括号的“量”以确定中括号是否对应</p>
+<p>具体实现逻辑就是同类符号加1，异类符号减1</p>
+<pre><code class="Python">elif code[position] == &#39;[&#39;:
+            if paper_tape[pointer] == 0:
+                position += 1
+                while code[position] != &#39;]&#39; or i != 0:
+                    if code[position] == &#39;[&#39;:
+                        i += 1
+                    elif code[position] == &#39;]&#39;:
+                        i -= 1
+                    if position != len(code):
+                        position += 1
+                    else:
+                        print(&#39;Syntax error! (Cannot find corresponding &quot;]&quot;)&#39;)
+                        return
+</code></pre>
+<pre><code class="Python">elif code[position] == &#39;]&#39;:
+            if paper_tape[pointer] != 0:
+                position -= 1
+                while code[position] != &#39;[&#39; or i != 0:  
+                    if code[position] == &#39;[&#39;:
+                        i -= 1
+                    elif code[position] == &#39;]&#39;:
+                        i += 1
+                    if position != 0:
+                        position -= 1
+                    else:
+                        print(&#39;Syntax error! (Cannot find corresponding &quot;[&quot;)&#39;)
+                        return 
+</code></pre>
+<p>对于其他的字符，我给函数增加了一个布尔参数<code>strict</code></p>
+<p>当<code>strict</code>为<strong>True</strong>时，当执行代码时遇到无法识别的字符就会报错并退出函数，否则则会忽略</p>
+<pre><code class="Python"> else:
+            if strict:
+                print(&#39;Invalid code &quot;&#39;,code[position],&#39;&quot; !&#39;)
+                return
+</code></pre>
+<p>为了便于测试 我们加入模式参数<code>mode</code></p>
+<p>当<code>mode</code>值为<code>normal</code>时，即为正常模式；当其值为<code>debug</code>时，则会在运行过程中将代码和纸带等参数打印出来；当值为其他时，报错并停止</p>
+<pre><code class="Python">if mode == &#39;debug&#39;:
+            print(paper_tape,pointer,code[position],i)
+        elif mode != &#39;normal&#39;:
+            print(&#39;Invalid parameter&#39;)
+            return
+</code></pre>
+<p>在<code>[</code>和<code>]</code>中的循环中加入</p>
+<pre><code class="Python">if mode == &#39;debug&#39;:
+    print(position,pointer,code[position],i)
+</code></pre>
+<p>最后的结果是这样的</p>
+<pre><code class="Python">def paper_tape_machine(code,mode,strict):
+    pointer = 0
+    paper_tape = [0]
+    position = 0
+    i = 0
+    while position != len(code):
+        if code[position] == &#39;&gt;&#39;:
+            if pointer + 2 &gt; len(paper_tape):
+                paper_tape.append(0)
+            pointer += 1
+        elif code[position] == &#39;&lt;&#39;:
+            if pointer != 0:
+                pointer -= 1
+            else:
+                print(&#39;Data overflow!&#39;)
+                return
+        elif code[position] == &#39;+&#39;:
+            if paper_tape[pointer] != 255:
+                paper_tape[pointer] += 1
+            else:
+                paper_tape[pointer] = 0
+        elif code[position] == &#39;-&#39;:
+            if paper_tape[pointer] != 0:
+                paper_tape[pointer] -= 1
+            else:
+                paper_tape[pointer] = 255
+        elif code[position] == &#39;.&#39;:
+            print(chr(paper_tape[pointer]),end=&#39;&#39;)
+        elif code[position] == &#39;,&#39;:
+            text = input()
+            if len(text) == 1:
+                paper_tape[pointer] = ord(text)
+            else:
+                print(&#39;Invalid input!&#39;)
+                return
+        elif code[position] == &#39;[&#39;:
+            if paper_tape[pointer] == 0:
+                position += 1
+                while code[position] != &#39;]&#39; or i != 0:
+                    if code[position] == &#39;[&#39;:
+                        i += 1
+                    elif code[position] == &#39;]&#39;:
+                        i -= 1
+                    if mode == &#39;debug&#39;:
+                        print(position,pointer,code[position],i)
+                    if position != len(code):
+                        position += 1
+                    else:
+                        print(&#39;Syntax error! (Cannot find corresponding &quot;]&quot;)&#39;)
+                        return
+        elif code[position] == &#39;]&#39;:
+            if paper_tape[pointer] != 0:
+                position -= 1
+                while code[position] != &#39;[&#39; or i != 0:  
+                    if code[position] == &#39;[&#39;:
+                        i -= 1
+                    elif code[position] == &#39;]&#39;:
+                        i += 1
+                    if mode == &#39;debug&#39;:
+                        print(position,pointer,code[position],i)
+                    if position != 0:
+                        position -= 1
+                    else:
+                        print(&#39;Syntax error! (Cannot find corresponding &quot;[&quot;)&#39;)
+                        return 
+        else:
+            if strict:
+                print(&#39;Invalid code &quot;&#39;,code[position],&#39;&quot; !&#39;)
+                return
+        if mode == &#39;debug&#39;:
+            print(paper_tape,pointer,code[position],i)
+        elif mode != &#39;normal&#39;:
+            print(&#39;Invalid parameter&#39;)
+            return
+        position += 1
+paper_tape_machine(input(),&#39;normal&#39;,False)
+</code></pre>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>来一段代码试一下</p>
+<pre><code class="Brainfuck">++++++++++[&gt;+++++++&gt;++++++++++&gt;+++&gt;+&lt;&lt;&lt;&lt;-]&gt;++.&gt;+.+++++++..+++.&gt;++.&lt;&lt;+++++++++++++++.&gt;.+++.------.--------.&gt;+.&gt;.
+</code></pre>
+<p>输出结果为</p>
+<pre><code class="shell">Hello World!
+</code></pre>
+<p>成功了~ &lt;(￣︶￣)&gt;</p>
+<h2 id="临时总结"><a href="#临时总结" class="headerlink" title="临时总结"></a>临时总结</h2><p>虽然用python成功实现了解释器，但代码还是不够精简，且没有经过大量的测试，有可能会出现一些问题，所以还需要继续改进</p>
+<blockquote>
+<p>思维是灵魂的自我谈话&nbsp;&nbsp;&nbsp;&nbsp;——柏拉图</p>
+</blockquote>
+<p>未完待续 (￣o￣) . z Z……</p>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+    </article>
+    <!-- license -->
     
-    <!-- paginator  -->
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://zacrous.top">Zacrous</a>
+            <p>原文链接：<a href="https://zacrous.top/2021/01/01/brainfuck/">https://zacrous.top/2021/01/01/brainfuck/</a>
+            <p>发表日期：<a href="https://zacrous.top/2021/01/01/brainfuck/">January 1st 2021, 12:00:00 am</a>
+            <p>更新日期：<a href="https://zacrous.top/2021/01/01/brainfuck/">January 9th 2022, 4:16:15 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2021/07/21/hello-world/" title="Hello World">
+                    <div class="nextTitle">Hello World</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="comment"></div>
+    <script>
+        new Valine({
+            el: '#comment',
+            notify:false,
+            verify:false,
+            appId: "dCbb7juKmbeM6wN6wwyUXTki-MdYXbMMI",
+            appKey: "AKTC8VTbco1zyKYocBVkMHGW",
+            placeholder: "欢迎━(*｀∀´*)ノ亻!评论~",
+            path:window.location.pathname,
+            avatar:'mm'
+        });
+    </script>
+
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 
@@ -607,6 +895,23 @@ Run server1$ hexo ...
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">临时总结</span></a></li></ol>
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -762,6 +1067,8 @@ Run server1$ hexo ...
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         
