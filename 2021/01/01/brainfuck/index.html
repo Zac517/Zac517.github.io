@@ -789,7 +789,7 @@ paper_tape_machine(input(),&#39;normal&#39;,False)
             verify:false,
             appId: "dCbb7juKmbeM6wN6wwyUXTki-MdYXbMMI",
             appKey: "AKTC8VTbco1zyKYocBVkMHGW",
-            placeholder: "欢迎━(*｀∀´*)ノ亻!评论~",
+            placeholder: "",
             path:window.location.pathname,
             avatar:'mm'
         });
@@ -797,6 +797,18 @@ paper_tape_machine(input(),&#39;normal&#39;,False)
 
 
             
+    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+    <div id="comment"></div>
+    <script>
+    Waline({
+        el: '#comment' ,
+        serverURL: "zacrous.top",
+        placeholder: "欢迎━(*｀∀´*)ノ亻!评论~",
+        avatar: "https://cdn.jsdelivr.net/gh/Zacrous/img/img/touxiang.webp",
+        login: ""
+    });
+    </script>
+
 
         </div>
     
