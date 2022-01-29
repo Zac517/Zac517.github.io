@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Zaqueo&#39;s Studio</title>
+    <link>http://zaqueo.site/blog/tags/</link>
+    <description>Recent content in Tags on Zaqueo&#39;s Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021-2022 &lt;a href=&#34;http://zaqueo.site&#34;&gt;Zaqueo&#39;s Studio&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://zaqueo.site/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>brainfuck</title>
+      <link>http://zaqueo.site/blog/tags/brainfuck/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://zaqueo.site/blog/tags/brainfuck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://zaqueo.site/blog/tags/python/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://zaqueo.site/blog/tags/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

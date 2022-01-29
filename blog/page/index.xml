@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Zaqueo&#39;s Studio</title>
+    <link>http://zaqueo.site/blog/page/</link>
+    <description>Recent content in Pages on Zaqueo&#39;s Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021-2022 &lt;a href=&#34;http://zaqueo.site&#34;&gt;Zaqueo&#39;s Studio&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://zaqueo.site/blog/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自述</title>
+      <link>http://zaqueo.site/blog/page/about/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://zaqueo.site/blog/page/about/</guid>
+      <description>我的名字叫Zacrous，15岁.住在杜王町东北部的别墅区一带， 邻居是个上班族.就读于杜王町葡萄丘高中，每天都要学习到晚上10点才能回家……（雾） 爱玩</description>
+    </item>
+    
+  </channel>
+</rss>
