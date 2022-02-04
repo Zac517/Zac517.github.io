@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Zaqueo&#39;s Studio</title>
-    <link>http://zaqueo.site/blog/posts/</link>
-    <description>Recent content in Posts on Zaqueo&#39;s Studio</description>
+    <title>宗教 on Zaqueo&#39;s Studio</title>
+    <link>http://zaqueo.site/blog/tags/%E5%AE%97%E6%95%99/</link>
+    <description>Recent content in 宗教 on Zaqueo&#39;s Studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021-2022 &lt;a href=&#34;http://zaqueo.site&#34;&gt;Zaqueo&#39;s Studio&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://zaqueo.site/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://zaqueo.site/blog/tags/%E5%AE%97%E6%95%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>救赎自我</title>
       <link>http://zaqueo.site/blog/posts/redeem/</link>
@@ -25,15 +25,6 @@
       
       <guid>http://zaqueo.site/blog/posts/indian_religion/</guid>
       <description>待更新</description>
-    </item>
-    
-    <item>
-      <title>玩转BrainFuck</title>
-      <link>http://zaqueo.site/blog/posts/brainfuck-python/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://zaqueo.site/blog/posts/brainfuck-python/</guid>
-      <description>前言 在B站冲浪时，看到这样的一个视频 o(￣▽￣)ブ： 其中的BrainFuck语言引起了我的注意 (☄⊙ω⊙)☄ 下面用python实现一个解释器 ᕕ( ᐛ )ᕗ</description>
     </item>
     
   </channel>
