@@ -8,7 +8,16 @@
     <language>zh</language>
     <copyright>&amp;copy; 2021-2022 &lt;a href=&#34;http://zaqueo.site&#34;&gt;Zaqueo&#39;s Studio&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zaqueo.site/blog/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zaqueo.site/blog/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>算法复杂度笔记</title>
+      <link>https://zaqueo.site/blog/posts/redeem/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zaqueo.site/blog/posts/redeem/</guid>
+      <description>待更新</description>
+    </item>
+    
     <item>
       <title>玩转BrainFuck</title>
       <link>https://zaqueo.site/blog/posts/brainfuck-python/</link>

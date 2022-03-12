@@ -85,9 +85,11 @@
         "@type": "WebPage",
         "@id": "https://zaqueo.site/blog/posts/brainfuck-python/"
     },
-    "headline": "玩转BrainFuck | Zaqueo\u0027s Studio","datePublished": "2021-01-01T00:00:00+00:00",
+    "headline": "玩转BrainFuck | Zaqueo\u0027s Studio",
+    "image": "https://cdn.jsdelivr.net/gh/Zacrous/img/img/2.webp",
+    "datePublished": "2021-01-01T00:00:00+00:00",
     "dateModified": "2021-01-01T00:00:00+00:00",
-    "wordCount":  1751 ,
+    "wordCount":  1665 ,
     "publisher": {
         "@type": "Person",
         "name": "Zaqueo's Studio",
@@ -164,8 +166,8 @@
         <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
             <a href="/blog/categories/%e7%ac%94%e8%ae%b0/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">笔记</a>
             <a href="/blog/categories/%e6%9d%82%e8%b0%88/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">杂谈</a>
-            <a href="/blog/categories/%e8%ae%b0%e4%ba%8b/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">记事</a>
             <a href="/blog/page/about/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">自述</a>
+            <a href="https://zaqueo.site" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">主页</a>
         </div>
 
         <div class="flex">
@@ -246,6 +248,10 @@
         
         
         
+        <div class="my-4">
+            <img src="https://cdn.jsdelivr.net/gh/Zacrous/img/img/2.webp" class="w-full" alt="Featured Image">
+        </div>
+        
 
         <div class="content">
             <h2 id="前言">前言</h2>
@@ -300,12 +306,11 @@
 </table>
 <p>同样 也可以通过BrainFuck的在线可视化运行的网站来增进理解：</p>
 <p><a href="http://mvalipour.github.io/ng-brainfuck/">Brainfuck interpreter</a></p>
-<p>了解清楚后 开始实现</p>
 <h2 id="实现">实现</h2>
 <p>我的基本思路是 用Python列表来模拟纸带
 首先来创建一个函数</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">paper_tape_machine</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
-</code></pre></div><p>我们要写一个函数对八种代码进行读取并进行操作，当然这不是仅进行一次的，在while循环和递归这两种方式中我选择了前者 <del>绝对不是因为我在尝试后发现Python有最大递归深度</del>
+</code></pre></div><p>我们要写一个函数对八种代码进行读取并进行操作
 如下所示</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="k">def</span> <span class="nf">paper_tape_machine</span><span class="p">(</span><span class="n">code</span><span class="p">):</span>
     <span class="n">pointer</span> <span class="o">=</span> <span class="mi">0</span>
@@ -483,9 +488,6 @@
 </code></pre></div><p>成功了~ &lt;(￣︶￣)&gt;</p>
 <h2 id="临时总结">临时总结</h2>
 <p>虽然用python成功实现了解释器，但代码还是不够精简，且没有经过大量的测试，有可能会出现一些问题，所以还需要继续改进</p>
-<blockquote>
-<p>思维是灵魂的自我谈话    ——柏拉图</p>
-</blockquote>
 <p>未完待续&hellip;&hellip;</p>
 
         </div>
