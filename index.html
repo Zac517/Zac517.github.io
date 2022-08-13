@@ -1,68 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Zacrous/img/img/avatar.webp">
+	<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/ZaqueoX/img/img/avatar.webp">
 	<title>Zaqueo's Studio</title>
 	<link rel="stylesheet" type="text/css" href="css/h.9c69ed6c.css">
 	<link rel="stylesheet" type="text/css" href="css/nekotora.99cf6f8c.css">
-	<link rel="preload" href="//at.alicdn.com/t/font_3165812_l8s1ibde3es.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_3165812_dbcsgy6co2m.css">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137340638-1"></script>
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/c/font_3165812_yiipova3njf.css">
 	<script src="https://cdn.jsdelivr.net/gh/fz6m/Private-web@1.4/js/custom/slide.js"></script>
-	<script>
-		function a() {
-			dataLayer.push(arguments)
-		}
-		window.dataLayer = window.dataLayer || [], a("js", new Date), a("config", "UA-137340638-1");
-	</script>
 	<style>
-		.footer p.c {margin-top: 10px;}
-		.background .cover {height: 200vh;}
-		.container {max-width: 1100px;}
-		.ch {padding: 40px 0;}
-		.clear{margin-top: 50px;}
-		.find .links .item i {left: calc(18% + 0.8vw);position:absolute;}
-		.icon-github{margin-top: -2px;left: calc(16.5% + 0.8vw) !important}
-		.zac-bilibili,.icon-twitter{margin-top: -1px;}
-		.inner{text-align: left;}
-		@media screen and (min-width:700px){
-			#person-tag,.footer p{font-size: 16px;}
-			.find .links .item span {font-size: 16px !important;}
-			.find .links .item i {font-size: 24px;}
-			.footer h3,.footer p{letter-spacing: .5em}
-		}
-		.find .links .item span {position: absolute;right: calc(18% + 0.8vw);width: 60px;text-align: center;}
-		*{-webkit-tap-highlight-color: transparent}
-		#person-tag{margin: 15px;}
-		.line{line-height: 50px;}
-		.line div{display: inline-block;margin-right: 10px;}
-		@media screen and (max-width:700px) {
-			#person-tag{margin: 0px;}
-			.hello{padding: 0;width: 100%;}
-			.clear {margin-top: 0px;}
-			.about ul.skill li {width: 45%;}
-			.about ul.skill li p {width: 100%;}
-			.about ul.skill li .progress {width: 100%;}
-			.about ul.skill {margin-top: 0px;}
-			.ch{padding: 0px}
-			.footer{padding-bottom: 40px;}
-		}
 	</style>
 </head>
 <body>
-	<body 
-		NOOP="if (window.event != null && window.event.button == 2) alert ('Thanks...');">
+	<body>
 		<div class="background">
 			<canvas id="startrack"></canvas>
 			<div class="cover"></div>
 		</div>
 		<div class="main">
 			<div class="ch intro">
-				<div class="container">
+				<div class="contain">
 					<div class="hello">
 						<h1 id="slogan">思考中...</h1>
 					</div>
@@ -70,90 +29,40 @@
 			</div>
 			<div class="ch about">
 				<div class="container">
-					<h2 class="chtitle">Who am <span>Zaqueo</span>？</h2>
+					<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
 					<div class="clear">
-						<div class="introduct">
-							<div id="person" style="display: flex;">
 								<img class="avatar"src="https://www.z4a.net/images/2022/04/08/62ea617df3b37891.jpg
 								">
 								<div id="person-tag">
 							<div class="line">
 								<div>🌟十八线摆烂「高中生」</div>
-								<div>&nbsp;🐱‍🚀「乐观主义」「斯多葛主义」&nbsp;INTP</div>
+								<div>&nbsp;&nbsp;&nbsp;&nbsp;🐱‍🚀「乐观主义」「斯多葛主义」&nbsp;INTP</div>
 							</div>
 							<div class="line">
 								<div>🖥️偶尔研究「前端」「树莓派」持有</div>
-								<div>📚历史知识|文学阅历缺失&nbsp;&nbsp;完善「价值观」ing</div>
+								<div>&nbsp;&nbsp;&nbsp;&nbsp;📚历史知识|文学阅历缺失&nbsp;&nbsp;完善「价值观」ing</div>
 							</div>
 							<div class="line">
 								<div>🕹️Minecraft|云Pokemon</div>
-								<div>📬1271470655@qq.com&nbsp;&nbsp;<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" style="color: inherit;">了解更多</a></div>
-							</div>
-							</div>
+								<div>&nbsp;&nbsp;&nbsp;&nbsp;📬1271470655@qq.com&nbsp;&nbsp;<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" style="color: inherit;">了解更多</a></div>
 						</div>
-						<ul class="skill clear">
-							<li>
-								<p>HTML/CSS</p>
-								<div class="progress">
-									<div style="width:50%;"></div>
-									<span>超文本标记语言</span>
-								</div>
-							</li>
-							<li>
-								<p>Python</p>
-								<div class="progress">
-									<div style="width:20%;"></div>
-									<span>简单易用可扩展</span>
-								</div>
-							</li>
-							<li>
-								<p>JavaScript</p>
-								<div class="progress">
-									<div style="width:5%;">
-									</div><span>客户端脚本语言</span>
-								</div>
-							</li>
-							<li>
-								<p>？？？？</p>
-								<div class="progress">
-									<div style="width:0%;"></div>
-									<span>？？？？？？</span>
-								</div>
-							</li>
-							<li>
-								<p>？？？？</p>
-								<div class="progress">
-									<div style="width:0%;"></div>
-									<span>？？？？？？</span>
-								</div>
-							</li>
-							<li>
-								<p>？？？？</p>
-								<div class="progress">
-									<div style="width:0%;"></div>
-									<span>？？？？？？</span>
-								</div>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="find ch">
+			<div class="find">
 				<div class="container links">
 					<h2 class="chtitle"><span>社交</span>链接</h2>
-					<div class="clear col-3">
-					</div>
 					<div class="clear">
 						<a href="https://twitter.com/ZaqueoXX" target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:#28a9e0"></div>
-								<div class="inner"> <i class="icon-twitter"></i> <span>Twitter</span> </div>
+								<div class="inner"> <i class="iconfont zac-twitter"></i> <span>Twitter</span> </div>
 							</div>
 						</a>
 						<a href="https://github.com/ZaqueoX" target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:#353535"></div>
-								<div class="inner"> <i class="icon-github"></i> <span>Github</span> </div>
+								<div class="inner"> <i class="iconfont zac-github"></i> <span>Github</span> </div>
 							</div>
 						</a>
 						<a href="https://www.zhihu.com/people/qaq-68-79-57" target="_blank">
@@ -163,8 +72,7 @@
 									<span>知乎</span> </div>
 							</div>
 						</a>
-						<a href="https://space.bilibili.com/419097469"
-							target="_blank">
+						<a href="https://space.bilibili.com/419097469"target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:#fb7299"></div>
 								<div class="inner"> <i class="iconfont zac-bilibili"></i>
@@ -180,20 +88,21 @@
 								</div>
 							</div>
 						</a>
+						<a href="https://blog.zaqueo.site" target="_blank">
+							<div class="item">
+								<div class="bg" style="background-color: #0093E9;
+								background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+								"></div>
+								<div class="inner"> <i class="iconfont zac-blog"></i>
+									<span>博客</span>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
-		<div class="footer ch">
-			<div class="container">
-				<h3>o(*≧▽≦)ツ</h3>
-				<p>如烟往事俱忘却,心底无私天地宽</p>
-				<p class="c"><a href="https://blog.zaqueo.site/index.php/state.html" target="_blank">声明</a>|<a href="https://blog.zaqueo.site" target="_blank">前往博客 </a>@Zaqueo</p>
-				
-			</div>
-		</div>
 		</div>
 		<script src="js/page.3a0791a3.js"></script>
-		<script type="text/javascript" src="js/stats.js" charset="UTF-8">
 		</script>
 	</body>
 </html>
