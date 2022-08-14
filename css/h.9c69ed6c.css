@@ -193,7 +193,7 @@ html {
 
 .container {
     position: relative;
-    width: 520px;
+    width: 450px;
     margin: 0 auto;
     padding: 20px 0
 }
@@ -524,12 +524,13 @@ ul.skill li .progress div {
     body, html{position: absolute;}
     .intro {position: relative}
     .clear{display: block !important;}
+    .avatar{margin-top: 0 !important;}
 }
 .main{position: fixed;}
 .about{
     top: 0;
-    width: 700px;
-    padding: 40px 0px;
+    width: 560px;
+    padding: 40px 0;
     overflow-y: scroll;
     height: calc(100vh - 80px);
 }
@@ -543,7 +544,7 @@ ul.skill li .progress div {
     height: 120px;
     width: 120px;
     border-radius: 120px;
-    margin: 75px 20px 0;
+    margin: 40px 20px 0;
 }
 #person-tag{
     margin-top: 20px;
