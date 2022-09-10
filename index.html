@@ -16,7 +16,7 @@
 	--background:url(https://www.z4a.net/images/2022/09/10/6-1.png);
 }
 body,html {font-family: Microsoft YaHei;-webkit-font-smoothing: antialiased;color: #fff;font-size: 14px;overflow-x: hidden;position: relative;}
-.background{position: fixed;width: 100vw;height: 100vh;background-image: linear-gradient(to right,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.7) 720px,rgba(0,0,0,0) 1300px),var(--background);background-position: center;background-size: cover;z-index: -1;}
+.background{position: fixed;width: 100vw;height: 100vh;background-image: linear-gradient(to right,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 720px,rgba(0,0,0,0) 100%),var(--background);background-position: center;background-size: cover;z-index: -1;}
 .main{width: 640px;padding: var(--padding);}
 .about {width: 100%;}
 .chtitle {
@@ -59,7 +59,7 @@ body,html {font-family: Microsoft YaHei;-webkit-font-smoothing: antialiased;colo
 	right: 0;
 	top: 0;
 	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.5) calc(var(--padding) + 20px));
-	width: 295px;
+	width: 275px;
 	color: rgba(255, 255, 255, 0.9);
 }
 .find a {
@@ -188,7 +188,7 @@ a {
 .workbox div{
 	height: 160px;
 	width: 220px;
-	background-color: #353535;
+	background-color: #2b2b2b;
 	border-radius: 10px;
 	display: inline-block;
 	margin: 20px 20px 20px 0;
@@ -198,13 +198,20 @@ a {
 .workbox i{
 	display: block;
 	font-size: 80px !important;
-	color: rgba(255, 255, 255, 0.05);
+	color: rgba(255, 255, 255, 0.02);
 }
 @media screen and (max-width:720px) {
 	*{--padding: 20px}
 	.main{width: calc(100vw - 2*var(--padding));}
 	.find a {flex-basis: 30vw;}
-	.workbox{border-radius: 0;width: 100vw;left: -20px;position: relative;}
+	.workbox{
+		border-radius: 0;
+		width: 100vw;
+		left: -20px;
+		position: relative;
+		overflow-x: scroll;
+	}
+	.workbox::-webkit-scrollbar {display: none;}
 	.background{background-image: linear-gradient(to right,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),var(--background);}
 }
 	</style>
@@ -218,9 +225,9 @@ a {
 				<div class="avatar"></div>
 				<div id="persontag">
 					<div class="line">🌟十八线摆烂「<div class="tag">高中生</div>」&nbsp;INTP</div>
-					<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;🖥️偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
+					<div class="line">🖥️偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
 					<div class="line">🕹️Minecraft|云Pokemon</div>
-					<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;📬1271470655@qq.com&nbsp;&nbsp;</div>
+					<div class="line">📬1271470655@qq.com</div>
 					<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" id='morelink'><i class="iconfont zac-link" style="font-size: 20px;"></i></a>
 				</div>
 			</div>
@@ -280,11 +287,14 @@ a {
 </body>
 <script>
 let container = document.querySelector(".workbox");
-container.addEventListener("wheel",(event) => {
+if (window.innerWidth >720) {
+	container.addEventListener("wheel",(event) => {
 	event.preventDefault();
 	for (var i=0;i<10;i++){
 		setTimeout(() => container.scrollLeft += event.deltaY/10,10*i);
 }});
+}
+
 console.log(" %c Zaqueo's Studio %c v1.0.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 </script>
 </html>
