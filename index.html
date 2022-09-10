@@ -13,7 +13,7 @@
 	margin: 0;
 	transition-timing-function: cubic-bezier(.19, 1, .22, 1);
 	--padding: 40px;
-	--background:url(https://www.z4a.net/images/2022/09/10/6-1.png);
+	--background:url(https://www.z4a.net/images/2022/03/19/2.webp);
 }
 body,html {font-family: Microsoft YaHei;-webkit-font-smoothing: antialiased;color: #fff;font-size: 14px;overflow-x: hidden;position: relative;}
 .background{position: fixed;width: 100vw;height: 100vh;background-image: linear-gradient(to right,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 720px,rgba(0,0,0,0) 100%),var(--background);background-position: center;background-size: cover;z-index: -1;}
@@ -42,7 +42,8 @@ body,html {font-family: Microsoft YaHei;-webkit-font-smoothing: antialiased;colo
     height: 200px;
     overflow: hidden;
 	position: relative;
-	margin-bottom:30px ;
+	margin-bottom:30px;
+	border: 0.1px #303030 solid;
 }
 .avatar {
     height: 200px;
@@ -97,6 +98,7 @@ a {
     overflow: hidden;
     opacity: 1;
     border-radius: 20px;
+	box-shadow: 0 8px 12px -3px var(--color);
 }
 .item span{
 	position: absolute;
@@ -157,25 +159,25 @@ a {
 #morelink{
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 30px;
-	height: 30px;
-	width: 30px;
+	height: 34px;
+	width: 34px;
 	text-align: center;
-	line-height: 30px;
+	line-height: 34px;
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
 	transition: 0.2s;
 }
 #morelink:hover{
-	height: 36px;
-	width: 36px;
+	height: 40px;
+	width: 40px;
 	right: 17px;
 	bottom: 17px;
 	transition: 0.3s;
-	line-height: 36px;
+	line-height: 40px;
 }
-#morelink:hover i{color: white;}
-#morelink i{display: block;}
+#morelink i:hover{color: white;font-size: 24px;}
+#morelink i{display: block;font-size: 22px;}
 .work{width:100%}
 .workbox{
 	height: 200px;
@@ -183,7 +185,8 @@ a {
 	width: 100%;
 	white-space: nowrap;
 	background-color: #222222;
-	overflow-x: hidden;
+	overflow: hidden;
+	border: 0.1px #303030 solid;
 }
 .workbox div{
 	height: 160px;
@@ -194,6 +197,7 @@ a {
 	margin: 20px 20px 20px 0;
 	line-height: 160px;
 	text-align: center;
+	border: 0.1px #303030 solid;
 }
 .workbox i{
 	display: block;
@@ -228,7 +232,7 @@ a {
 					<div class="line">🖥️偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
 					<div class="line">🕹️Minecraft|云Pokemon</div>
 					<div class="line">📬1271470655@qq.com</div>
-					<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" id='morelink'><i class="iconfont zac-link" style="font-size: 20px;"></i></a>
+					<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" id='morelink'><i class="iconfont zac-link"></i></a>
 				</div>
 			</div>
 		</div>
@@ -236,38 +240,38 @@ a {
 		<h2 class="chtitle"><span>社交</span>链接</h2>
 		<div id="linkbox">
 						<a href="https://twitter.com/ZaqueoXX" target="_blank">
-							<div class="item">
-								<div class="bg" style="background-color:#28a9e0"></div>
+							<div class="item" style="--color: rgba(40, 169, 224,0.2)">
+								<div class="bg" style="background-color:rgb(40, 169, 224)"></div>
 								<div class="inner"> <i class="iconfont zac-twitter"></i><span>Twitter</span></div>
 							</div>
 						</a>
 						<a href="https://github.com/ZaqueoX" target="_blank">
-							<div class="item">
-								<div class="bg" style="background-color:#353535"></div>
+							<div class="item" style="--color:rgba(53, 53, 53,0.2)">
+								<div class="bg" style="background-color:rgb(53, 53, 53)"></div>
 								<div class="inner"> <i class="iconfont zac-github"></i><span>Github</span></div>
 							</div>
 						</a>
 						<a href="https://www.zhihu.com/people/qaq-68-79-57" target="_blank">
-							<div class="item">
+							<div class="item" style="--color:rgba(0, 102, 255,0.2)">
 								<div class="bg" style="background-color:rgb(0, 102, 255)"></div>
 								<div class="inner"> <i class="iconfont zac-zhihu"></i><span>知乎</span></div>
 							</div>
 						</a>
 						<a href="https://space.bilibili.com/419097469"target="_blank">
-							<div class="item">
-								<div class="bg" style="background-color:#fb7299"></div>
+							<div class="item" style="--color:rgba(251, 114, 153,0.2)">
+								<div class="bg" style="background-color:rgb(251, 114, 153)"></div>
 								<div class="inner"> <i class="iconfont zac-bilibili"></i><span>Bilibili</span></div>
 							</div>
 						</a>
 						<a href="https://steamcommunity.com/id/zaqueox/" target="_blank">
-							<div class="item">
-								<div class="bg" style="background-color:#232d37"></div>
+							<div class="item" style="--color:rgba(35, 45, 55,0.2)">
+								<div class="bg" style="background-color:rgb(35, 45, 55)"></div>
 								<div class="inner"> <i class="iconfont zac-steam"></i><span>Steam</span></div>
 							</div>
 						</a>
 						<a href="https://blog.zaqueo.site" target="_blank">
-							<div class="item">
-								<div class="bg" style="background-color: #0093E9;
+							<div class="item" style="--color:rgba(0, 147, 233,0.2)">
+								<div class="bg" style="background-color: rgb(0, 147, 233);
 								background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 								"></div>
 								<div class="inner"> <i class="iconfont zac-minecraft"></i><span>博客</span></div>
