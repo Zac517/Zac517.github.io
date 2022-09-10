@@ -6,73 +6,256 @@
 	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="https://www.z4a.net/images/2022/05/29/avatar.webp" type="image/x-icon" />
 	<title>Zaqueo's Studio</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/c/font_3165812_yiipova3njf.css">
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/c/font_3165812_jt92h59vh5k.css">
 	<style>
+* {
+	padding: 0;
+	margin: 0;
+	transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+	--padding: 40px;
+	--background:url(https://www.z4a.net/images/2022/09/10/6-1.png);
+}
+body,html {font-family: Microsoft YaHei;-webkit-font-smoothing: antialiased;color: #fff;font-size: 14px;overflow-x: hidden;position: relative;}
+.background{position: fixed;width: 100vw;height: 100vh;background-image: linear-gradient(to right,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.7) 720px,rgba(0,0,0,0) 1300px),var(--background);background-position: center;background-size: cover;z-index: -1;}
+.main{width: 640px;padding: var(--padding);}
+.about {width: 100%;}
+.chtitle {
+    padding-bottom: 30px;
+    font-size: 26px;
+    letter-spacing: .2em;
+    color: hsla(0, 0%, 100%, .5)
+}
+.chtitle span {
+    color: #fff
+}
+.chtitle:after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 5px;
+    background-color: hsla(0, 0%, 100%, .5);
+    margin-top: 20px;
+}
+.clear {
+    background-color: #222222;
+    border-radius: 20px;
+    height: 200px;
+    overflow: hidden;
+	position: relative;
+	margin-bottom:30px ;
+}
+.avatar {
+    height: 200px;
+    width: 400px;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 60%,#222222 100%),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
+}
+#persontag {
+    padding: 20px var(--padding);
+    line-height: 40px;
+    font-size: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.5) calc(var(--padding) + 20px));
+	width: 295px;
+	color: rgba(255, 255, 255, 0.9);
+}
+.find a {
+    color: #fff;
+    text-decoration: none;
+	flex-basis: 160px;
+	margin: 0 20px 20px 0;
+	position: relative;
+	flex-grow: 1;
+	transition: 0.3s;
+}
+.find a:hover{
+	flex-grow: 10;
+	transition: 0.6s;
+}
+a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+.find{
+	width: calc(100% + 20px);
+	margin-bottom: 10px;
+}
+#linkbox{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.find .item {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    transition: all .2s;
+    overflow: hidden;
+    opacity: 1;
+    border-radius: 20px;
+}
+.item span{
+	position: absolute;
+	left: var(--padding);
+	letter-spacing:.1em;
+	font-weight: bold;
+}
+.find .item .inner {
+    position: relative;
+    z-index: 5;
+	height: 100%;
+}
+.find .item .bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    transition: all .15s;
+    height: 100%;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .28);
+}
+.find .item i {
+    font-size: 90px;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    color: rgba(255, 255, 255, 0.3);
+    transition: 0.6s;
+	filter: blur(5px);
+}
+.find a:hover i{
+	bottom: -2px;
+	font-size: 60px;
+	color: #fff;
+	right: 20px;
+	filter: blur(0px);
+}
+.find .item span {
+    display: inline-block;
+    width: 100px;
+    font-size: 20px;
+	color: rgba(255, 255, 255, 0.6);
+	transition: 0.3s;
+}
+.find .item:hover span{
+	color: white;
+	transition: 0.6s;
+}
+#persontag .tag{
+	display: inline-block;
+	transition: 0.3s;
+}
+#persontag .tag:hover{
+	margin: 0 5px;
+	transition: 0.6s;
+}
+#morelink{
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 30px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	transition: 0.2s;
+}
+#morelink:hover{
+	height: 36px;
+	width: 36px;
+	right: 17px;
+	bottom: 17px;
+	transition: 0.3s;
+	line-height: 36px;
+}
+#morelink:hover i{color: white;}
+#morelink i{display: block;}
+.work{width:100%}
+.workbox{
+	height: 200px;
+	border-radius: 20px;
+	width: 100%;
+	white-space: nowrap;
+	background-color: #222222;
+	overflow-x: hidden;
+}
+.workbox div{
+	height: 160px;
+	width: 220px;
+	background-color: #353535;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 20px 20px 20px 0;
+	line-height: 160px;
+	text-align: center;
+}
+.workbox i{
+	display: block;
+	font-size: 80px !important;
+	color: rgba(255, 255, 255, 0.05);
+}
+@media screen and (max-width:720px) {
+	*{--padding: 20px}
+	.main{width: calc(100vw - 2*var(--padding));}
+	.find a {flex-basis: 30vw;}
+	.workbox{border-radius: 0;width: 100vw;left: -20px;position: relative;}
+	.background{background-image: linear-gradient(to right,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),var(--background);}
+}
 	</style>
 </head>
 <body>
-	<body>
-		<div class="background">
-			<canvas id="startrack"></canvas>
-			<div class="cover"></div>
-		</div>
-		<div class="main">
-			<div class="ch intro">
-				<div class="contain hello">
-						<h1 id="slogan">思考中...</h1>
+	<div class="background"></div>
+	<div class="main">
+		<div class="about">
+			<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
+			<div class="clear">
+				<div class="avatar"></div>
+				<div id="persontag">
+					<div class="line">🌟十八线摆烂「<div class="tag">高中生</div>」&nbsp;INTP</div>
+					<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;🖥️偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
+					<div class="line">🕹️Minecraft|云Pokemon</div>
+					<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;📬1271470655@qq.com&nbsp;&nbsp;</div>
+					<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" id='morelink'><i class="iconfont zac-link" style="font-size: 20px;"></i></a>
 				</div>
 			</div>
-			<div class="ch about">
-				<div class="container">
-					<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
-					<div class="clear">
-						<img class="avatar"src="https://www.z4a.net/images/2022/04/08/62ea617df3b37891.jpg">
-						<div id="person-tag">
-							<div class="line">🌟十八线摆烂「高中生」&nbsp;INTP</div>
-							<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;🖥️偶尔研究「前端」「树莓派」持有</div>
-							<div class="line">🕹️Minecraft|云Pokemon</div>
-							<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;📬1271470655@qq.com&nbsp;&nbsp;<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" style="color: inherit;">更多</a></div>
-						</div>
-					</div>
-				</div>
-			<div class="find">
-				<div class="container links">
-					<h2 class="chtitle"><span>社交</span>链接</h2>
-					<div style="height: 300px">
+		</div>
+	<div class="find">
+		<h2 class="chtitle"><span>社交</span>链接</h2>
+		<div id="linkbox">
 						<a href="https://twitter.com/ZaqueoXX" target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:#28a9e0"></div>
-								<div class="inner"> <i class="iconfont zac-twitter"></i> <span>Twitter</span> </div>
+								<div class="inner"> <i class="iconfont zac-twitter"></i><span>Twitter</span></div>
 							</div>
 						</a>
 						<a href="https://github.com/ZaqueoX" target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:#353535"></div>
-								<div class="inner"> <i class="iconfont zac-github"></i> <span>Github</span> </div>
+								<div class="inner"> <i class="iconfont zac-github"></i><span>Github</span></div>
 							</div>
 						</a>
 						<a href="https://www.zhihu.com/people/qaq-68-79-57" target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:rgb(0, 102, 255)"></div>
-								<div class="inner"> <i class="iconfont zac-zhihu"></i> 
-									<span>知乎</span> </div>
+								<div class="inner"> <i class="iconfont zac-zhihu"></i><span>知乎</span></div>
 							</div>
 						</a>
 						<a href="https://space.bilibili.com/419097469"target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:#fb7299"></div>
-								<div class="inner"> <i class="iconfont zac-bilibili"></i>
-									<span>Bilibili</span>
-								</div>
+								<div class="inner"> <i class="iconfont zac-bilibili"></i><span>Bilibili</span></div>
 							</div>
 						</a>
 						<a href="https://steamcommunity.com/id/zaqueox/" target="_blank">
 							<div class="item">
 								<div class="bg" style="background-color:#232d37"></div>
-								<div class="inner"> <i class="iconfont zac-steam"></i>
-									<span>Steam</span>
-								</div>
+								<div class="inner"> <i class="iconfont zac-steam"></i><span>Steam</span></div>
 							</div>
 						</a>
 						<a href="https://blog.zaqueo.site" target="_blank">
@@ -80,16 +263,28 @@
 								<div class="bg" style="background-color: #0093E9;
 								background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 								"></div>
-								<div class="inner"> <i class="iconfont zac-blog"></i>
-									<span>博客</span>
-								</div>
+								<div class="inner"> <i class="iconfont zac-minecraft"></i><span>博客</span></div>
 							</div>
 						</a>
-					</div>
-				</div>
-			</div>
 		</div>
-		<script src="main.js"></script>
-		</script>
-	</body>
+	</div>
+	<div class="work">
+		<h2 class="chtitle"><span>项目</span>合集</h2>
+		<div class="workbox">
+			<div style="margin-left: 20px"><i class="iconfont zac-box"></i></div>
+			<div><i class="iconfont zac-box"></i></div>
+			<div><i class="iconfont zac-box"></i></div>
+			<div><i class="iconfont zac-box"></i></div>
+		</div>
+	</div>
+</body>
+<script>
+let container = document.querySelector(".workbox");
+container.addEventListener("wheel",(event) => {
+	event.preventDefault();
+	for (var i=0;i<10;i++){
+		setTimeout(() => container.scrollLeft += event.deltaY/10,10*i);
+}});
+console.log(" %c Zaqueo's Studio %c v1.0.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+</script>
 </html>
