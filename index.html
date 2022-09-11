@@ -14,6 +14,7 @@
 	transition-timing-function: cubic-bezier(.19, 1, .22, 1);
 	--padding: 40px;
 	--background:url(https://www.z4a.net/images/2022/09/11/202201051641367368245026.jpg);
+	-webkit-tap-highlight-color: transparent;
 }
 body,html {font-family: Microsoft YaHei;-webkit-font-smoothing: antialiased;color: #fff;font-size: 14px;overflow-x: hidden;position: relative;}
 .background{
@@ -58,18 +59,18 @@ body,html {font-family: Microsoft YaHei;-webkit-font-smoothing: antialiased;colo
 	top: 90px;
 	left: 200px;
 	height: 20px;
-	animation: rotate infinite 3s linear reverse;
+	animation: rotate infinite 5s linear reverse;
 }
 .avatar {
-    height: 240px;
-    width: 440px;
+    height: 220px;
+    width: 420px;
     background-size: 120%;
     background-position: center;
     background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 300px,rgba(34,34,34) 440px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
-	animation: rotate infinite 3s linear;
+	animation: rotate infinite 5s linear;
 	position: absolute;
-	top: -120px;
-	left: -220px;
+	top: -110px;
+	left: -210px;
 }
 #persontag {
     padding: 20px var(--padding);
@@ -206,24 +207,57 @@ a {
 	overflow: hidden;
 	border: 0.1px #303030 solid;
 }
+#first,#last{width: 110px;top: -15px;position: relative;}
+#first{border-radius: 0 20px 20px 0;}
+#last{border-radius: 20px 0 0 20px;margin-right: 0;}
+#first i,#last i{
+	color: transparent;
+	transition: 0.3s;
+	font-size: 40px;
+}
+#first:hover i,#last:hover i{
+	color: white;
+	transition: 0.6s;
+}
 .workbox div{
 	height: 160px;
 	width: 220px;
 	background-color: #2b2b2b;
-	border-radius: 10px;
+	border-radius: 20px;
 	display: inline-block;
 	margin: 20px 20px 20px 0;
 	line-height: 160px;
 	text-align: center;
 	border: 0.1px #303030 solid;
+	transition: 0.3s;
+	position: relative;
 }
 .workbox div:hover{
-	box-shadow: 0 0 40px rgb(18, 18, 18);
+	box-shadow: 0 0 40px rgba(18, 18, 18, 0.5);
+	transition: 0.6s;
 }
 .workbox i{
 	display: block;
-	font-size: 80px !important;
+	font-size: 80px;
 	color: rgba(255, 255, 255, 0.02);
+}
+.workbox span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	letter-spacing: .2em;
+    font-weight: bold;
+	font-size: 22px;
+    color: rgba(255, 255, 255, 0.1);
+	writing-mode:vertical-lr;
+	line-height: 110px;
+	text-align: center;
+	height: 160px;
+	transition: 0.3s;
+}
+.workbox div:hover span{
+	color: transparent;
+	transition: 0.6s;
 }
 @media screen and (max-width:720px) {
 	*{--padding: 20px}
@@ -309,10 +343,11 @@ a {
 	<div class="work">
 		<h2 class="chtitle"><span>项目</span>合集</h2>
 		<div class="workbox">
-			<div style="margin-left: 20px"><i class="iconfont zac-box"></i></div>
+			<a href="https://github.com/Zaqueo517" target="_blank"><div id="first"><i class="iconfont zac-github"></i><span>正在构思</span></div></a>
 			<div><i class="iconfont zac-box"></i></div>
 			<div><i class="iconfont zac-box"></i></div>
 			<div><i class="iconfont zac-box"></i></div>
+			<a href="https://github.com/Zaqueo517" target="_blank"><div id="last"><i class="iconfont zac-github"></i><span>查看更多</span></div></a>
 		</div>
 	</div>
 </body>
