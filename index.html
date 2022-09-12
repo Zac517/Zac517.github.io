@@ -64,20 +64,20 @@ body,html {
 .avatarbox{
 	position: absolute;
 	top: 90px;
-	left: 200px;
-	height: 20px;
+	left: 170px;
+	height: 10px;
 	animation: rotate infinite 3s linear reverse;
 }
 .avatar {
     height: 230px;
-    width: 430px;
-    background-size: 120%;
+    width: 360px;
+    background-size: cover;
     background-position: center;
-    background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 300px,rgba(34,34,34) 440px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
-	animation: rotate infinite 3s cubic-bezier(0.4, 0.38, 0.60, 0.62);
+    background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 240px,rgba(34,34,34) 360px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
+	animation: rotate infinite 3s cubic-bezier(0.4, 0.39, 0.60, 0.61);
 	position: absolute;
 	top: -110px;
-	left: -210px;
+	left: -175px;
 }
 #persontag {
     padding: 20px 20px 20px 80px;
@@ -86,7 +86,7 @@ body,html {
 	position: absolute;
 	right: 0;
 	top: 0;
-	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.8) 60px);
+	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 60px);
 	width: 275px;
 	color: rgba(255, 255, 255, 0.9);
 }
@@ -277,16 +277,17 @@ a {
 		position: relative;
 		overflow-x: scroll;
 	}
+	.workbox::-webkit-scrollbar {display: none;}
+	.background{background-image: linear-gradient(to right,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),var(--background);}
+}
+@media screen and (max-width: 560px) {
 	#persontag{
 		opacity: 0.2;
 		transition: 0.3s;
-		width: calc(100vw - 80px);
 		background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(34, 34, 34, 0.6) 100%);
-		padding: 20px;
+		padding: 20px 20px 20px calc(100vw - 335px);
 	}
-	#persontag:hover{opacity: 1;transform: 0.6s;}
-	.workbox::-webkit-scrollbar {display: none;}
-	.background{background-image: linear-gradient(to right,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),var(--background);}
+	#persontag:hover{opacity: 1;transition: 0.6s;}
 }
 @keyframes rotate{
 	0%{transform: rotateZ(0deg);}
