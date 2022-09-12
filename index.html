@@ -73,7 +73,7 @@ body,html {
     width: 360px;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 240px,rgba(34,34,34) 360px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
+    background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34,0.8) 320px,rgba(34,34,34) 360px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
 	animation: rotate infinite 3s cubic-bezier(0.4, 0.39, 0.60, 0.61);
 	position: absolute;
 	top: -110px;
@@ -213,7 +213,9 @@ a {
 	background-color: #222222;
 	overflow: hidden;
 	border: 0.1px #303030 solid;
+	overflow-x: scroll;
 }
+.workbox::-webkit-scrollbar {display: none;}
 #first,#last{width: 110px;top: -15px;position: relative;}
 #first{border-radius: 0 20px 20px 0;}
 #last{border-radius: 20px 0 0 20px;margin-right: 0;}
@@ -275,9 +277,7 @@ a {
 		width: 100vw;
 		left: -20px;
 		position: relative;
-		overflow-x: scroll;
 	}
-	.workbox::-webkit-scrollbar {display: none;}
 	.background{background-image: linear-gradient(to right,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),var(--background);}
 }
 @media screen and (max-width: 560px) {
