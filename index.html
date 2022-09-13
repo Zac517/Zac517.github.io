@@ -13,7 +13,6 @@
 	margin: 0;
 	transition-timing-function: cubic-bezier(.19, 1, .22, 1);
 	--padding: 40px;
-	--background:url(https://www.z4a.net/images/2022/09/11/202201051641367368245026.jpg);
 	-webkit-tap-highlight-color: transparent;
 }
 body,html {
@@ -28,12 +27,18 @@ body,html {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: linear-gradient(to right,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 720px,rgba(0,0,0,0) 100%),var(--background);
+	background-image: url(https://www.z4a.net/images/2022/09/11/202201051641367368245026.jpg);
 	background-position: 70%;
 	background-size: cover;
 	z-index: -1;
 }
-.main{width: 640px;padding: var(--padding);}
+.main{
+	width: 640px;
+	padding: var(--padding);
+	background: rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 100px 100px rgb(0 0 0 / 0.4);
+}
+body::-webkit-scrollbar {display: none;}
 .about {width: 100%;}
 .chtitle {
     padding-bottom: 30px;
@@ -61,23 +66,13 @@ body,html {
 	margin-bottom:30px;
 	border: 0.1px #303030 solid;
 }
-.avatarbox{
-	position: absolute;
-	top: 90px;
-	left: 170px;
-	height: 10px;
-	animation: rotate infinite 3s linear reverse;
-}
+
 .avatar {
-    height: 230px;
-    width: 360px;
+    height: 200px;
+    width: 340px;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34,0.8) 320px,rgba(34,34,34) 360px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
-	animation: rotate infinite 3s cubic-bezier(0.4, 0.39, 0.60, 0.61);
-	position: absolute;
-	top: -110px;
-	left: -175px;
+    background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34) 340px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
 }
 #persontag {
     padding: 20px 20px 20px 80px;
@@ -86,7 +81,7 @@ body,html {
 	position: absolute;
 	right: 0;
 	top: 0;
-	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 60px);
+	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 80px);
 	width: 275px;
 	color: rgba(255, 255, 255, 0.9);
 }
@@ -195,12 +190,12 @@ a {
 	transition: 0.1s;
 }
 #morelink:hover{
-	height: 40px;
-	width: 40px;
-	right: 17px;
-	bottom: 17px;
+	height: 36px;
+	width: 36px;
+	right: 19px;
+	bottom: 19px;
 	transition: 0.1s;
-	line-height: 40px;
+	line-height: 36px;
 }
 #morelink i:hover{color: white;font-size: 24px;}
 #morelink i{display: block;font-size: 22px;}
@@ -278,7 +273,6 @@ a {
 		left: -20px;
 		position: relative;
 	}
-	.background{background-image: linear-gradient(to right,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),var(--background);}
 }
 @media screen and (max-width: 560px) {
 	#persontag{
@@ -289,10 +283,6 @@ a {
 	}
 	#persontag:hover{opacity: 1;transition: 0.6s;}
 }
-@keyframes rotate{
-	0%{transform: rotateZ(0deg);}
-	100%{transform: rotateZ(360deg);}
-}
 	</style>
 </head>
 <body>
@@ -301,7 +291,7 @@ a {
 		<div class="about">
 			<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
 			<div class="clear">
-				<div class="avatarbox"><div class="avatar"></div></div>
+				<div class="avatar"></div>
 				<div id="persontag">
 					<div class="line">🌟十八线摆烂「<div class="tag">高中生</div>」&nbsp;INTJ</div>
 					<div class="line">🖥️偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
@@ -347,7 +337,9 @@ a {
 						<a href="https://blog.zaqueo.site" target="_blank">
 							<div class="item" style="--color:rgba(0, 147, 233,0.2)">
 								<div class="bg" style="background-color: rgb(0, 147, 233);
-								background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+								background-color: #85FFBD;
+								background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 								"></div>
 								<div class="inner"> <i class="iconfont zac-minecraft"></i><span>博客</span></div>
 							</div>
@@ -370,8 +362,8 @@ let container = document.querySelector(".workbox");
 if (window.innerWidth >720) {
 	container.addEventListener("wheel",(event) => {
 	event.preventDefault();
-	for (var i=0;i<10;i++){
-		setTimeout(() => container.scrollLeft += event.deltaY/10,10*i);
+	for (var i=0;i<100;i++){
+		setTimeout(() => container.scrollLeft += event.deltaY/100,i);
 }});
 }
 
