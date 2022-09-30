@@ -64,7 +64,7 @@ body::-webkit-scrollbar {display: none;}
     overflow: hidden;
 	position: relative;
 	margin-bottom:30px;
-	border: 0.1px #303030 solid;
+	border: 1px #303030 solid;
 }
 
 .avatar {
@@ -211,34 +211,77 @@ a {
 	overflow-x: scroll;
 }
 .workbox::-webkit-scrollbar {display: none;}
-#first,#last{width: 120px;top: -15px;position: relative;}
+#first,#last{
+	width: 60px;
+	height: 160px;
+	display: inline-block;
+	margin: 20px 20px 20px 0;
+	background-color: #272727;
+	border: 1px #292929 solid;
+	position: relative;
+}
 #first{border-radius: 0 20px 20px 0;}
 #last{border-radius: 20px 0 0 20px;margin-right: 0;}
 #first i,#last i{
 	color: transparent;
 	transition: 0.3s;
-	font-size: 40px;
+	font-size: 30px;
+	line-height: 160px;
+	width: 60px;
+	text-align: center;
+	display: block;
 }
 #first:hover i,#last:hover i{
 	color: rgba(255, 255, 255, 0.1);
 	transition: 0.6s;
 }
-.workbox div{
-	height: 160px;
-	width: 240px;
+.project{
+	height: 120px;
+	width: 200px;
 	background-color: #272727;
 	border-radius: 20px;
 	display: inline-block;
 	margin: 20px 20px 20px 0;
-	line-height: 160px;
-	text-align: center;
 	border: 1px #292929 solid;
 	position: relative;
+	padding: 20px;
+	vertical-align: top;
 }
-.workbox i{
+.project i{
 	display: block;
-	font-size: 80px;
-	color: rgba(255, 255, 255, 0.02);
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.project h3{
+	margin: 2.5px 0;
+	color: #fff;
+	display: inline-block;
+}
+.project p{
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 15px;
+}
+.language{
+	position: absolute;
+	bottom: 20px;
+	left: 15px;
+	color: rgba(255, 255, 255, 0.5);
+}
+.language div{
+	display: inline-block;
+	font-size: 12px;
+}
+.language div::before{
+	content: '';
+	background-color: var(--color);
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 0 5px;
 }
 .workbox span{
 	position: absolute;
@@ -249,12 +292,12 @@ a {
 	font-size: 22px;
     color: rgba(255, 255, 255, 0.03);
 	writing-mode:vertical-lr;
-	line-height: 120px;
+	line-height: 60px;
 	text-align: center;
 	height: 160px;
 	transition: 0.3s;
 }
-.workbox div:hover span{
+#first:hover span,#last:hover span{
 	color: transparent;
 	transition: 0.6s;
 }
@@ -290,7 +333,7 @@ a {
 				<div id="persontag">
 					<div class="line">🌟&nbsp;十八线摆烂「<div class="tag">高中生</div>」&nbsp;INTJ</div>
 					<div class="line">🖥️&nbsp;偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
-					<div class="line">🕹️&nbsp;Minecraft&nbsp;云Pokemon</div>
+					<div class="line">🕹️&nbsp;Minecraft&nbsp;饥荒&nbsp;云Pokemon</div>
 					<div class="line">📬&nbsp;1271470655@qq.com</div>
 					<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" id='morelink'><i class="iconfont zac-link"></i></a>
 				</div>
@@ -300,37 +343,37 @@ a {
 		<h2 class="chtitle"><span>社交</span>链接</h2>
 		<div id="linkbox">
 						<a href="https://twitter.com/Zaqueo517" target="_blank">
-							<div class="item" style="--color: rgba(40, 169, 224,0.2)">
+							<div class="item" style="--color: rgba(40, 169, 224,0.3)">
 								<div class="bg" style="background-color:rgb(40, 169, 224)"></div>
 								<div class="inner"> <i class="iconfont zac-twitter"></i><span>Twitter</span></div>
 							</div>
 						</a>
 						<a href="https://github.com/Zaqueo517" target="_blank">
-							<div class="item" style="--color:rgba(53, 53, 53,0.2)">
+							<div class="item" style="--color:rgba(53, 53, 53,0.3)">
 								<div class="bg" style="background-color:rgb(53, 53, 53)"></div>
 								<div class="inner"> <i class="iconfont zac-github"></i><span>Github</span></div>
 							</div>
 						</a>
 						<a href="https://www.zhihu.com/people/qaq-68-79-57" target="_blank">
-							<div class="item" style="--color:rgba(0, 102, 255,0.2)">
+							<div class="item" style="--color:rgba(0, 102, 255,0.3)">
 								<div class="bg" style="background-color:rgb(0, 102, 255)"></div>
 								<div class="inner"> <i class="iconfont zac-zhihu"></i><span>知乎</span></div>
 							</div>
 						</a>
 						<a href="https://space.bilibili.com/419097469"target="_blank">
-							<div class="item" style="--color:rgba(251, 114, 153,0.2)">
+							<div class="item" style="--color:rgba(251, 114, 153,0.3)">
 								<div class="bg" style="background-color:rgb(251, 114, 153)"></div>
 								<div class="inner"> <i class="iconfont zac-bilibili"></i><span>Bilibili</span></div>
 							</div>
 						</a>
 						<a href="https://steamcommunity.com/id/zaqueox/" target="_blank">
-							<div class="item" style="--color:rgba(35, 45, 55,0.2)">
+							<div class="item" style="--color:rgba(35, 45, 55,0.3)">
 								<div class="bg" style="background-color:rgb(35, 45, 55)"></div>
 								<div class="inner"> <i class="iconfont zac-steam"></i><span>Steam</span></div>
 							</div>
 						</a>
 						<a href="https://blog.zaqueo.site" target="_blank">
-							<div class="item" style="--color:rgba(0, 147, 233,0.2)">
+							<div class="item" style="--color:rgba(170,190,236,0.3)">
 								<div class="bg" style="background-color: rgb(0, 147, 233);
 								background-color: #85FFBD;
 								background-color: #8BC6EC;
@@ -345,9 +388,24 @@ background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 		<h2 class="chtitle"><span>项目</span>合集</h2>
 		<div class="workbox">
 			<a href="https://github.com/Zaqueo517" target="_blank"><div id="first"><i class="iconfont zac-github"></i><span>正在构思</span></div></a>
-			<div><i class="iconfont zac-box"></i></div>
-			<div><i class="iconfont zac-box"></i></div>
-			<div><i class="iconfont zac-box"></i></div>
+			<div class="project">
+				<i class="iconfont zac-github"></i>
+				<a href="https://github.com/Zaqueo517/ZaqueoX.github.io"><h3>项目标题</h3></a>
+				<p>项目介绍 阿巴阿巴阿巴</p>
+				<div class="language"><div style="--color:#e34c26">HTML</div><div style="--color:#563d7c">CSS</div></div>
+			</div>
+			<div class="project">
+				<i class="iconfont zac-github"></i>
+				<a href="https://github.com/Zaqueo517/ZaqueoX.github.io"><h3>项目标题</h3></a>
+				<p>项目介绍 阿巴阿巴阿巴</p>
+				<div class="language"><div style="--color:#4F5D95">PHP</div></div>
+			</div>
+			<div class="project">
+				<i class="iconfont zac-github"></i>
+				<a href="https://github.com/Zaqueo517/ZaqueoX.github.io"><h3>项目标题</h3></a>
+				<p>项目介绍 阿巴阿巴阿巴</p>
+				<div class="language"><div style="--color:#3572A5">Python</div></div>
+			</div>
 			<a href="https://github.com/Zaqueo517" target="_blank"><div id="last"><i class="iconfont zac-github"></i><span>查看更多</span></div></a>
 		</div>
 	</div>
