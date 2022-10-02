@@ -23,7 +23,7 @@ body,html {
 	overflow-x: hidden;
 	position: relative;
 }
-.background{
+#background{
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
@@ -67,12 +67,12 @@ body::-webkit-scrollbar {display: none;}
 	border: 1px #303030 solid;
 }
 
-.avatar {
+#avatar {
     height: 200px;
     width: 340px;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34) 340px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
+	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34) 340px),url(https://www.z4a.net/images/2022/09/10/70579450_p28_master1200.jpg);
 }
 #persontag {
     padding: 20px 20px 20px 80px;
@@ -88,7 +88,7 @@ body::-webkit-scrollbar {display: none;}
 .find a {
     color: #fff;
     text-decoration: none;
-	flex-basis: 160px;
+	flex-basis: 170px;
 	margin: 0 20px 20px 0;
 	position: relative;
 	flex-grow: 1;
@@ -306,7 +306,7 @@ a {
 @media screen and (max-width:720px) {
 	*{--padding: 20px}
 	.main{width: calc(100vw - 2*var(--padding));}
-	.find a {flex-basis: 30vw;}
+	.find a {flex-basis: calc(33vw - 55px);}
 	.workbox{
 		border-radius: 0;
 		width: 100vw;
@@ -322,16 +322,17 @@ a {
 		padding: 20px 20px 20px calc(100vw - 335px);
 	}
 	#persontag:hover{opacity: 1;transition: 0.6s;}
+	.find a {flex-basis: calc(50vw - 60px);}
 }
 	</style>
 </head>
 <body>
-	<div class="background"></div>
+	<div id="background"></div>
 	<div class="main">
 		<div class="about">
 			<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
 			<div class="clear">
-				<div class="avatar"></div>
+				<div id="avatar"></div>
 				<div id="persontag">
 					<div class="line">🌟&nbsp;十八线摆烂「<div class="tag">高中生</div>」&nbsp;INTJ</div>
 					<div class="line">🖥️&nbsp;偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
@@ -412,6 +413,7 @@ background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 		</div>
 	</div>
 </body>
+<script src="js/jquery.js"></script>
 <script>
 let container = document.querySelector(".workbox");
 if (window.innerWidth >720) {
@@ -421,7 +423,6 @@ if (window.innerWidth >720) {
 		setTimeout(() => container.scrollLeft += event.deltaY/100,i);
 }});
 }
-
 console.log(" %c Zaqueo's Studio %c v1.0.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 </script>
 </html>
