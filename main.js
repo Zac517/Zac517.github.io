@@ -12,7 +12,7 @@ var t = y
 var s ={
     "cd":(f) =>{r(f,
         () =>{u = '~';t = y},
-        (a,b) =>{q('Is a file:&nbsp;&nbsp;'+ a,'e')},
+        (a,b) =>{q('Is a file:&nbsp;'+ a,'e')},
         (a,b) =>{u = a;t = b})},
     "ls":() =>{q(p(t,'o'));},
     "echo":(f) =>{q('<span class="p">'+p(f)+'</span>');},
@@ -20,7 +20,7 @@ var s ={
     "cat":(f) =>{r(f,
         () =>{q('No parameters obtained','e')},
         (a,b) =>{q('<span class="p">'+b+'</span>')},
-        (a,b) =>{q('Is a directory:&nbsp;&nbsp;'+ a,'e')})},
+        (a,b) =>{q('Is a directory:&nbsp;'+ a,'e')})},
 };
 function o(a,b){
     var c = b.split('/');
@@ -32,8 +32,8 @@ function o(a,b){
 }
 function p(a,b = 'a'){
     var c = '';
-    if (b == 'o'){for (i in a){c += i+'&nbsp;&nbsp;'}}
-    else{for (i in a){c += a[i]+'&nbsp;&nbsp;'}}
+    if (b == 'o'){for (i in a){c += i+'&nbsp;'}}
+    else{for (i in a){c += a[i]+'&nbsp;'}}
     return c;
 }
 function q(a,b = 'a'){
@@ -44,12 +44,12 @@ function q(a,b = 'a'){
 }
 function r(f,a,b,c){
     if (f.length == 0){a()}
-    else if(f.length > 1){q('Unrecognized arguments:&nbsp;&nbsp;'+p(f.slice(1)),'e')}
+    else if(f.length > 1){q('Unrecognized arguments:&nbsp;'+p(f.slice(1)),'e')}
     else{
         if(f[0].split('/')[0] in y){d=y,e=f[0]}
         else{d=t,e=u +'/' + f[0]}
         var d = o(d,f[0])
-        if (d == false){q('No such file or directory:&nbsp;&nbsp;' +f[0],'e')}
+        if (d == false){q('No such file or directory:&nbsp;' +f[0],'e')}
         else if(typeof(d) == 'string'){b(e,d)}
         else{c(e,d)}}
 }
@@ -79,14 +79,14 @@ function m(a,b){
     }
 };
 function l(a){
-    q("[<span class='g'>guest</span>@Browser&nbsp;&nbsp;<span class='b'>"+u+"</span>]<span class='d'>$</span>&nbsp;&nbsp;"+a.value);
+    q("[<span class='g'>guest</span>@Browser&nbsp;<span class='b'>"+u+"</span>]<span class='d'>$</span>&nbsp;"+a.value);
     var b = a.value.split(' ');
     if (b[0] in s){
         s[b[0]](b.slice(1));
     }
-    else{q('command not found:&nbsp;&nbsp;'+a.value,'e')}
+    else{q('command not found:&nbsp;'+a.value,'e')}
     a.value=''
-    v.innerHTML= "[<span class='g'>guest</span>@Browser&nbsp;&nbsp;<span class='b'>"+u+"</span>]<span class='d'>$</span>&nbsp;&nbsp;"
+    v.innerHTML= "[<span class='g'>guest</span>@Browser&nbsp;<span class='b'>"+u+"</span>]<span class='d'>$</span>&nbsp;"
     x.scrollTop = 10000
 };
 /*scroll*/

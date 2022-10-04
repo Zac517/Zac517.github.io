@@ -73,7 +73,8 @@ body::-webkit-scrollbar {display: none;}
 	width: 280px;
 	color: rgba(255, 255, 255, 0.9);
 }
-
+#persontag .line,#terminal,#terminal input{font-weight: 600 !important;}
+#terminal,#terminal input{font-family:'Fira Code', monospace !important;}
 .find a {
     color: #fff;
     text-decoration: none;
@@ -252,6 +253,7 @@ a {
 .project p{
 	color: rgba(255, 255, 255, 0.5);
 	margin-top: 15px;
+	font-weight: bold;
 }
 .language{
 	position: absolute;
