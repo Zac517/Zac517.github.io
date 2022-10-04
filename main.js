@@ -1,66 +1,60 @@
-var root ={
+/*teminal*/
+var y ={
     "docs":{"easterEgg.txt":"Glad you found it here."},
     "games":{"newgame.js":"Preparing."},
     "home":{"photo":{}}
 }
-let container = document.querySelector(".workbox");
-let terminal = document.getElementById('terminal');
-let context = document.getElementById('context');
-let message = document.getElementById('message');
-var position = '~'
-var pos = root
-var commend ={
-    "cd":(route) =>{findf(route,
-        () =>{position = '~';pos = root},
-        (a,b) =>{print('Is a file:&nbsp;&nbsp;'+ a,'e')},
-        (a,b) =>{position = a;pos = b})},
-    "ls":() =>{print(PA(pos,'o'));},
-    "echo":(route) =>{print('<span class="p">'+PA(route,'a')+'</span>');},
-    "help":() =>{print(PA(commend,'o'));},
-    "cat":(route) =>{findf(route,
-        () =>{print('No parameters obtained','e')},
-        (a,b) =>{print('<span class="p">'+b+'</span>')},
-        (a,b) =>{print('Is a directory:&nbsp;&nbsp;'+ a,'e')})},
+let x = document.getElementById('terminal');
+let w = document.getElementById('context');
+let v = document.getElementById('message');
+var u = '~'
+var t = y
+var s ={
+    "cd":(f) =>{r(f,
+        () =>{u = '~';t = y},
+        (a,b) =>{q('Is a file:&nbsp;&nbsp;'+ a,'e')},
+        (a,b) =>{u = a;t = b})},
+    "ls":() =>{q(p(t,'o'));},
+    "echo":(f) =>{q('<span class="p">'+p(f)+'</span>');},
+    "help":() =>{q(p(s,'o'));},
+    "cat":(f) =>{r(f,
+        () =>{q('No parameters obtained','e')},
+        (a,b) =>{q('<span class="p">'+b+'</span>')},
+        (a,b) =>{q('Is a directory:&nbsp;&nbsp;'+ a,'e')})},
 };
-function find(obj,route){
-    var j = route.split('/');
-    var k = obj
-    for(var i = 0; i< j.length;i++){
-        if (j[i] in k){k = k[j[i]]}
+function o(a,b){
+    var c = b.split('/');
+    var d = a
+    for(var i = 0; i< c.length;i++){
+        if (c[i] in d){d = d[c[i]]}
         else{return false}}
-    return k
+    return d
 }
-function PA(obj,type){
-    var text = '';
-    if (type == 'o'){for (i in obj){text += i+'&nbsp;&nbsp;'}}
-    else{for (i in obj){text += obj[i]+'&nbsp;&nbsp;'}}
-    return text;
+function p(a,b = 'a'){
+    var c = '';
+    if (b == 'o'){for (i in a){c += i+'&nbsp;&nbsp;'}}
+    else{for (i in a){c += a[i]+'&nbsp;&nbsp;'}}
+    return c;
 }
-function print(text,type = 'a'){
-    var p = document.createElement('p')
-    p.innerHTML=text
-    if (type == 'e'){p.className = 'e'}
-    context.appendChild(p)
+function q(a,b = 'a'){
+    var c = document.createElement('p')
+    c.innerHTML=a
+    if (b == 'e'){c.className = 'e'}
+    w.appendChild(c)
 }
-function findf(route,a,b,c){
-    if (route.length == 0){a()}
-    else if(route.length > 1){print('Unrecognized arguments:&nbsp;&nbsp;'+PA(route.slice(1),'a'),'e')}
+function r(f,a,b,c){
+    if (f.length == 0){a()}
+    else if(f.length > 1){q('Unrecognized arguments:&nbsp;&nbsp;'+p(f.slice(1)),'e')}
     else{
-        if(route[0].split('/')[0] in root){d=root,e=route[0]}
-        else{d=pos,e=position +'/' + route[0]}
-        var result = find(d,route[0])
-        if (result == false){print('No such file or directory:&nbsp;&nbsp;' +route[0],'e')}
-        else if(typeof(result) == 'string'){b(e,result)}
-        else{c(e,result)}}
+        if(f[0].split('/')[0] in y){d=y,e=f[0]}
+        else{d=t,e=u +'/' + f[0]}
+        var d = o(d,f[0])
+        if (d == false){q('No such file or directory:&nbsp;&nbsp;' +f[0],'e')}
+        else if(typeof(d) == 'string'){b(e,d)}
+        else{c(e,d)}}
 }
-if (window.innerWidth >720) {
-	container.addEventListener("wheel",(event) => {
-	event.preventDefault();
-	for (var i=0;i<100;i++){
-		setTimeout(() => container.scrollLeft += event.deltaY/100,i);
-}})};
 var z = 'a'
-function change(){
+function n(){
     if (z == 'a'){   
     document.getElementById('avatar').className = 'dap';
     document.getElementById('persontag').className = 'dap';
@@ -77,25 +71,34 @@ function change(){
     document.getElementById('avatar').className = 'ap';
     document.getElementById('persontag').className = 'ap';
     z = 'a'},300)}}
-function keydown(event,obj){
-    terminal.scrollTop = 10000
-    var ev = window.event||event;
-    if (ev.keyCode == 13) {
-        execute(obj)
+function m(a,b){
+    x.scrollTop = 10000
+    var c = window.event||a;
+    if (c.keyCode == 13) {
+        l(b)
     }
 };
-function execute(obj){
-    print("[<span class='g'>guest</span>@Browser&nbsp;&nbsp;"+position+"]<span class='d'>$</span>&nbsp;&nbsp;"+obj.value);
-    var com = obj.value.split(' ');
-    if (com[0] in commend){
-        commend[com[0]](com.slice(1));
+function l(a){
+    q("[<span class='g'>guest</span>@Browser&nbsp;&nbsp;<span class='b'>"+u+"</span>]<span class='d'>$</span>&nbsp;&nbsp;"+a.value);
+    var b = a.value.split(' ');
+    if (b[0] in s){
+        s[b[0]](b.slice(1));
     }
-    else{print('command not found:&nbsp;&nbsp;'+obj.value,'e')}
-    obj.value=''
-    message.innerHTML= "[<span class='g'>guest</span>@Browser&nbsp;&nbsp;"+position+"]<span class='d'>$</span>&nbsp;&nbsp;"
-    terminal.scrollTop = 10000
+    else{q('command not found:&nbsp;&nbsp;'+a.value,'e')}
+    a.value=''
+    v.innerHTML= "[<span class='g'>guest</span>@Browser&nbsp;&nbsp;<span class='b'>"+u+"</span>]<span class='d'>$</span>&nbsp;&nbsp;"
+    x.scrollTop = 10000
 };
-console.log(" %c Zaqueo's Studio %c v1.0.1 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+/*scroll*/
+let container = document.querySelector(".workbox");
+if (window.innerWidth >720) {
+	container.addEventListener("wheel",(event) => {
+	event.preventDefault();
+	for (var i=0;i<100;i++){
+		setTimeout(() => container.scrollLeft += event.deltaY/100,i);
+}})};
+/*imform*/
+console.log(" %c Zaqueo's Studio %c v1.1.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
 　　　　　　　　　　　　　　　　　　　　　＿＿＿　　 ~ヽ
 　　　　　　　　　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶
