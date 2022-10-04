@@ -14,8 +14,8 @@
 	<div class="main">
 		<div class="about">
 			<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
-			<div class="clear">
-				<div id="avatar"><div class="bt" id="shell" onclick="openT()"><i class="iconfont zac-code"></i></div></div>
+			<div class="clear" ondblclick="change()">
+				<div id="avatar"></div>
 				<div id="persontag">
 					<div class="line">🌟&nbsp;十八线摆烂「<div class="tag">高中生</div>」&nbsp;INTJ</div>
 					<div class="line">🖥️&nbsp;偶尔研究「<div class="tag">前端</div>」「<div class="tag">树莓派</div>」持有</div>
@@ -25,11 +25,10 @@
 				</div>
 				<div id="terminal">
 					<div id="context">
-						<p>Welcome to Zaqueo's Terminal!</p>
-						<p>Type <span style="color: #f9e684">help</span> to list the available commands.</p>
+						<p style="color: #ffea83">Welcome to Zaqueo's Terminal!</p>
+						<p style="color: #ffea83">Type help to list the available commands.</p>
 					</div>
-					<span id="message">[<span style='color:#96d9e1'>guest</span>@Browser ~]<span style='color:#81b181'>$</span>&nbsp;&nbsp;</span><input type="text" onkeydown="keydown(event,this)">
-					<div class="bt" id="close" onclick="closeT()"><i class="iconfont zac-code"></i></div>
+					<span id="message">[<span class='g'>guest</span>@Browser ~]<span class='d'>$</span>&nbsp;&nbsp;</span><input type="text" onkeydown="keydown(event,this)">
 				</div>
 			</div>
 		</div>

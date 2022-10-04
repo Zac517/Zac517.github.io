@@ -76,7 +76,6 @@ body::-webkit-scrollbar {display: none;}
 #context p{
     word-break: break-all;
     word-wrap: break-word;
-    color: #9f9f9f;
 }
 #terminal{
     padding: 20px;
@@ -365,5 +364,6 @@ a {
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
-.ap{animation: op2 0.6s;}
-.dap{animation: op1 0.6s;}
+.ap{animation: op2 0.4s;}
+.dap{animation: op1 0.4s;}
+.g{color: #96d9e1;}.d{color: #81b181;}.p{color: #999999;font-style: italic;}.e{color: rgb(255, 155, 155) !important;}
