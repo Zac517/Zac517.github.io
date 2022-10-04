@@ -73,8 +73,6 @@ body::-webkit-scrollbar {display: none;}
 	width: 280px;
 	color: rgba(255, 255, 255, 0.9);
 }
-#persontag .line,#terminal,#terminal input{font-weight: 600 !important;}
-#terminal,#terminal input{font-family:'Fira Code', monospace !important;}
 .find a {
     color: #fff;
     text-decoration: none;
@@ -363,3 +361,4 @@ a {
     background: rgba(0,0,0,0);
     border-radius: 10px;
 }
+#terminal,#terminal input{font-family:'Fira Code', monospace !important;font-weight: 600 !important;}
