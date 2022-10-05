@@ -323,12 +323,6 @@ a {
 }
 .ap{animation: op2 0.4s;}
 .dap{animation: op1 0.4s;}
-.g{color: #96d9e1;}.d{color: #81b181;}.p{color: #999999;font-style: italic;}
-.e{color: rgb(255, 155, 155) !important;}.b{color: #ebaeff;}
-#context p{
-    word-break: break-all;
-    word-wrap: break-word;
-}
 #terminal{
     padding: 20px;
     width: calc(100% - 40px);
@@ -337,7 +331,7 @@ a {
     color: rgba(255, 255, 255, 0.9);
     display: none;
 }
-#terminal input{
+#input{
     background-color: transparent;
     border: none;
     color: #fff;
@@ -345,9 +339,7 @@ a {
     width: calc(100% - 40px);
     position: relative;
 }
-#terminal input:focus{
-    outline: none;
-}
+#input:focus{outline: none;}
 #terminal::-webkit-scrollbar {
     width: 7.5px;
     height: 0;
@@ -361,3 +353,14 @@ a {
     border-radius: 10px;
 }
 #terminal,#terminal input{font-family:'Fira Code', monospace !important;font-weight: 600 !important;}
+#context p{
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.italic{color: #999999;font-style: italic;}
+.error{color: rgb(255, 155, 155);}
+.warning{color: #ffea83;}
+
+.g{color: #96d9e1;}.d{color: #81b181;}
+.b{color: #ebaeff;}
+

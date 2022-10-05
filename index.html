@@ -15,7 +15,7 @@
 	<div class="main">
 		<div class="about">
 			<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
-			<div class="clear" ondblclick="n()">
+			<div class="clear" ondblclick="change()">
 				<div id="avatar"></div>
 				<div id="persontag">
 					<div class="line">🌟&nbsp;十八线摆烂「<div class="tag">高中生</div>」&nbsp;INTJ</div>
@@ -25,11 +25,8 @@
 					<a href="https://blog.zaqueo.site/index.php/about.html" target="_blank" id='morelink' class="bt"><i class="iconfont zac-link"></i></a>
 				</div>
 				<div id="terminal">
-					<div id="context">
-						<p style="color: #ffea83">Welcome to Zaqueo's Terminal!</p>
-						<p style="color: #ffea83">Type help to list the available commands.</p>
-					</div>
-					<span id="message">[<span class='g'>guest</span>@Browser <span class='b'>~</span>]<span class='d'>$</span>&nbsp;</span><input type="text" onkeydown="m(event,this)">
+					<div id="context"></div>
+					<span id="head">Error</span><input id="input" type="text" onkeydown="enter(event)">
 				</div>
 			</div>
 		</div>
