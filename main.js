@@ -1,5 +1,6 @@
-/*检查输入事件 */
+{/*检查输入事件 */
 function enter(event){
+    console.log(event)
     terminal.scrollTop = 10000;
     var event = window.event||event;
     if (event.keyCode == 13){execute()}
@@ -25,15 +26,15 @@ function print(text,type = 'normal'){
 }
 /*更新 */
 function update(){
-    his.splice(1,0,input.value)
-    head.innerHTML= '[<span class="g">guest</span>@Browser&nbsp;<span class="b">'+route+'</span>]<span class="d">$</span>&nbsp;';
-    line = his.length -1
+    his.splice(his.length -2,0,input.value)
+    head.innerHTML= headb+route+heada;
+    line = his.length -2
     input.value=his[line];
     terminal.scrollTop = 10000;
 }
 /*解析参数 */
 function analysis(array,com,customize = 1){
-    if (array[0] == ''){return[-3]}
+    if (array[0] == undefined){return[-3]}
     var num = 0
     var obj = command[com]
     var con = ''
@@ -66,21 +67,22 @@ function printObj(obj){
 }
 /*执行函数 */
 function test(text){
-    var result = analysis(text.split(' '),'test',0)
+    var result = analysis(text.split(' ').filter(i => i !=''),'test',0)
     if (result == -3){print('Hello,world!','italic')}
     else if(result[0] >= 0){print(result[0])}
 }
 function cmecho(text){
-    var result = analysis(text.split(' '),'echo',100)
+    var result = analysis(text.split(' ').filter(i => i !=''),'echo',100)
     if (result == -3){print('No parameters provided','error')}
     else if (result[0] >= 0){print(text,'italic')}
 }
 function cmhelp(text){
     if (text ==''){print(printObj(command),'italic')}
-    else{analysis(text.split(' '),'echo',0)}
+    else{analysis(text.split(' ').filter(i => i !=''),'echo',0)}
 }
 function cmcd(text){
-    var res1 = analysis(text.split(' '),'cd',1)
+    var res1 = analysis(text.split(' ').filter(i => i !=''),'cd',1)
+    console.log(text.split(' ').filter(i => i !=''))
     if (res1[0] == -3){route = '~';folder = index}
     else if (res1[0] >= 0){
         var res2 = find(res1[1])
@@ -90,7 +92,7 @@ function cmcd(text){
     }
 }
 function cmls(text){
-    var res1 = analysis(text.split(' '),'ls',1)
+    var res1 = analysis(text.split(' ').filter(i => i !=''),'ls',1)
     if (res1[0] == -3){print(printObj(folder),'italic')}
     else if (res1[0] >= 0){
         var res2 = find(res1[1])
@@ -100,7 +102,7 @@ function cmls(text){
     }
 }
 function cmcat(text){
-    var res1 = analysis(text.split(' '),'cat',1)
+    var res1 = analysis(text.split(' ').filter(i => i !=''),'cat',1)
     if (res1[0] == -3){print('No parameters provided','error')}
     else if (res1[0] >= 0){
         var res2 = find(res1[1])
@@ -109,7 +111,7 @@ function cmcat(text){
         else{print('Is a directory: '+ res2[1],'error')}
     }
 }
-var state = 'a'
+let state = 'a'
 function change(){
     if (state == 'a'){   
     document.getElementById('avatar').className = 'dap';
@@ -129,21 +131,21 @@ function change(){
     state = 'a'},300)}}
 
 /*文件结构*/
-var index ={
+let index ={
     'games':{'newGame.js':'Preparing.'},
     'home':{'docs':{'easterEgg.txt':'Glad you found it here.'}}
 };
-var line = 0
-var terminal = document.getElementById('terminal');
-var context = document.getElementById('context');
-var head = document.getElementById('head');
-var input = document.getElementById('input');
-var route = '~';
-var folder = index;
+let line = 0
+let terminal = document.getElementById('terminal');
+let context = document.getElementById('context');
+let head = document.getElementById('head');
+let input = document.getElementById('input');
+let route = '~';
+let folder = index;
 let headb = '[<span class="g">guest</span>@Browser&nbsp;<span class="b">'
 let heada = '</span>]<span class="d">$</span> '
 /*命令定义 */
-var command ={
+let command ={
     'echo':{
         'fun':cmecho,
         'help':'usage: echo [str] [-h]<br>str: Output content<br>-h,--help: Show the help message.',
@@ -179,7 +181,9 @@ var command ={
         'parameter':{}
     }
 };
-var his = ['Haha,you found it.']
+let his = ['Haha,you found it.']
+document.getElementById('input').onkeydown = enter
+document.getElementById('clear').ondblclick = change
 update()
 print("Welcome to Zaqueo's Terminal!",'warning')
 print('Type <span style="color: #35a5a1">help</span> to list the available commands.','warning')
@@ -213,3 +217,4 @@ console.log(` %c
 　　　　　　 　 　 ' 　 ｀ー- 、　｀　|＼/　 丶、　 　 |│　；
 　　　　　　　　　 　 　 　 　 ＼ 　_!　　　　　 ＼　　|│　;
 `,'font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;line-height: 1;font-size: 12pt;');
+}
