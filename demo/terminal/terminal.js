@@ -8,17 +8,8 @@
 } 
 */
 let index ={
-    'games':{
-        'newGame.js':'Preparing.'
-    },
-    'home':{
-        'docs':{
-            'easterEgg.txt':'Glad you found it here.'
-        },
-        'photo':{
-            'nano.txt': ''
-        }
-    }
+    'games':{'newGame.js':'Preparing.'},
+    'home':{'docs':{'easterEgg.txt':'Glad you found it here.'}}
 };
 /*命令历史 */
 let line = 0
@@ -290,7 +281,7 @@ function cmcat(text){
     }
 }
 /*初始化 */
-let headb = '[<span class="g">guest</span>@Browser <span class="b">'
+let headb = '[<span class="g">guest</span>@Browser&nbsp;<span class="b">'
 let heada = '</span>]<span class="d">$</span> '
 let terminal = document.createElement('div');
 terminal.className = 'terminal'
@@ -306,26 +297,6 @@ terminal.appendChild(context)
 terminal.appendChild(head)
 terminal.appendChild(input)
 container.appendChild(terminal)
-index.home.photo["nano.txt"] = `<p class = 'paint'>
-　　　　　　　　　　　　　＿＿＿　　 ~ヽ<br>
-　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶<br>
- 　 　 　 　 ／::::::::::::::::::::::::::::::::::::::::::::::＼　’<br>
-　　　　　 /:::::::::/|:::∧:::|Χ:::::::::::::::::::::::::::.　；<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ｛　 |:::::: /＼/　'V⌒Y＼ :::::::::::::::: |<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        ；　N:::ｲ,'⌒}　　{　　|　 |::::::::::::::::: |　｝<br>
-　　　　　　| ::| ､_,ﾉ　　 ､__ﾉ　 |::::::::::::::::: |<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　      :　　|::ﾘ　　　　　　 　 ｕ|::::::::::::::::: |　{<br>
-    &nbsp;  　 　 ｝ 　|（ｕ　r　　 ￣＼ ｕ::::::::::::::::::: |　；<br>
-　　　　　　|:::＞ ゝ,　＿＿_）│::::::/:∧:::|<br>
-　　　　　　∨∨∨ﾚ:ｧャ　ア |人〃⌒∨　:<br>
-&nbsp;    　 　 ~''　　　 　 人_{／／／ﾍ（⌒) ）　．<br>
-    &nbsp;　　　　　　　　　/　〈__>ｰく　 　 ﾏ二二7<br>
- 　 ，'~　　　｀；　/│/　|　~｀∨　　Y⌒)ヽ<br>
- &nbsp;　　　 (ヽ　　 〈ーl/　(⌒ヽ ├ー‐仁＿ﾉ ，<br>
-  ｛　（￣　　ｰ-/￣|　　,>､　　ｰ＜｀ＹV　 ノ<br>
-   ' 　 ｀ー- 、　｀　|＼/　 丶、　 &nbsp;　 |│　；<br>
-　 　 　 　 　 ＼ 　_!　　　　 ＼　　|│　;
-</p>`
 update()
 print("Welcome to Zaqueo's Terminal!(Simulation version :D)",'warning')
 print('Type <span style="color: #ffbc00">help</span> to list the available commands.','warning')

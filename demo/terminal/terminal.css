@@ -7,7 +7,10 @@
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     background-color: #222222;
+    font-size: 14px;
+    border-radius: 20px;
 }
+.terminal p{margin: 0;}
 .input{
     background-color: transparent;
     border: none;
@@ -49,11 +52,3 @@
 .d{color: #81b181;}
 .g{color: #96d9e1;}
 .b{color: #ebaeff;}
-.paint{
-    font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;
-    line-height: 1;
-    font-size: 12pt;
-    color: #81b181;
-    font-weight: 400;
-    font-style: normal !important;
-}
