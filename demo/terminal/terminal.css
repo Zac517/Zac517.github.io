@@ -8,7 +8,6 @@
     height: calc(100% - 40px);
     background-color: #222222;
     font-size: 14px;
-    border-radius: 20px;
 }
 .terminal p{margin: 0;}
 .input{
