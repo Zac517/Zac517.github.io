@@ -4,12 +4,8 @@
     overflow-y: scroll;
     color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
     background-color: #222222;
-    font-size: 14px;
 }
-.terminal p{margin: 0;}
 .input{
     background-color: transparent;
     border: none;
@@ -36,7 +32,7 @@
     font-weight: 600 !important;
 }
 .context p{
-    word-break: break-all;
+    word-break: keep-all;
     word-wrap: break-word;
 }
 .italic{
@@ -51,3 +47,12 @@
 .d{color: #81b181;}
 .g{color: #96d9e1;}
 .b{color: #ebaeff;}
+.paint{
+    font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;
+    line-height: 1;
+    font-size: 12pt;
+    color: #81b181;
+    font-weight: 400;
+    font-style: normal !important;
+    white-space: pre;
+}

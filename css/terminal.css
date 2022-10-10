@@ -32,7 +32,7 @@
     font-weight: 600 !important;
 }
 .context p{
-    word-break: break-all;
+    word-break: keep-all;
     word-wrap: break-word;
 }
 .italic{
@@ -54,4 +54,5 @@
     color: #81b181;
     font-weight: 400;
     font-style: normal !important;
+    white-space: pre;
 }
