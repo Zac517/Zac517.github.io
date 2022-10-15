@@ -53,7 +53,7 @@ body::-webkit-scrollbar {display: none;}
     overflow: hidden;
 	position: relative;
 	margin-bottom:30px;
-	border: 0.5px #303030 solid;
+	border: 1px #3c3c3c solid;
 }
 #avatar {
     height: 200px;
