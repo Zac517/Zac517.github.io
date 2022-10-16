@@ -199,19 +199,20 @@ a {
 	width: 60px;
 	height: 160px;
 	display: inline-block;
-	margin: 20px 20px 20px 0;
+	margin: 20px 18px 20px 0;
 	background-color: #272727;
 	border: 1px #292929 solid;
 	position: relative;
+	border: 1px #2e2e2e solid;
 }
-#first{border-radius: 0 20px 20px 0;}
-#last{border-radius: 20px 0 0 20px;margin-right: 0;}
+#first{border-radius: 0 20px 20px 0;border-left: none;}
+#last{border-radius: 20px 0 0 20px;margin-right: 0;border-right: none;}
 #first i,#last i{
 	color: transparent;
 	transition: 0.3s;
 	font-size: 30px;
 	line-height: 160px;
-	width: 60px;
+	width: 58px;
 	text-align: center;
 	display: block;
 }
@@ -221,12 +222,12 @@ a {
 }
 .project{
 	height: 160px;
-	width: 240px;
+	width: 228px;
 	background-color: #272727;
 	border-radius: 20px;
 	display: inline-block;
-	margin: 20px 20px 20px 0;
-	border: 1px #292929 solid;
+	margin: 20px 18px 20px 0;
+	border: 1px #2e2e2e solid;
 	position: relative;
 	padding: 20px;
 	vertical-align: top;
@@ -248,7 +249,7 @@ a {
 }
 .project p{
 	color: rgba(255, 255, 255, 0.5);
-	margin-top: 15px;
+	margin-top: 20px;
 }
 .language{
 	position: absolute;
@@ -276,9 +277,9 @@ a {
 	letter-spacing: .2em;
     font-weight: bold;
 	font-size: 22px;
-    color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.06);
 	writing-mode:vertical-lr;
-	line-height: 60px;
+	line-height: 56px;
 	text-align: center;
 	height: 160px;
 	transition: 0.3s;
