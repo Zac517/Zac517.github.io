@@ -308,14 +308,12 @@ a {
 }
 @media screen and (max-width: 570px) {
 	#persontag{
-		opacity: 0;
-		transition: 0.3s;
 		width: 100%;
-		background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(34, 34, 34, 0.6) 100%);
+		background-image: linear-gradient(to right,rgba(0,0,0,0.4),rgba(34, 34, 34, 0.4) 100%);
 		padding: 20px 20px 20px calc(100vw - 340px);
 	}
 	.item span{left: 20px;}
-	#clear:hover #persontag{transition: 0.6s cubic-bezier(0, 0.4, 0.6, 1);z-index: 3;opacity: 1;}
+	#persontag{z-index: 3;opacity: 1;}
 	.find a {flex-basis: calc(50vw - 60px);}
 }
 @keyframes op1{
