@@ -316,6 +316,15 @@ a {
 	#persontag{z-index: 3;opacity: 1;}
 	.find a {flex-basis: calc(50vw - 60px);}
 }
+@media screen and (max-width: 360px) {
+	.find .item span{
+		font-size: calc(10px + 2vw);
+	}
+	#persontag{
+		font-size: 4.2vw;
+		padding-left: 20px;
+	}
+}
 @keyframes op1{
     0%{opacity:auto}
     100%{opacity: 0;}
