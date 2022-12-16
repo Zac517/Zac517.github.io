@@ -16,15 +16,16 @@ body,html {
 #background{
 	width: 100vw;
 	z-index: -1;
-	position: absolute;
+	position: fixed;
+	filter: brightness(0.5);
+	background-image: url(https://www.z4a.net/images/2022/03/19/2.webp);
+	background-position: center;
+	background-size: cover;
 	height: 100%;
-	filter: brightness(0.6);
 }
 .main{
-	width: 980px;
+	width: 720px;
 	padding: 40px;
-	background: linear-gradient(to right, rgba(32, 32, 32, 0.9) 60%, rgba(32, 32, 32, 0) 100%);
-    padding-right: 300px;
 }
 body::-webkit-scrollbar {display: none;}
 .chtitle {
@@ -303,6 +304,7 @@ a {
 		0%{opacity: 0;}
 		100%{opacity: 0.1;}
 	}
+	#background{filter: brightness(0.3);}
 }
 @media screen and (max-width: 570px) {
 	#persontag{
@@ -334,4 +336,3 @@ a {
 .ap{animation: op2 0.4s;}
 .dap{animation: op1 0.4s;}
 #terminal{display: none;width: 100%;height: 100%;position: relative;}
-#startrack {width: 100%;height: 100%;top: 0;position: absolute;}
