@@ -14,18 +14,17 @@ body,html {
 	position: relative;
 }
 #background{
-	position: fixed;
 	width: 100vw;
-	height: 100vh;
-	background-image: url(https://www.z4a.net/images/2022/03/19/2.webp);
-	background-position: center;
-	background-size: cover;
 	z-index: -1;
-	filter: brightness(0.5);
+	position: absolute;
+	height: 100%;
+	filter: brightness(0.6);
 }
 .main{
-	width: 720px;
+	width: 980px;
 	padding: 40px;
+	background: linear-gradient(to right, rgba(32, 32, 32, 0.9) 60%, rgba(32, 32, 32, 0) 100%);
+    padding-right: 300px;
 }
 body::-webkit-scrollbar {display: none;}
 .chtitle {
@@ -291,6 +290,7 @@ a {
 	.main{
 		width: 100vw;
 		padding: 20px;
+		background: rgba(32, 32, 32, 0.4);
 	}
 	.find a {flex-basis: calc(33vw - 55px);}
 	.workbox{
@@ -302,9 +302,6 @@ a {
 	@keyframes op2{
 		0%{opacity: 0;}
 		100%{opacity: 0.1;}
-	}
-	#background{
-		filter: brightness(0.3);
 	}
 }
 @media screen and (max-width: 570px) {
@@ -337,3 +334,4 @@ a {
 .ap{animation: op2 0.4s;}
 .dap{animation: op1 0.4s;}
 #terminal{display: none;width: 100%;height: 100%;position: relative;}
+#startrack {width: 100%;height: 100%;top: 0;position: absolute;}
