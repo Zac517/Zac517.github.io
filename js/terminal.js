@@ -14,9 +14,6 @@ let index ={
     'home':{
         'docs':{
             'easterEgg.txt':'Glad you found it here.'
-        },
-        'photo':{
-            'nano.txt': ''
         }
     }
 };
@@ -306,26 +303,6 @@ terminal.appendChild(context)
 terminal.appendChild(head)
 terminal.appendChild(input)
 container.appendChild(terminal)
-index.home.photo["nano.txt"] = `<p class = 'paint'>
-　　　　　　　　　　　　　＿＿＿　　 ~ヽ
-　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶
- 　 　 　 　 ／::::::::::::::::::::::::::::::::::::::::::::::＼　’
-　　　　　 /:::::::::/|:::∧:::|Χ:::::::::::::::::::::::::::.　；
-       ｛　 |:::::: /＼/　'V⌒Y＼ :::::::::::::::: |
-        ；　N:::ｲ,'⌒}　　{　　|　 |::::::::::::::::: |　｝
-　　　　　　| ::| ､_,ﾉ　　 ､__ﾉ　 |::::::::::::::::: |
-　      :　　|::ﾘ　　　　　　 　 ｕ|::::::::::::::::: |　{
-  　 　 ｝ 　|（ｕ　r　　 ￣＼ ｕ::::::::::::::::::: |　；
-　　　　　　|:::＞ ゝ,　＿＿_）│::::::/:∧:::|
-　　　　　　∨∨∨ﾚ:ｧャ　ア |人〃⌒∨　:
-    　 　 ~''　　　 　 人_{／／／ﾍ（⌒) ）　．
-　　　　　　　　　　/　〈__>ｰく　 　 ﾏ二二7
- 　 ，'~　　　｀；　/│/　|　~｀∨　　Y⌒)ヽ
-　　　　 (ヽ　　 〈ーl/　(⌒ヽ ├ー‐仁＿ﾉ ，
-  ｛　（￣　　ｰ-/￣|　　,>､　　ｰ＜｀ＹV　 ノ
-   ' 　 ｀ー- 、　｀　|＼/　 丶、　 　 |│　；
-　 　 　 　 　 ＼ 　_!　　　　　 ＼　　|│　;
-</p>`
 update()
 print("Welcome to Zaqueo's Terminal!(Simulation version :D)",'warning')
 print('Type <span style="color: #ffbc00">help</span> to list the available commands.','warning')
