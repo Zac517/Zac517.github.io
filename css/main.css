@@ -17,7 +17,7 @@ body,html {
 	width: 100vw;
 	z-index: -1;
 	position: fixed;
-	filter: brightness(0.6);
+	filter: brightness(0.8);
 	background-image: url(https://www.z4a.net/images/2022/12/17/ba6bc9f0-1b2d-4755-a065-5ff16f8104af.jpg);
 	background-position: left top;
     background-size: 130%;
