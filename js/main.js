@@ -50,3 +50,20 @@ console.log(` %c
    ' 　 ｀ー- 、　｀　|＼/　 丶、　 　 |│　；
 　 　 　 　 　 ＼ 　_!　　　　　 ＼　　|│　;
 `,'font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;line-height: 1;font-size: 12pt;');
+var back = document.getElementById('background')
+let w = window.innerWidth
+let h = window.innerHeight
+window.onmousemove = function(e) {
+  if (w > 1400){
+    let x = -(e.pageX - (w / 2)) * (w > h ? (h / w) : 1)/22-23;
+    let y = -(e.pageY - (h / 2)) * (h > w ? (w / h) : 1)/22-23;
+    document.getElementById('background').style.backgroundPosition = x+'px '+y+'px';
+  }
+  else{
+    if (w > 720){
+      let x = -(e.pageX - (w / 2)) * (w > h ? (h / w) : 1)/22-18;
+      let y = -(e.pageY - (h / 2)) * (h > w ? (w / h) : 1)/22-18;
+      document.getElementById('background').style.backgroundPosition = x+'px '+y+'px';
+    }
+  }
+}
