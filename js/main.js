@@ -50,20 +50,10 @@ console.log(` %c
    ' 　 ｀ー- 、　｀　|＼/　 丶、　 　 |│　；
 　 　 　 　 　 ＼ 　_!　　　　　 ＼　　|│　;
 `,'font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;line-height: 1;font-size: 12pt;');
-var back = document.getElementById('background')
-let w = window.innerWidth
-let h = window.innerHeight
-window.onmousemove = function(e) {
-  if (w > 1400){
-    let x = -(e.pageX - (w / 2)) * (w > h ? (h / w) : 1)/22-23;
-    let y = -(e.pageY - (h / 2)) * (h > w ? (w / h) : 1)/22-23;
-    document.getElementById('background').style.backgroundPosition = x+'px '+y+'px';
-  }
-  else{
-    if (w > 720){
-      let x = -(e.pageX - (w / 2)) * (w > h ? (h / w) : 1)/22-18;
-      let y = -(e.pageY - (h / 2)) * (h > w ? (w / h) : 1)/22-18;
-      document.getElementById('background').style.backgroundPosition = x+'px '+y+'px';
-    }
-  }
-}
+var sence = document.getElementById('sence')
+var parallaxInstance = new Parallax(sence, {
+  //更多参数可参考 https://github.com/wagerfield/parallax
+  relativeInput: true, //默认值：false 使鼠标相对于场景元素的位置输入。
+  clipRelativeInput: false, //默认值：false 将鼠标输入剪切到场景的边界。这意味着一旦光标到达场景元素的边缘，移动就会停止。
+  hoverOnly:false //默认值：false 视差仅在光标位于场景元素上方时才有效，否则所有图层将移回到其初始位置。
+});
