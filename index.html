@@ -9,11 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/c/font_3165812_1m8use2lwh3.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/terminal.css">
-	<link rel="stylesheet" type="text/css" href="css/pointer.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </head>
 <body>
+	<div class="node" id="node"></div>
+	<div class="cursor" id="cursor"></div>
 	<div id="sence"><div id="background" data-depth="0.2"></div></div>
 	<div class="main">
 		<div class="about">
@@ -98,14 +99,8 @@
 		</div>
 	</div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/NodeCursor/src/nodecursor-jquery.js"></script>
 <script src="js/main.js"></script>
 <script src="js/terminal.js"></script>
-<script src="js/pointer.js"></script>
-<script>
-	init_pointer({
-  pointerColor: "#FFF",
-  ringSize: 15,
-  ringClickSize: 10
-})
-</script>
 </html>
