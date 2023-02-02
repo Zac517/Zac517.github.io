@@ -56,8 +56,7 @@ var parallaxInstance = new Parallax(sence, {
   relativeInput: true,
   clipRelativeInput: false,
   hoverOnly:false
-})
-}
+});
 $( function() {
   // init plugin
   NodeCursor({
@@ -67,10 +66,9 @@ $( function() {
     node_velocity : 0.15, 
     native_cursor : 'none', 
     element_to_hover : 'a', 
-    cursor_class_hover : 'disable', 
+    cursor_class_hover : 'expand', 
     node_class_hover : 'expand', 
     hide_mode : true, 
     hide_timing : 2000, 
   });
-
-});
+})}

@@ -78,7 +78,7 @@ body::-webkit-scrollbar {display: none;}
 	top: 0;
 	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 80px);
 	width: 380px;
-	color: rgba(255, 255, 255, 0.9);
+	color: rgba(255, 255, 255, 0.8);
 }
 .find a {
     color: #fff;
@@ -145,7 +145,7 @@ a {
 	filter: blur(10px);
 }
 .find a:hover i{
-	bottom: -2px;
+	bottom: 0;
 	font-size: 40px;
 	color: #fff;
 	right: 20px;
@@ -224,7 +224,7 @@ a {
 	display: block;
 }
 #first:hover i,#last:hover i{
-	color: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.8);
 	transition: 0.6s;
 }
 .project{
@@ -242,27 +242,27 @@ a {
 .project i{
 	display: block;
 	font-size: 20px;
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.6);
 	position: absolute;
 	top: 20px;
 	right: 20px;
 }
 .project h3{
-	color: rgba(255, 255, 255, 0.9);
+	color: rgba(255, 255, 255, 0.8);
 	display: inline-block;
 }
 .project h3:hover{
 	text-decoration: underline;
 }
 .project p{
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.6);
 	margin-top: 20px;
 }
 .language{
 	position: absolute;
 	bottom: 20px;
 	left: 15px;
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.6);
 }
 .language div{
 	display: inline-block;
@@ -283,8 +283,8 @@ a {
 	left: 0;
 	letter-spacing: .2em;
     font-weight: bold;
-	font-size: 22px;
-    color: rgba(255, 255, 255, 0.06);
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.5);
 	writing-mode:vertical-lr;
 	line-height: 56px;
 	text-align: center;
@@ -367,9 +367,9 @@ a {
 	display: block;
 	transition: opacity .3s linear;
 	opacity: 0;
-	width: 12px;
-	height: 12px;
-	box-shadow: rgba(255, 255, 255, 0.5) 0 0 40px;
+	width: 18px;
+	height: 18px;
+	transform: translate(1px,1px);
   }
   
   .cursor.moving {
@@ -388,11 +388,15 @@ a {
   
 	opacity: 1;
 	transition: opacity .3s linear;
+	box-shadow: rgba(255, 255, 255, 0.5) 0 0 20px;
+	transition: opacity 150ms linear, transform 150ms linear, border 300ms linear, background-color 150ms linear;
   }
   
   
   .cursor.expand::before {
-	opacity: 0;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	transform: scale(1.5);
   }
   
   
@@ -431,7 +435,7 @@ a {
 	transform: scale(1.5);
 	opacity: 1;
 	transition: opacity 150ms linear, transform 150ms linear, border 300ms linear, background-color 150ms linear;
-	box-shadow: rgba(255, 255, 255, 0.5) 0 0 40px;
+	box-shadow: rgba(255, 255, 255, 0.3) 0 0 20px;
   }
   
   
@@ -439,6 +443,5 @@ a {
 	transform: scale(2.5);
 	background-color: #ffffff;
 	opacity: 0.2;
-	box-shadow: rgba(255, 255, 255, 0.5) 0 0 40px;
   }
   
