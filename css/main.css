@@ -22,13 +22,22 @@ body,html {
 }
 #background{
 	width: 140%;
-	filter: brightness(0.7);
-	background-image: url(https://www.z4a.net/images/2022/12/17/ba6bc9f0-1b2d-4755-a065-5ff16f8104af.jpg);
+	filter: brightness(0.6);
+	background-image: url(https://www.z4a.net/images/2023/02/07/2_magic.jpg);
     background-size: 100%;
 	height: 140%;
 	position: absolute;
-	top: -24px !important;
-	left: -36px !important;
+	top: -10vw !important;
+	left: -160px !important;
+}
+#bg{
+	width: 120%;
+	filter: brightness(0.7);
+	background-image: url(https://www.z4a.net/images/2023/02/07/bg.png);
+    background-size: cover;
+	height: 120%;
+	position: absolute;
+	left:10vw !important;
 }
 .main{
 	width: 980px;
@@ -297,7 +306,7 @@ a {
 	transition: 0.6s;
 }
 @media screen and (max-width:1400px) {
-	#background{background-size: 210vh;}
+	#background{background-size: 240vh;}
 }
 @media screen and (max-width:720px) {
 	.main{
@@ -323,6 +332,14 @@ a {
 		width: 100%;
 		height: 100%;
 		top:0 !important;
+		left:0 !important;
+	}
+	#bg{
+		filter: brightness(0.5);
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
 		left:0 !important;
 	}
 }
