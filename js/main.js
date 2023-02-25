@@ -72,3 +72,15 @@ $( function() {
     hide_timing : 2000, 
   });
 })}
+else {
+  if (window.DeviceOrientationEvent) {
+    var bg = document.getElementById('bg')
+    window.addEventListener("deviceorientation", 
+    function(event) {
+      bg.style.translate = (-event.beta) +'px '+(-event.alpha)+'px';
+  })}
+  else{
+    console.log("DeviceOrientationEvent is not supported");
+  }
+}
+
