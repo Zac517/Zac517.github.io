@@ -20,25 +20,6 @@ body,html {
 	position: fixed;
 	z-index: -1;
 }
-#background{
-	width: 140%;
-	filter: brightness(0.6);
-	background-image: url(https://www.z4a.net/images/2023/02/07/2_magic.jpg);
-    background-size: 100%;
-	height: 140%;
-	position: absolute;
-	top: -10vw !important;
-	left: -160px !important;
-}
-#bg{
-	width: 120%;
-	filter: brightness(0.7);
-	background-image: url(https://www.z4a.net/images/2023/02/07/bg.png);
-    background-size: cover;
-	height: 120%;
-	position: absolute;
-	left:10vw !important;
-}
 .main{
 	width: 980px;
     padding: 40px 300px 40px 40px;
@@ -312,7 +293,7 @@ a {
 	.main{
 		width: 100vw;
 		padding: 20px;
-		background: rgba(32, 32, 32, 0.4);
+		background: rgba(32, 32, 32, 0.8);
 	}
 	.find a {flex-basis: calc(33vw - 55px);}
 	.workbox{
@@ -325,23 +306,7 @@ a {
 		0%{opacity: 0;}
 		100%{opacity: 0.1;}
 	}
-	#background{
-		filter: brightness(0.5);
-		background-position: center;
-		background-size: cover;
-		width: 100%;
-		height: 100%;
-		top:0 !important;
-		left:0 !important;
-	}
-	#bg{
-		filter: brightness(0.5);
-		background-position: center;
-		background-size: cover;
-		width: 100%;
-		height: 100%;
-		left:0 !important;
-	}
+	#video{width: 100%;}
 }
 @media screen and (max-width: 570px) {
 	#persontag{
@@ -459,5 +424,12 @@ a {
 	transform: scale(2.5);
 	background-color: #ffffff;
 	opacity: 0.2;
-  }
+}
+#video{
+	width: 120%;
+	min-height: 100%;
+	object-fit: cover;
+	position: fixed;
+	z-index: -99;
+}
   

@@ -52,11 +52,6 @@ console.log(` %c
 `,'font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;line-height: 1;font-size: 12pt;');
 var sence = document.getElementById('sence')
 if(window.innerWidth > 720){
-var parallaxInstance = new Parallax(sence, {
-  relativeInput: true,
-  clipRelativeInput: false,
-  hoverOnly:false
-});
 $( function() {
   // init plugin
   NodeCursor({
