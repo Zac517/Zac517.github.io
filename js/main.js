@@ -36,22 +36,16 @@ container.addEventListener('touchmove',scroll)
 function scroll(){
   if (container.scrollLeft > container.scrollWidth - container.clientWidth-1){
   container.appendChild(container.children[0]);
-  container.scrollLeft -= 240;
+  container.scrollLeft -= 245;
     }
     else{
       if (container.scrollLeft < 1){
         container.insertBefore(container.children[container.children.length -1],container.children[0]);
-        container.scrollLeft += 240;
+        container.scrollLeft += 245;
 }}}
 isnothover = true
-function onhover(){
-  isnothover = true
-  console.log(isnothover)
-}
-function offhover(){
-  isnothover = false
-  console.log(isnothover)
-}
+function onhover(){isnothover = true}
+function offhover(){isnothover = false}
 window.setInterval(
   () => {
     if(isnothover){
