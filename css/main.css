@@ -21,7 +21,7 @@ body,html {
 	z-index: -1;
 }
 .main{
-	width: 980px;
+	width: 1000px;
     padding: 40px 300px 40px 40px;
     background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8) 600px,rgba(34, 34, 34, 0));
 }
@@ -68,7 +68,7 @@ body::-webkit-scrollbar {display: none;}
 	top: 0;
 	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 80px);
 	width: 380px;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgb(255, 255, 255);
 }
 .find a {
     color: #fff;
@@ -192,31 +192,6 @@ a {
 	overflow-x: scroll;
 }
 .workbox::-webkit-scrollbar {display: none;}
-#first,#last{
-	width: 60px;
-	height: 160px;
-	display: inline-block;
-	margin: 20px 18px 20px 0;
-	background-color: #272727;
-	border: 1px #292929 solid;
-	position: relative;
-	border: 1px #2e2e2e solid;
-}
-#first{border-radius: 0 20px 20px 0;border-left: none;}
-#last{border-radius: 20px 0 0 20px;margin-right: 0;border-right: none;}
-#first i,#last i{
-	color: transparent;
-	transition: 0.3s;
-	font-size: 30px;
-	line-height: 160px;
-	width: 58px;
-	text-align: center;
-	display: block;
-}
-#first:hover i,#last:hover i{
-	color: rgba(255, 255, 255, 1);
-	transition: 0.6s;
-}
 .project{
 	height: 160px;
 	width: 228px;
@@ -267,24 +242,6 @@ a {
 	border-radius: 10px;
 	display: inline-block;
 	margin: 0 5px;
-}
-.workbox span{
-	position: absolute;
-	top: 0;
-	left: 0;
-	letter-spacing: .2em;
-    font-weight: bold;
-	font-size: 20px;
-	color: rgba(255, 255, 255, 0.5);
-	writing-mode:vertical-lr;
-	line-height: 56px;
-	text-align: center;
-	height: 160px;
-	transition: 0.3s;
-}
-#first:hover span,#last:hover span{
-	color: transparent;
-	transition: 0.6s;
 }
 @media screen and (max-width:1400px) {
 	#background{background-size: 240vh;}
