@@ -22,7 +22,7 @@ function change(){
 
 /*scroll*/
 let container = document.querySelector('.workbox');
-container.scrollLeft = 160
+container.scrollLeft = 185
 if (window.innerWidth >720) {
 	container.addEventListener('wheel',(event) => {
 	event.preventDefault();
@@ -36,12 +36,12 @@ container.addEventListener('touchmove',scroll)
 function scroll(){
   if (container.scrollLeft > container.scrollWidth - container.clientWidth-1){
   container.appendChild(container.children[0]);
-  container.scrollLeft -= 245;
+  container.scrollLeft -= 260;
     }
     else{
       if (container.scrollLeft < 1){
         container.insertBefore(container.children[container.children.length -1],container.children[0]);
-        container.scrollLeft += 245;
+        container.scrollLeft += 260;
 }}}
 isnothover = true
 function onhover(){isnothover = true}

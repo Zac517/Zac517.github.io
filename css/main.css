@@ -194,7 +194,7 @@ a {
 .workbox::-webkit-scrollbar {display: none;}
 .project{
 	height: 160px;
-	width: 228px;
+	width: 240px;
 	background-color: #272727;
 	border-radius: 20px;
 	display: inline-block;
@@ -215,6 +215,7 @@ a {
 .project h3{
 	color: rgba(255, 255, 255, 0.8);
 	display: inline-block;
+	font-size: 16px;
 }
 .project h3:hover{
 	text-decoration: underline;
@@ -233,6 +234,7 @@ a {
 .language div{
 	display: inline-block;
 	font-size: 13px;
+	font-family:'Fira Code', monospace !important;
 }
 .language div::before{
 	content: '';
