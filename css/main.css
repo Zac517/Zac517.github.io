@@ -331,12 +331,12 @@ a {
 	opacity: 1;
 	transition: opacity .3s linear;
 	box-shadow: rgba(255, 255, 255, 0.5) 0 0 20px;
-	transition: opacity 250ms linear, transform 300ms linear, border 300ms linear;
+	transition: opacity 100ms linear, transform 300ms linear, border 300ms linear;
   }
   
   
   .cursor.expand::before {
-	transform: scale(3);
+	transform: scale(2);
 	opacity: 0;
   }
   
