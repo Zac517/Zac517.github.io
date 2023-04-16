@@ -190,6 +190,7 @@ a {
 	overflow: hidden;
 	box-shadow: inset 0 0 30px rgba(18, 18, 18);
 	overflow-x: scroll;
+	overscroll-behavior:none;
 }
 .workbox::-webkit-scrollbar {display: none;}
 .project{

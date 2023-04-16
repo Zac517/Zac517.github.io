@@ -37,12 +37,12 @@ if (window.innerWidth >720) {
   }
 })}
 function scroll(){
-  if (container.scrollLeft > container.scrollWidth - container.clientWidth-1){
+  if (container.scrollLeft > container.scrollWidth - container.clientWidth - 320){
   container.appendChild(container.children[0]);
   container.scrollLeft -= 260;
   }
   else{
-    if (container.scrollLeft < 1){
+    if (container.scrollLeft < 320){
       container.insertBefore(container.children[container.children.length -1],container.children[0]);
       container.scrollLeft += 260;
     }
