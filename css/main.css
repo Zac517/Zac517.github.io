@@ -21,7 +21,7 @@ body,html {
 	z-index: -1;
 }
 .main{
-	width: 1000px;
+	width: 960px;
     padding: 40px 300px 40px 40px;
     background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8) 600px,rgba(34, 34, 34, 0));
 }
@@ -54,20 +54,20 @@ body::-webkit-scrollbar {display: none;}
 }
 #avatar {
     height: 200px;
-    width: 360px;
+    width: calc(100px + 40%);
     background-size: cover;
     background-position: center;
-	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34) 360px),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
+	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34) 100%),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
 }
 #persontag {
-    padding: 20px 20px 20px 120px;
+    padding: 18px 20px 20px 120px;
     line-height: 40px;
     font-size: 15.5px;
 	position: absolute;
 	right: 0;
 	top: 0;
 	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 80px);
-	width: 420px;
+	width: 410px;
 	color: rgb(255, 255, 255);
 }
 .find a {
@@ -216,6 +216,7 @@ a {
 	color: rgba(255, 255, 255, 0.8);
 	display: inline-block;
 	font-size: 16px;
+	margin: 2px;
 }
 .project h3:hover{
 	text-decoration: underline;
@@ -223,7 +224,7 @@ a {
 }
 .project p{
 	color: rgba(255, 255, 255, 0.6);
-	margin-top: 20px;
+	margin-top: 15px;
 }
 .language{
 	position: absolute;
@@ -248,7 +249,7 @@ a {
 @media screen and (max-width:1400px) {
 	#background{background-size: 240vh;}
 }
-@media screen and (max-width:720px) {
+@media screen and (max-width:750px) {
 	.main{
 		width: 100vw;
 		padding: 20px;
@@ -271,11 +272,12 @@ a {
 	#persontag{
 		width: 100%;
 		background-image: linear-gradient(to right,rgba(0,0,0,0.4),rgba(34, 34, 34, 0.4) 100%);
-		padding: 20px 20px 20px calc(100vw - 340px);
+		padding: 18px 20px 20px calc(100vw - 340px);
 	}
 	.item span{left: 20px;}
 	#persontag{z-index: 3;opacity: 1;}
 	.find a {flex-basis: calc(50vw - 60px);}
+	#avatar{width: 330px;}
 }
 @media screen and (max-width: 360px) {
 	.find .item span{
@@ -385,7 +387,7 @@ a {
 	opacity: 0.2;
 }
 #video{
-	width: 120%;
+	width: 110%;
 	min-height: 100%;
 	object-fit: cover;
 	position: fixed;

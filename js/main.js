@@ -3,23 +3,29 @@
 document.getElementById('clear').ondblclick = change
 let state = 'a'
 function change(){
-    if (state == 'a'){   
+  if (state == 'a'){   
     document.getElementById('avatar').className = 'dap';
     document.getElementById('persontag').className = 'dap';
-    setTimeout(() => {document.getElementById('avatar').style.display = 'none';
-    document.getElementById('persontag').style.display = 'none';
-    document.getElementById('terminal').style.display = 'block';
-    document.getElementById('terminal').className = 'ap';
-    state = 't'},300)
-    }else{
+    setTimeout(() => {
+      document.getElementById('avatar').style.display = 'none';
+      document.getElementById('persontag').style.display = 'none';
+      document.getElementById('terminal').style.display = 'block';
+      document.getElementById('terminal').className = 'ap';
+      state = 't'
+    },300)
+  }
+  else{
     document.getElementById('terminal').className = 'dap'
-    setTimeout(() => {document.getElementById('terminal').style.display = 'none';
-    document.getElementById('avatar').style.display = 'block';
-    document.getElementById('persontag').style.display = 'block';
-    document.getElementById('avatar').className = 'ap';
-    document.getElementById('persontag').className = 'ap';
-    state = 'a'},300)}}
-
+    setTimeout(() => {
+      document.getElementById('terminal').style.display = 'none';
+      document.getElementById('avatar').style.display = 'block';
+      document.getElementById('persontag').style.display = 'block';
+      document.getElementById('avatar').className = 'ap';
+      document.getElementById('persontag').className = 'ap';
+      state = 'a'
+    },300)
+  }
+}
 /*scroll*/
 let container = document.querySelector('.workbox');
 container.scrollLeft = 185
@@ -37,12 +43,14 @@ function scroll(){
   if (container.scrollLeft > container.scrollWidth - container.clientWidth-1){
   container.appendChild(container.children[0]);
   container.scrollLeft -= 260;
+  }
+  else{
+    if (container.scrollLeft < 1){
+      container.insertBefore(container.children[container.children.length -1],container.children[0]);
+      container.scrollLeft += 260;
     }
-    else{
-      if (container.scrollLeft < 1){
-        container.insertBefore(container.children[container.children.length -1],container.children[0]);
-        container.scrollLeft += 260;
-}}}
+  }
+}
 isnothover = true
 function onhover(){isnothover = true}
 function offhover(){isnothover = false}
