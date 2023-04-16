@@ -33,12 +33,9 @@ if (window.innerWidth >720) {
 	container.addEventListener('wheel',(event) => {
 	event.preventDefault();
 	for (var i=0;i<100;i++){
-		setTimeout(() => {container.scrollLeft += event.deltaY/100;scroll()},i);
+		setTimeout(() => {container.scrollLeft += event.deltaY/100;},i);
   }
 })}
-else{
-container.addEventListener('touchmove',scroll)  
-}
 function scroll(){
   if (container.scrollLeft > container.scrollWidth - container.clientWidth-1){
   container.appendChild(container.children[0]);
@@ -58,8 +55,8 @@ window.setInterval(
   () => {
     if(isnothover){
       container.scrollLeft += 1;
-      scroll()
     }
+    scroll()
 },20)
 /*imform*/
 console.log(" %c Zaqueo's Studio %c v1.1.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
