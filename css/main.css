@@ -388,7 +388,7 @@ a {
 	opacity: 0.2;
 }
 #video{
-	width: 110%;
+	width: 120%;
 	min-height: 100%;
 	object-fit: cover;
 	position: fixed;
