@@ -237,7 +237,7 @@ a {
 	display: inline-block;
 	font-size: 13px;
 	font-family:'Fira Code', monospace !important;
-	font-weight: 500;
+	font-weight: 600;
 }
 .language div::before{
 	content: '';
