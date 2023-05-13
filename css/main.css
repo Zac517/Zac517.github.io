@@ -397,5 +397,5 @@ a {
 	object-fit: cover;
 	position: fixed;
 	z-index: -99;
+    filter:brightness(0.8)
 }
-  
