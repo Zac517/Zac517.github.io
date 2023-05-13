@@ -273,13 +273,16 @@ a {
 @media screen and (max-width: 570px) {
 	#persontag{
 		width: 100%;
-		background-image: linear-gradient(to right,rgba(0,0,0,0.4),rgba(34, 34, 34, 0.4) 100%);
+		background-image: linear-gradient(to right,rgba(0,0,0,0.3),rgba(34, 34, 34, 0.3) 100%);
 		padding: 18px 20px 20px calc(100vw - 340px);
 	}
 	.item span{left: 20px;}
 	#persontag{z-index: 3;opacity: 1;}
 	.find a {flex-basis: calc(50vw - 60px);}
-	#avatar{width: 330px;}
+	#avatar{
+		width: 330px;
+		box-shadow: inset #222222 0px 0px 80px 20px;
+	}
 }
 @media screen and (max-width: 360px) {
 	.find .item span{
