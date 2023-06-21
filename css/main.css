@@ -57,7 +57,7 @@ body::-webkit-scrollbar {display: none;}
     width: calc(100px + 40%);
     background-size: cover;
     background-position: center;
-	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 180px,rgba(34,34,34) 100%),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
+	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 150px,rgba(34,34,34) 320px),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
 }
 #persontag {
     padding: 18px 20px 20px 120px;
