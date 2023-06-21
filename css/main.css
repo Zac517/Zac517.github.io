@@ -318,7 +318,7 @@ a {
 	opacity: 0;
 	width: 7px;
 	height: 7px;
-	transform: translate(10px,10px);
+	transform: translate(1px,1px);
   }
   
   .cursor.moving {
