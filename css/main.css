@@ -15,13 +15,13 @@ body,html {
 	position: relative;
 }
 .main{
-	width: 960px;
+	width: 900px;
     padding: 40px 300px 40px 40px;
     background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8) 600px,rgba(34, 34, 34, 0));
 }
 body::-webkit-scrollbar {display: none;}
 .chtitle {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-size: 26px;
     letter-spacing: .2em;
     color: hsla(0, 0%, 100%, .5)
@@ -35,7 +35,7 @@ body::-webkit-scrollbar {display: none;}
     width: 10%;
     height: 5px;
     background-color: hsla(0, 0%, 100%, .5);
-    margin-top: 20px;
+    margin-top: 12px;
 }
 #clear {
     background-color: #222222;
@@ -43,7 +43,7 @@ body::-webkit-scrollbar {display: none;}
     height: 200px;
     overflow: hidden;
 	position: relative;
-	margin-bottom:30px;
+	margin-bottom: 20px;
 	border: 1px #3c3c3c solid;
 }
 #avatar {
@@ -54,7 +54,7 @@ body::-webkit-scrollbar {display: none;}
 	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 150px,rgba(34,34,34) 330px),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
 }
 #persontag {
-    padding: 20px 30px 20px 110px;
+    padding: 20px 20px 20px 120px;
     line-height: 40px;
     font-size: 15.5px;
 	position: absolute;
@@ -67,7 +67,7 @@ body::-webkit-scrollbar {display: none;}
 .find a {
     color: #fff;
     text-decoration: none;
-	flex-basis: 170px;
+	flex-basis: 150px;
 	margin: 0 20px 20px 0;
 	position: relative;
 	flex-grow: 1;
@@ -83,7 +83,6 @@ a {
 }
 .find{
 	width: calc(100% + 20px);
-	margin-bottom: 10px;
 }
 #linkbox{
 	display: flex;
@@ -91,8 +90,8 @@ a {
 }
 .find .item {
     position: relative;
-    height: 100px;
-    line-height: 100px;
+    height: 90px;
+    line-height: 90px;
     transition: all .2s;
     overflow: hidden;
     opacity: 1;
@@ -137,7 +136,7 @@ a {
 }
 .find .item span {
     display: inline-block;
-    width: 100px;
+    width: 90px;
     font-size: 20px;
 	color: rgba(255, 255, 255, 0.6);
 	transition: 0.3s;
@@ -245,7 +244,7 @@ a {
 @media screen and (max-width:1400px) {
 	#background{background-size: 240vh;}
 }
-@media screen and (max-width:750px) {
+@media screen and (max-width:640px) {
 	.main{
 		width: 100vw;
 		padding: 20px;
