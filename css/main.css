@@ -249,7 +249,7 @@ a {
 	.main{
 		width: 100vw;
 		padding: 20px;
-		background: transparent;
+		background: rgba(34, 34, 34, 0.5);
 	}
 	.find a {flex-basis: calc(33vw - 55px);}
 	.workbox{
@@ -373,9 +373,7 @@ a {
 	opacity: 0.2;
 }
 html {
-	height: 100%;
 	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-	overflow: hidden;
   }
   
   #stars {
