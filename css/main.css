@@ -275,7 +275,7 @@ a {
 	.find a {flex-basis: calc(50vw - 60px);}
 	#avatar{
 		width: 330px;
-		box-shadow: inset rgb(0 0 0) 0px 0px 80px 40px;
+		box-shadow: inset #222222 0px 0px 80px 40px;
 		background-image: url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
 	}
 }
