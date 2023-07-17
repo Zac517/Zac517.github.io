@@ -275,7 +275,7 @@ a {
 	.find a {flex-basis: calc(50vw - 60px);}
 	#avatar{
 		width: 330px;
-		box-shadow: inset #222222 0px 0px 80px 20px;
+		box-shadow: inset rgba(34, 34, 34, 0.5) 0px 0px 80px 20px;
 	}
 }
 @media screen and (max-width: 360px) {
