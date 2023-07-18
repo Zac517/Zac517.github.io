@@ -127,7 +127,8 @@
 <script>
 	var scene = document.getElementById('scene');
 	var parallaxInstance = new Parallax(scene, {
-    relativeInput: false  //指定是否使用场景的坐标系(默认false)
+    relativeInput: true,  //指定是否使用场景的坐标系(默认false)
+	calibrateX: true
 });
 </script>
 </html>
