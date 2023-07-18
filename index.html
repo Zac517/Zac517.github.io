@@ -15,9 +15,11 @@
 <body>
 	<div class="node" id="node"></div>
 	<div class="cursor" id="cursor"></div>
-	<div id='stars'></div>
-	<div id='stars2'></div>
-	<div id='stars3'></div>
+	<div id="scene">
+			<div data-depth="0.1"><div id='stars'></div></div>
+			<div data-depth="0.2"><div id='stars2'></div></div>
+			<div data-depth="0.3"><div id='stars3'></div></div>
+	</div>
 	<div class="main">
 		<div class="about">
 			<h2 class="chtitle">Who is <span>Zaqueo</span>？</h2>
@@ -119,6 +121,13 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://fastly.jsdelivr.net/gh/hmongouachon/NodeCursor/src/nodecursor-jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/terminal.js"></script>
+<script>
+	var scene = document.getElementById('scene');
+	var parallaxInstance = new Parallax(scene, {
+    relativeInput: true  //指定是否使用场景的坐标系(默认false)
+});
+</script>
 </html>

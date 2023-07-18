@@ -315,7 +315,6 @@ a {
 	height: 7px;
 	transform: translate(1px,1px);
   }
-  
   .cursor.moving {
 	opacity: 1;
   }
@@ -376,10 +375,7 @@ a {
 html {
 	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   }
-  
   #stars {
-	z-index: -99;
-	position: fixed;
 	width: 1px;
 	height: 1px;
 	background: transparent;
@@ -387,7 +383,6 @@ html {
 	animation: animStar 50s linear infinite;
   }
   #stars:after {
-	z-index: -99;
 	content: " ";
 	position: absolute;
 	top: 2000px;
@@ -398,8 +393,6 @@ html {
   }
   
   #stars2 {
-	position: fixed;
-	z-index: -99;
 	width: 2px;
 	height: 2px;
 	background: transparent;
@@ -407,7 +400,6 @@ html {
 	animation: animStar 100s linear infinite;
   }
   #stars2:after {
-	z-index: -99;
 	content: " ";
 	position: absolute;
 	top: 2000px;
@@ -418,8 +410,6 @@ html {
   }
   
   #stars3 {
-	position: fixed;
-	z-index: -99;
 	width: 3px;
 	height: 3px;
 	background: transparent;
@@ -427,7 +417,6 @@ html {
 	animation: animStar 150s linear infinite;
   }
   #stars3:after {
-	z-index: -99;
 	content: " ";
 	position: absolute;
 	top: 2000px;
@@ -438,10 +427,16 @@ html {
   }
   
   @keyframes animStar {
-	from {
-	  transform: translateY(0px);
+	0% {
+	  transform: translateY(0px) translateX(0px);opacity: 0;
 	}
-	to {
-	  transform: translateY(-2000px);
+	10%{transform: translateY(-200px) translateX(100px);opacity: 1;}
+	90%{transform: translateY(-1800px) translateX(900px);opacity: 1;}
+	100% {
+	  transform: translateY(-2000px) translateX(1000px);opacity: 0;
 	}
   }
+#scene{
+	z-index: -99;
+	position: fixed;
+}
