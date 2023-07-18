@@ -443,3 +443,14 @@ html {
 	z-index: -99;
 	position: fixed;
 }
+#girl{
+	background-image: url(https://www.z4a.net/images/2023/07/18/girl.png);
+	height: 800px;
+	width: 465px;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	left: calc(100vw - 700px) !important;
+	top: 100px !important;
+	z-index: 10;
+}
