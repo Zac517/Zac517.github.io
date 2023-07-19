@@ -264,9 +264,8 @@ a {
 		100%{opacity: 0.1;}
 	}
 	#video{width: 100%;}
-	#scene{
-		left: -1000px;
-	}
+	#scene{left: -1000px;}
+	#quote{opacity: 0;}
 }
 @media screen and (max-width: 570px) {
 	#persontag{
@@ -451,7 +450,7 @@ html {
 	background-size: cover;
 	position: relative;
 	left: calc(100vw - 700px) !important;
-	top: 150px !important;
+	top: 120px !important;
 	z-index: 10;
 }
 #quote{
