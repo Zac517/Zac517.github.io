@@ -452,7 +452,7 @@ html {
 	background-size: cover;
 	position: relative;
 	left: calc(100vw - 700px) !important;
-	top: 120px !important;
+	top: 80px !important;
 	z-index: 10;
 }
 #quote{
@@ -462,7 +462,6 @@ html {
 	bottom: 40px;
 	font-size: 40px;
 	line-height: 60px;
-	font-weight: bold;
 	z-index: -1;
 	font-family: 'segoe script';
 	text-align: right;
