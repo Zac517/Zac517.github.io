@@ -444,6 +444,9 @@ html {
 	width: 100%;
 	height: 100vh;
 }
+#father{
+	z-index: 10;
+}
 #girl{
 	background-image: url(https://www.z4a.net/images/2023/07/21/girl.png);
 	height: 700px;
@@ -453,7 +456,12 @@ html {
 	position: relative;
 	left: calc(100vw - 800px) !important;
 	top: 120px !important;
-	z-index: 10;
+	animation: shake 15s ease-in-out infinite;
+}
+@keyframes shake{
+	0%{transform: rotate(0) translateY(-20px)}
+	50%{transform: rotate(2deg) translateY(20px)}
+	100%{transform: rotate(0) translateY(-20px)}
 }
 #quote{
 	position: fixed;
