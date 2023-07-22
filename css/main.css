@@ -18,8 +18,8 @@ a *,a{cursor: none;}
 	display: block;
 	transition: opacity .3s linear;
 	opacity: 0;
-	height: 30px;
-	width: 30px;
+	height: 26px;
+	width: 26px;
 	z-index: 99;
   }
 .node.moving {
