@@ -27,15 +27,23 @@ function change(){
   }
 }
 /*scroll*/
-let container = document.querySelector('.workbox');
+let container = document.getElementById('workbox');
+container.addEventListener(
+  'mouseover',()=>{isnothover = false},{passive: true})
+container.addEventListener(
+  'mouseout',()=>{isnothover = true},{passive: true})
+container.addEventListener(
+  'touchstart',()=>{isnothover = false},{passive: true})
+container.addEventListener(
+  'touchend',()=>{isnothover = true},{passive: true})
 container.scrollLeft = 185
 if (window.innerWidth >720) {
 	container.addEventListener('wheel',(event) => {
-	event.preventDefault();
 	for (var i=0;i<100;i++){
 		setTimeout(() => {container.scrollLeft += event.deltaY/100;},i);
   }
-})}
+}, {passive: true})
+}
 function scroll(){
   if (container.scrollLeft > container.scrollWidth - container.clientWidth - 320){
   container.appendChild(container.children[0]);
@@ -49,8 +57,7 @@ function scroll(){
   }
 }
 isnothover = true
-function onhover(){isnothover = true}
-function offhover(){isnothover = false}
+
 window.setInterval(
   () => {
     if(isnothover){
@@ -58,6 +65,8 @@ window.setInterval(
     }
     scroll()
 },20)
+
+
 /*imform*/
 console.log(" %c Zaqueo's Studio %c v1.2.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
@@ -80,8 +89,17 @@ console.log(` %c
    ' 　 ｀ー- 、　｀　|＼/　 丶、　 　 |│　；
 　 　 　 　 　 ＼ 　_!　　　　　 ＼　　|│　;
 `,'font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Trebuchet MS", Verdana, Futura, Arial, Helvetica, sans-serif;line-height: 1;font-size: 12pt;');
-var sence = document.getElementById('sence')
-if(window.innerWidth > 720){
+
+
+/*background*/
+var scene = document.getElementById('background');
+	var parallaxInstance = new Parallax(scene, {
+    relativeInput: true,
+	calibrateX: true
+})
+
+/*cursor*/
+if(window.innerWidth > 640){
 $( function() {
   // init plugin
   NodeCursor({

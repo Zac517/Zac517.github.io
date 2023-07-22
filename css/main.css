@@ -4,11 +4,11 @@
 	-webkit-tap-highlight-color: transparent;
 	box-sizing: border-box;
 	cursor: url(../img/cursor.png)1 1,auto;
-}
-html::selection {
-	background-color: #111922;
 	color: #fff;
+	text-decoration: none;
+	position: relative;
 }
+html::selection {color: #111922;background-color: white;}
 html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 ::-webkit-scrollbar{display:none}
 a *{cursor: none;}
@@ -47,12 +47,11 @@ a *{cursor: none;}
 	height: 100%;
 }
 #girl{
-	background-image: url(https://www.z4a.net/images/2023/07/21/girl.png);
+	background-image: url(https://www.z4a.net/images/2023/07/22/girl.webp);
 	height: 700px;
 	width: 400px;
 	background-position: center;
 	background-size: cover;
-	position: absolute;
 	left: calc(100vw - 800px) !important;
 	top: 120px !important;
 	animation: shake 15s ease-in-out infinite;
@@ -73,7 +72,6 @@ a *{cursor: none;}
 	text-align: right;
 	text-shadow: 0px 0px 30px black;
 	font-style: italic;
-	color: #ffffff;
 }
 #main{
 	width: 900px;
@@ -86,9 +84,6 @@ a *{cursor: none;}
     font-size: 26px;
     letter-spacing: .2em;
     color: hsla(0, 0%, 100%, .5)
-}
-.chtitle span {
-    color: #fff
 }
 .chtitle:after {
     content: "";
@@ -103,16 +98,16 @@ a *{cursor: none;}
     border-radius: 20px;
     height: 200px;
     overflow: hidden;
-	position: relative;
 	margin-bottom: 20px;
 	border: 1px #3c3c3c solid;
 }
 #avatar {
     height: 200px;
-    width: calc(100px + 40%);
+    width: 300px;
+	position: static;
     background-size: cover;
     background-position: center;
-	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 150px,rgba(34,34,34) 300px),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
+	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 120px,rgba(34,34,34,0.8) 240px,rgba(34,34,34) 300px),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
 }
 #persontag {
     padding: 20px 20px 20px 120px;
@@ -123,7 +118,6 @@ a *{cursor: none;}
 	top: 0;
 	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 120px);
 	width: 410px;
-	color: rgb(255, 255, 255);
 }
 @keyframes op1{
     0%{opacity:1}
@@ -139,14 +133,42 @@ a *{cursor: none;}
 	display: none;
 	width: 100%;
 	height: 100%;
-	position: relative;
+}
+#persontag .tag{
+	display: inline-block;
+	transition: 0.3s;
+}
+#persontag .tag:hover{
+	margin: 0 3px;
+	transition: 0.6s;
+}
+#morelink{
+	right: 20px;
+	bottom: 20px;
+	background-color: rgba(255, 255, 255, 0.15);
+	z-index: 5;
+}
+.bt{
+	border-radius: 32px;
+	height: 32px;
+	width: 32px;
+	text-align: center;
+	line-height: 32px;
+	position: absolute;
+	transition: 0.1s;
+}
+.bt:hover{
+	transition: 0.1s;
+	transform: scale(1.1);
+}
+.bt i:hover{color: white;}
+.bt i{
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.5);
 }
 #linkbox a {
-    color: #fff;
-    text-decoration: none;
 	flex-basis: 150px;
 	margin: 0 20px 20px 0;
-	position: relative;
 	flex-grow: 1;
 	transition: 0.3s;
 }
@@ -160,14 +182,12 @@ a *{cursor: none;}
 	width: calc(100% + 20px);
 }
 #linkbox .item {
-    position: relative;
     height: 90px;
     line-height: 90px;
     transition: all .2s;
     overflow: hidden;
     opacity: 1;
     border-radius: 20px;
-	box-shadow: 0 6px 12px -3px var(--color);
 }
 .item span{
 	position: absolute;
@@ -176,7 +196,6 @@ a *{cursor: none;}
 	font-weight: bold;
 }
 #linkbox .item .inner {
-    position: relative;
     z-index: 5;
 	height: 100%;
 }
@@ -209,44 +228,14 @@ a *{cursor: none;}
     display: inline-block;
     width: 90px;
     font-size: 20px;
-	color: rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.8);
 	transition: 0.3s;
 }
 #linkbox .item:hover span{
-	color: white;
 	transition: 0.6s;
+	color: #fff;
 }
-#persontag .tag{
-	display: inline-block;
-	transition: 0.3s;
-}
-#persontag .tag:hover{
-	margin: 0 3px;
-	transition: 0.6s;
-}
-#morelink{
-	right: 20px;
-	bottom: 20px;
-	background-color: rgba(255, 255, 255, 0.15);
-	z-index: 5;
-	text-decoration: none;
-}
-.bt{
-	border-radius: 32px;
-	height: 32px;
-	width: 32px;
-	text-align: center;
-	line-height: 32px;
-	position: absolute;
-	transition: 0.1s;
-}
-.bt:hover{
-	transition: 0.1s;
-	transform: scale(1.1);
-}
-.bt i:hover{color: white;}
-.bt i{display: block;font-size: 20px;color: rgba(255, 255, 255, 0.5);}
-.workbox{
+#workbox{
 	height: 200px;
 	border-radius: 20px;
 	width: 100%;
@@ -257,7 +246,6 @@ a *{cursor: none;}
 	overflow-x: scroll;
 	overscroll-behavior:none;
 }
-.workbox::-webkit-scrollbar {display: none;}
 .project{
 	height: 160px;
 	width: 240px;
@@ -266,14 +254,12 @@ a *{cursor: none;}
 	display: inline-block;
 	margin: 20px 18px 20px 0;
 	border: 1px #2e2e2e solid;
-	position: relative;
 	padding: 20px;
 	vertical-align: top;
 }
 .project i{
 	display: block;
 	font-size: 20px;
-	color: rgb(255, 255, 255);
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -286,7 +272,6 @@ a *{cursor: none;}
 }
 .project h3:hover{
 	text-decoration: underline;
-	color: white;
 }
 .project p{
 	color: rgba(255, 255, 255, 0.6);
@@ -297,13 +282,12 @@ a *{cursor: none;}
 	position: absolute;
 	bottom: 20px;
 	left: 15px;
-	color: rgba(255, 255, 255, 0.6);
 }
 .language div{
 	display: inline-block;
 	font-size: 13px;
-	font-family:'Fira Code', monospace !important;
 	font-weight: 600;
+	color: rgba(255, 255, 255, 0.6);
 }
 .language div::before{
 	content: '';
@@ -314,28 +298,18 @@ a *{cursor: none;}
 	display: inline-block;
 	margin: 0 5px;
 }
-@media screen and (max-width:1400px) {
-	#background{background-size: 240vh;}
-}
 @media screen and (max-width:640px) {
 	#main{
 		width: 100vw;
 		padding: 20px;
 		background: rgba(34, 34, 34, 0.5);
-		height: auto;
 	}
 	#linkbox a {flex-basis: calc(33vw - 55px);}
-	.workbox{
+	#workbox{
 		border-radius: 0;
 		width: 100vw;
 		left: -20px;
-		position: relative;
 	}
-	@keyframes op2{
-		0%{opacity: 0;}
-		100%{opacity: 0.1;}
-	}
-	#video{width: 100%;}
 	#background{left: -1000px;}
 	#quote{opacity: 0;}
 }
@@ -346,10 +320,15 @@ a *{cursor: none;}
 		padding: 18px 20px 20px calc(100vw - 340px);
 	}
 	.item span{left: 20px;}
-	#persontag{z-index: 3;opacity: 1;}
+	#persontag{
+		z-index: 3;
+		opacity: 1;
+	}
 	#linkbox a {flex-basis: calc(50vw - 60px);}
+}
+@media screen and (max-width: 400px) {
 	#avatar{
-		width: 330px;
+		width: 100%;
 		box-shadow: inset #161616 0px 0px 80px 40px;
 		background-image: url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
 	}
