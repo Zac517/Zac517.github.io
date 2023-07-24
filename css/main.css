@@ -115,7 +115,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 }
 .zac-music-off{
 	display: block;
-	animation: rotate 6s linear(0 0%, 1 100%) infinite;
+	animation: rotate 6s linear infinite;
 }
 #main{
 	width: 900px;
