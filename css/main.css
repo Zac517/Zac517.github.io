@@ -69,6 +69,45 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	background-color: #ffffff;
 	opacity: 0.2;
 }
+#invert{
+	width: 100%;
+	height: 100%;
+}
+@keyframes bug {
+	0%{backdrop-filter: invert(1)}
+	0.3%{backdrop-filter: invert(1)}
+	0.31%{backdrop-filter: invert(0)}
+	1%{backdrop-filter: invert(0)}
+	1.01%{backdrop-filter: invert(1)}
+	1.1%{backdrop-filter: invert(1)}
+	1.11%{backdrop-filter: invert(0)}
+	100%{backdrop-filter: invert(0)}
+}
+#invert div{
+	position: absolute;
+	backdrop-filter: invert(1);
+	animation: bug 60s linear infinite;
+}
+#i1{
+	right: 750px;
+	height: 400px;
+	width: 250px;
+	top: 250px;
+	animation-delay: 50ms !important;
+}
+#i2{
+	right: 500px;
+	height: 300px;
+	width: 300px;
+	top: 500px;
+}
+#i3{
+	right: 200px;
+	height: 150px;
+	width: 150px;
+	top: 300px;
+	animation-delay: 100ms !important;
+}
 #background{
 	z-index: -99;
 	position: fixed;
