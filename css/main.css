@@ -20,7 +20,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
     -moz-transition: opacity 300ms linear;
     -o-transition: opacity 300ms linear;
     transition: opacity 300ms linear;
-	
+	opacity: 0;
 }
 .cursor.moving {
     opacity: 1;
@@ -360,7 +360,6 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 		right: 20px;
 		top: 20px;
 	}
-	.cursor::before {opacity: 0};
 }
 @media screen and (max-width: 570px) {
 	#persontag{
