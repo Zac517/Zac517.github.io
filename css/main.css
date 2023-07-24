@@ -3,7 +3,7 @@
 	margin: 0;
 	-webkit-tap-highlight-color: transparent;
 	box-sizing: border-box;
-	cursor: url(../img/cursor.png)1 1,auto;
+	cursor: none;
 	color: #fff;
 	text-decoration: none;
 	position: relative;
@@ -11,7 +11,38 @@
 html::selection {color: #111922;background-color: white;}
 html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 ::-webkit-scrollbar{display:none}
-a *,a{cursor: none;}
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    z-index: 10;
+    display: block;
+    -webkit-transition: opacity 300ms linear;
+    -moz-transition: opacity 300ms linear;
+    -o-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
+	
+}
+.cursor.moving {
+    opacity: 1;
+}
+.cursor::before {
+    content: ' ';
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: opacity 300ms linear;
+    -moz-transition: opacity 300ms linear;
+    -o-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
+}
+.cursor.expand::before {
+    opacity: 0;
+}
 .node {
 	pointer-events: none;
 	position: fixed;
@@ -21,10 +52,8 @@ a *,a{cursor: none;}
 	height: 26px;
 	width: 26px;
 	z-index: 99;
-  }
-.node.moving {
-	opacity: 1;
-  }
+}
+.node.moving {opacity: 1;}
 .node::before {
 	content: ' ';
 	width: 100%;
@@ -63,8 +92,8 @@ a *,a{cursor: none;}
 }
 #quote{
 	position: fixed;
-	right: 80px;
-	bottom: 40px;
+	right: 40px;
+	bottom: 30px;
 	font-size: 30px;
 	line-height: 60px;
 	z-index: -1;
@@ -72,6 +101,21 @@ a *,a{cursor: none;}
 	text-align: right;
 	text-shadow: 0px 0px 30px black;
 	font-style: italic;
+}
+#musicbutton{
+	position: fixed;
+	right: 40px;
+	top: 40px;
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+}
+@keyframes rotate {
+	0% {transform: rotate(0deg)}
+	100% {transform: rotate(360deg)}
+}
+.zac-music-off{
+	display: inline-block;
+	animation: rotate 6s linear(0 0%, 1 100%) infinite;
 }
 #main{
 	width: 900px;
@@ -107,17 +151,18 @@ a *,a{cursor: none;}
 	position: static;
     background-size: cover;
     background-position: center;
-	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 120px,rgba(34,34,34,0.8) 240px,rgba(34,34,34) 300px),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
+	background-image: linear-gradient(to right,rgba(34,34,34,0) 0%,rgba(34,34,34,0) 160px,rgba(34,34,34,0.6) 220px,rgba(34,34,34,0.9) 270px,rgba(34,34,34) 300px),url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
 }
 #persontag {
-    padding: 20px 20px 20px 120px;
+    padding: 20px 20px 20px 80px;
     line-height: 40px;
     font-size: 15.5px;
 	position: absolute;
 	right: 0;
 	top: 0;
-	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 120px);
-	width: 410px;
+	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 80px);
+	width: 370px;
+	color: rgba(255, 255, 255, 0.8);
 }
 @keyframes op1{
     0%{opacity:1}
@@ -146,9 +191,9 @@ a *,a{cursor: none;}
 	right: 20px;
 	bottom: 20px;
 	background-color: rgba(255, 255, 255, 0.15);
-	z-index: 5;
 }
 .bt{
+	z-index: 5;
 	border-radius: 32px;
 	height: 32px;
 	width: 32px;
@@ -157,10 +202,7 @@ a *,a{cursor: none;}
 	position: absolute;
 	transition: 0.1s;
 }
-.bt:hover{
-	transition: 0.1s;
-	transform: scale(1.1);
-}
+.bt:hover{transform: scale(1.1);}
 .bt:hover i{color: white;}
 .bt i{
 	font-size: 20px;
@@ -268,14 +310,14 @@ a *,a{cursor: none;}
 	color: rgba(255, 255, 255, 0.8);
 	display: inline-block;
 	font-size: 16px;
-	margin: 2px;
+	margin-left: 2px;
 }
 .project h3:hover{
 	text-decoration: underline;
 }
 .project p{
 	color: rgba(255, 255, 255, 0.6);
-	margin-top: 15px;
+	margin-top: 12px;
 	font-size: 14px;
 }
 .language{
@@ -312,6 +354,11 @@ a *,a{cursor: none;}
 	}
 	#background{left: -1000px;}
 	#quote{opacity: 0;}
+	#musicbutton{
+		right: 20px;
+		top: 20px;
+	}
+	.cursor::before {opacity: 0};
 }
 @media screen and (max-width: 570px) {
 	#persontag{

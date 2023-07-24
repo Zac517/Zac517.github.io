@@ -108,10 +108,24 @@ $( function() {
     cursor_velocity : 1, 
     node_velocity : 0.15, 
     native_cursor : 'none', 
-    element_to_hover : 'a', 
+    element_to_hover : '.hover',
     cursor_class_hover : 'expand', 
     node_class_hover : 'expand', 
     hide_mode : true, 
     hide_timing : 2000, 
   });
 })}
+
+/*music*/
+var audio = document.getElementById('music');
+var icon = document.getElementById('icon')
+function music(){
+	if (audio.paused){
+		audio.play();
+		icon.className='iconfont zac-music-off';
+	}
+else{
+		audio.pause();
+		icon.className='iconfont zac-music';
+	}
+}
