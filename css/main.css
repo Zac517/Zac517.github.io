@@ -96,21 +96,6 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	text-shadow: 0px 0px 30px black;
 	font-style: italic;
 }
-#musicbutton{
-	position: fixed;
-	right: 40px;
-	top: 40px;
-	background-color: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(10px);
-}
-@keyframes rotate {
-	0% {transform: rotate(0deg)}
-	100% {transform: rotate(360deg)}
-}
-.zac-music-off{
-	display: block;
-	animation: rotate 6s linear infinite;
-}
 #main{
 	width: 900px;
     padding: 40px 300px 40px 40px;

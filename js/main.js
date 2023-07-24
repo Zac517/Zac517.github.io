@@ -115,17 +115,3 @@ $( function() {
     hide_timing : 2000, 
   });
 })}
-
-/*music*/
-var audio = document.getElementById('music');
-var icon = document.getElementById('icon')
-function music(){
-	if (audio.paused){
-		audio.play();
-		icon.className='iconfont zac-music-off';
-	}
-else{
-		audio.pause();
-		icon.className='iconfont zac-music';
-	}
-}
