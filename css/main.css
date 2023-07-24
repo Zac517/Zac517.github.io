@@ -81,14 +81,8 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	width: 400px;
 	background-position: center;
 	background-size: cover;
-	left: calc(100vw - 800px) !important;
-	top: 120px !important;
-	animation: shake 15s ease-in-out infinite;
-}
-@keyframes shake{
-	0%{transform: rotate(0) translateY(-20px)}
-	50%{transform: rotate(2deg) translateY(20px)}
-	100%{transform: rotate(0) translateY(-20px)}
+	left: calc(100vw - 700px) !important;
+	top: 110px !important;
 }
 #quote{
 	position: fixed;
