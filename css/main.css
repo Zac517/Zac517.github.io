@@ -335,10 +335,6 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	}
 	#background{left: -1000px;}
 	#quote{opacity: 0;}
-	#musicbutton{
-		right: 20px;
-		top: 20px;
-	}
 }
 @media screen and (max-width: 570px) {
 	#persontag{
