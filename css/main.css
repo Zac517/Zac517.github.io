@@ -97,8 +97,8 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	font-style: italic;
 }
 #main{
-	width: 900px;
-    padding: 40px 300px 40px 40px;
+	width: 640px;
+    padding: 40px;
 	z-index: 1;
 }
 .chtitle {
@@ -188,7 +188,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	color: rgba(255, 255, 255, 0.5);
 }
 #linkbox a {
-	flex-basis: 150px;
+	flex-basis: 140px;
 	margin: 0 20px 20px 0;
 	flex-grow: 1;
 	transition: 0.3s;
@@ -208,12 +208,11 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
     line-height: 90px;
     transition: all .2s;
     overflow: hidden;
-    opacity: 1;
-    border-radius: 20px;
+    border-radius: 16px;
 }
 .item span{
 	position: absolute;
-	left: 40px;
+	left: 30px;
 	letter-spacing:.1em;
 	font-weight: bold;
 }
@@ -238,6 +237,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
     color: rgba(255, 255, 255, 0.35);
     transition: 0.6s;
 	filter: blur(10px);
+	will-change: filter,right,font-size,bottom,color;
 }
 #linkbox a:hover i{
 	bottom: 0;
@@ -260,7 +260,6 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 #workbox{
 	height: 200px;
 	border-radius: 20px;
-	width: 100%;
 	white-space: nowrap;
 	background-color: #222222;
 	overflow: hidden;
@@ -285,9 +284,10 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	color: #d0d0d0;
 }
 .project h3{
-	color: rgba(255, 255, 255, 0.8);
+	color: #d0d0d0;
 	display: inline-block;
 	font-size: 16px;
 	margin-left: 2px;
@@ -296,9 +296,9 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	text-decoration: underline;
 }
 .project p{
-	color: rgba(255, 255, 255, 0.6);
-	margin-top: 12px;
-	font-size: 14px;
+	color: #a9a9a9;
+	margin-top: 14px;
+	font-size: 14.5px;
 }
 .language{
 	position: absolute;
@@ -309,7 +309,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	display: inline-block;
 	font-size: 13px;
 	font-weight: 600;
-	color: rgba(255, 255, 255, 0.6);
+	color: #a9a9a9;
 }
 .language div::before{
 	content: '';
@@ -338,14 +338,11 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 @media screen and (max-width: 570px) {
 	#persontag{
 		width: 100%;
-		background-image: linear-gradient(to right,rgba(0,0,0,0.3),rgba(34, 34, 34, 0.3) 100%);
+		background: rgba(0,0,0,0.3);
 		padding: 18px 20px 20px calc(100vw - 340px);
 	}
 	.item span{left: 20px;}
-	#persontag{
-		z-index: 3;
-		opacity: 1;
-	}
+	#persontag{z-index: 3;}
 	#linkbox a {flex-basis: calc(50vw - 60px);}
 }
 @media screen and (max-width: 400px) {
