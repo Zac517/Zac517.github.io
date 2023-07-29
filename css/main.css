@@ -5,9 +5,9 @@
 	box-sizing: border-box;
 	cursor: none;
 	color: #fff;
-	text-decoration: none;
 	position: relative;
 }
+a {text-decoration: none;}
 html::selection {color: #111922;background-color: white;}
 html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 ::-webkit-scrollbar{display:none}
@@ -90,7 +90,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	bottom: 30px;
 	font-size: 30px;
 	line-height: 60px;
-	z-index: -1;
+	z-index: 1;
 	font-family: 'segoe script';
 	text-align: right;
 	text-shadow: 0px 0px 30px black;
@@ -320,6 +320,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	margin: 0 5px;
 }
 @media screen and (max-width:640px) {
+	html {background: #090d13}
 	#main{
 		width: 100vw;
 		padding: 20px;
