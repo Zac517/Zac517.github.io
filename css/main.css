@@ -322,7 +322,11 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	display: inline-block;
 	margin: 0 5px;
 }
-@media screen and (max-width:1200px) {#quote{display: none;}}
+@media screen and (max-width:1200px) {
+	#quote{display: none;}
+	#clear{transform-style: unset;}
+	#persontag{right:0}
+}
 @media screen and (max-height:640px) {
 	#girl{
 		height: 500px;
@@ -354,7 +358,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 }
 @media screen and (max-width: 570px) {
 	#persontag{
-		width: 97%;
+		width: 100%;
 		padding: 18px 20px 20px calc(100vw - 340px);
 	}
 	.item span{left: 20px;}
