@@ -68,7 +68,7 @@ window.setInterval(
 
 
 /*imform*/
-console.log(" %c Zaqueo's Studio %c v1.3.1 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c Zaqueo's Studio %c v1.4.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
 　　　　　　　　　　　　　＿＿＿　　 ~ヽ
 　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶
@@ -115,3 +115,4 @@ $( function() {
     hide_timing : 2000, 
   });
 })}
+/*card*/

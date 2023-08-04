@@ -118,13 +118,14 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 }
 #clear {
     background-color: #222222;
-    border-radius: 20px;
     height: 200px;
-    overflow: hidden;
+	border-radius: 20px;
 	margin-bottom: 30px;
 	border: 1px #3c3c3c solid;
+	transform-style: preserve-3d;
 }
 #avatar {
+	border-radius: 20px;
     height: 200px;
     width: 300px;
 	position: static;
@@ -137,9 +138,9 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
     line-height: 40px;
     font-size: 15.5px;
 	position: absolute;
-	right: 0;
+	right: 4px;
 	top: 0;
-	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(34, 34, 34, 0.6) 80px);
+	transform: translateZ(30px);
 	width: 370px;
 }
 @keyframes op1{
@@ -276,6 +277,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	border: 1px #2e2e2e solid;
 	padding: 20px;
 	vertical-align: top;
+	transition: 0.3s;
 }
 .project i{
 	display: block;
@@ -352,8 +354,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 }
 @media screen and (max-width: 570px) {
 	#persontag{
-		width: 100%;
-		background: rgba(0,0,0,0.3);
+		width: 97%;
 		padding: 18px 20px 20px calc(100vw - 340px);
 	}
 	.item span{left: 20px;}
@@ -365,6 +366,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 		width: 100%;
 		box-shadow: inset #161616 0px 0px 80px 40px;
 		background-image: url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
+		filter: brightness(0.8);
 	}
 }
 @media screen and (max-width: 360px) {
