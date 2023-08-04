@@ -126,7 +126,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 }
 #avatar {
 	border-radius: 20px;
-    height: 200px;
+    height: 198px;
     width: 300px;
 	position: static;
     background-size: cover;
@@ -324,7 +324,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 }
 @media screen and (max-width:1200px) {
 	#quote{display: none;}
-	#clear{transform-style: unset;}
+	#clear{transform-style:flat}
 	#persontag{right:0}
 }
 @media screen and (max-height:640px) {

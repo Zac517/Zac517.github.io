@@ -114,5 +114,10 @@ $( function() {
     hide_mode : true, 
     hide_timing : 2000, 
   });
-})}
-/*card*/
+});
+let card = document.querySelector("#clear");
+VanillaTilt.init(card,{
+  max:10,
+  reverse:true
+});
+}
