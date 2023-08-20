@@ -327,6 +327,6 @@ index.home.photo["nano.txt"] = `<p class = 'paint'>
 　 　 　 　 　 ＼ 　_!　　　　　 ＼　　|│　;
 </p>`
 update()
-print("Welcome to Zaqueo's Terminal!(Simulation version :D)",'warning')
+print("Welcome to Zac's Terminal!(Simulation version :D)",'warning')
 print('Type <span style="color: #ffbc00">help</span> to list the available commands.','warning')
 })()

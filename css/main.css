@@ -8,7 +8,7 @@
 	position: relative;
 }
 a {text-decoration: none;}
-html::selection {color: #111922;background-color: white;}
+html::selection {color: #111922 !important;background-color: white !important;}
 html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 ::-webkit-scrollbar{display:none}
 .cursor {
@@ -81,8 +81,8 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	width: 400px;
 	background-position: center;
 	background-size: cover;
-	left: calc(70vw - 50px) !important;
-	top: 110px !important;
+	left: 60vw !important;
+	top: calc(50vh - 350px) !important;
 }
 #quote{
 	position: fixed;
@@ -122,7 +122,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	border-radius: 20px;
 	margin-bottom: 30px;
 	border: 1px #3c3c3c solid;
-	transform-style: preserve-3d;
+	overflow: hidden;
 }
 #avatar {
 	border-radius: 20px;
@@ -138,10 +138,10 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
     line-height: 40px;
     font-size: 15.5px;
 	position: absolute;
-	right: 4px;
+	right: 0px;
 	top: 0;
-	transform: translateZ(30px);
 	width: 370px;
+	background: linear-gradient(to left,rgba(34,34,34,1) 0,rgba(34,34,34,0.6) 280px,rgba(34,34,34,0) 100%);
 }
 @keyframes op1{
     0%{opacity:1}
@@ -328,16 +328,12 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 		transform-style:flat;
 		overflow: hidden;
 	}
-	#persontag{right:0}
 }
-@media screen and (max-height:640px) {
-	#girl{
-		height: 500px;
-		width: 285px;
-		left: calc(100vw - 300px) !important;
-		top: calc(100vh - 350px) !important;
-		filter: brightness(0.6);
-	}
+@media screen and (max-width:960px) {
+	#girl{display:none !important}
+}
+@media screen and (max-height:700px) {
+	#girl{display:none !important}
 }
 @media screen and (max-width:640px) {
 	html {background: #090d13}
@@ -351,21 +347,16 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 		width: 100vw;
 		left: -20px;
 	}
-	#girl{
-		height: 500px;
-		width: 285px;
-		left: calc(50vw - 142px) !important;
-		top: calc(50vh - 250px) !important;
-		filter: brightness(0.6);
-	}
 }
 @media screen and (max-width: 570px) {
 	#persontag{
 		width: 100%;
-		padding: 18px 20px 20px calc(100vw - 340px);
+		padding: 20px 20px 20px calc(100vw - 340px);
+		background: rgba(34,34,34,0.3);
+		z-index: 3;
 	}
 	.item span{left: 20px;}
-	#persontag{z-index: 3;}
+	
 	#linkbox a {flex-basis: calc(50vw - 60px);}
 }
 @media screen and (max-width: 400px) {
@@ -373,8 +364,8 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 		width: 100%;
 		box-shadow: inset #161616 0px 0px 80px 40px;
 		background-image: url(https://www.z4a.net/images/2022/10/13/70579450_p28_master1200.webp);
-		filter: brightness(0.8);
 	}
+	#persontag{background: rgba(34,34,34,0.1);}
 }
 @media screen and (max-width: 360px) {
 	#linkbox .item span{

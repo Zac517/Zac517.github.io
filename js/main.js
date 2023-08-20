@@ -68,7 +68,7 @@ window.setInterval(
 
 
 /*imform*/
-console.log(" %c Zaqueo's Studio %c v1.4.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c Zac's personal homepage %c v1.4.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
 　　　　　　　　　　　　　＿＿＿　　 ~ヽ
 　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶
@@ -114,10 +114,5 @@ $( function() {
     hide_mode : true, 
     hide_timing : 2000, 
   });
-});
-let card = document.querySelector("#clear");
-VanillaTilt.init(card,{
-  max:10,
-  reverse:true
 });
 }
