@@ -82,7 +82,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	background-position: center;
 	background-size: cover;
 	left: 60vw !important;
-	top: calc(50vh - 350px) !important;
+	top: calc(50vh - 380px) !important;
 }
 #quote{
 	position: fixed;
