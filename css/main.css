@@ -141,7 +141,7 @@ html {background: radial-gradient(ellipse, #111922 0%, #020203 100%)}
 	right: 0px;
 	top: 0;
 	width: 370px;
-	background: linear-gradient(to left,rgba(34,34,34,1) 0,rgba(34,34,34,0.6) 280px,rgba(34,34,34,0) 100%);
+	background: linear-gradient(to left,rgba(16,16,16,1) 0,rgba(34,34,34,0.6) 280px,rgba(34,34,34,0) 100%);
 }
 @keyframes op1{
     0%{opacity:1}
