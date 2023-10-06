@@ -248,7 +248,7 @@ section{
 }
 .item span{
 	position: absolute;
-	left: 30px;
+	left: 5vmin;
 	letter-spacing: 0.5vmin;
 	font-family: 'neue';
 }
