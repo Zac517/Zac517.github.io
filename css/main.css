@@ -1,3 +1,6 @@
+html,body{
+	height: fill-available;
+}
 @font-face {
 	font-family: 'neue';
 	src: url(../font/BebasNeue-Regular.ttf);
