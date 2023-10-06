@@ -249,7 +249,7 @@ section{
 .item span{
 	position: absolute;
 	left: 30px;
-	letter-spacing:.1em;
+	letter-spacing: 0.5vmin;
 	font-family: 'neue';
 }
 #linkbox .item .inner {
