@@ -1,74 +1,5 @@
-
-/*双击启动*/
-document.getElementById('clear').ondblclick = change
-let state = 'a'
-function change(){
-  if (state == 'a'){   
-    document.getElementById('avatar').className = 'dap';
-    document.getElementById('persontag').className = 'dap';
-    setTimeout(() => {
-      document.getElementById('avatar').style.display = 'none';
-      document.getElementById('persontag').style.display = 'none';
-      document.getElementById('terminal').style.display = 'block';
-      document.getElementById('terminal').className = 'ap';
-      state = 't'
-    },300)
-  }
-  else{
-    document.getElementById('terminal').className = 'dap'
-    setTimeout(() => {
-      document.getElementById('terminal').style.display = 'none';
-      document.getElementById('avatar').style.display = 'block';
-      document.getElementById('persontag').style.display = 'block';
-      document.getElementById('avatar').className = 'ap';
-      document.getElementById('persontag').className = 'ap';
-      state = 'a'
-    },300)
-  }
-}
-/*scroll*/
-let container = document.getElementById('workbox');
-container.addEventListener(
-  'mouseover',()=>{isnothover = false},{passive: true})
-container.addEventListener(
-  'mouseout',()=>{isnothover = true},{passive: true})
-container.addEventListener(
-  'touchstart',()=>{isnothover = false},{passive: true})
-container.addEventListener(
-  'touchend',()=>{isnothover = true},{passive: true})
-container.scrollLeft = 185
-if (window.innerWidth >720) {
-	container.addEventListener('wheel',(event) => {
-	for (var i=0;i<100;i++){
-		setTimeout(() => {container.scrollLeft += event.deltaY/100;},i);
-  }
-}, {passive: true})
-}
-function scroll(){
-  if (container.scrollLeft > container.scrollWidth - container.clientWidth - 320){
-  container.appendChild(container.children[0]);
-  container.scrollLeft -= 260;
-  }
-  else{
-    if (container.scrollLeft < 320){
-      container.insertBefore(container.children[container.children.length -1],container.children[0]);
-      container.scrollLeft += 260;
-    }
-  }
-}
-isnothover = true
-
-window.setInterval(
-  () => {
-    if(isnothover){
-      container.scrollLeft += 1;
-    }
-    scroll()
-},20)
-
-
 /*imform*/
-console.log(" %c Zac's personal homepage %c v1.4.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c Zac's personal homepage %c v2.0.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
 　　　　　　　　　　　　　＿＿＿　　 ~ヽ
 　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶
@@ -92,10 +23,15 @@ console.log(` %c
 
 
 /*background*/
-var scene = document.getElementById('background');
+var scene = document.getElementById('header');
 	var parallaxInstance = new Parallax(scene, {
     relativeInput: true,
-	calibrateX: true
+	  calibrateX: true,
+    scalarX: -10.0,
+    scalarY: -10.0,
+    clipRelativeInput: true,
+    frictionX: 1,
+    frictionY: 1
 })
 
 /*cursor*/
@@ -115,4 +51,27 @@ $( function() {
     hide_timing : 2000, 
   });
 });
+}
+
+document.addEventListener('nameofevent', { passive: false });
+$("#main").onepage_scroll({
+  sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+  easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                   // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+  animationTime: 750,             // AnimationTime let you define how long each section takes to animate
+  pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+  updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+  beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+  afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+  loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+  keyboard: true,                  // You can activate the keyboard controls
+  responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                   // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                   // the browser's width is less than 600, the fallback will kick in.
+  direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+});
+
+function write(text){
+  const clipboard = navigator.clipboard;
+  navigator.clipboard.writeText(text);
 }
