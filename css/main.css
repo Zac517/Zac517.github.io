@@ -227,7 +227,7 @@ section{
 	height: 480px;
 	width: 600px;
 	top:calc(50svh - 240px);
-	left: calc(50vw - 480px);
+	left: calc(30vw - 288px);
 }
 
 #linkbox a {
