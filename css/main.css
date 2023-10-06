@@ -134,10 +134,10 @@ section{
 }
 #header .number{
 	margin: auto;
-	top: calc(50vh - 420px) !important;
+	top: calc(50svh - 420px) !important;
 }
 #header .tt{
-	top: calc(50vh - 120px) !important;
+	top: calc(50svh - 120px) !important;
 	left: calc(50vw - 350px) !important;
 }
 
@@ -150,7 +150,7 @@ section{
 }
 #works .tt{
 	transform: rotate(-90deg);
-	top: calc(50vh - 40px);
+	top: calc(50svh - 40px);
 	left: calc(20vw - 200px);
 }
 #works .title{
@@ -165,11 +165,11 @@ section{
 #work-box{
 	width: fit-content;
 	position: absolute;
-	top: 15vh;
+	top: 15svh;
 	right: 5vw;
 }
 .child-box{
-	height: 70vh;
+	height: 70svh;
 	width: 18vw;
 	margin: 0px 2vw;
 	background-color: #282939;
@@ -181,7 +181,7 @@ section{
 }
 .c-tt{
 	transform: rotate(0deg);
-	bottom: 4vh;
+	bottom: 4svh;
 	left: 30px;
 	top: auto;
 	position: absolute;
@@ -207,11 +207,11 @@ section{
 }
 #social .number{
 	right: -100px;
-	top: calc(50vh - 420px);
+	top: calc(50svh - 420px);
 }
 #social .tt{
 	right: calc(10vw - 40px);
-	top: calc(50vh - 108px);
+	top: calc(50svh - 108px);
 }
 #social .title{
 	font-size: 120px;
@@ -226,7 +226,7 @@ section{
 	position: absolute;
 	height: 480px;
 	width: 600px;
-	top:calc(50vh - 240px);
+	top:calc(50svh - 240px);
 	left: calc(50vw - 480px);
 }
 
@@ -297,7 +297,7 @@ section{
 }
 #footer .tt{
 	left: calc(30vw - 180px);
-	top: calc(20vh - 60px);
+	top: calc(20svh - 60px);
 }
 #statistics{
 	position: absolute;
@@ -324,9 +324,9 @@ section{
 		width: 60vw;
 	}
 	.child-box{
-		height: 18vh;
+		height: 18svh;
 		width: 100%;
-		margin: 2vh 0;
+		margin: 2svh 0;
 	}
 }
 @media screen and (max-width:960px) {
@@ -397,7 +397,7 @@ section{
 @media screen and (max-width:720px){
 	#header .number{
 		font-size: 90vmin;
-		top: calc(50vh - 55vmin) !important;
+		top: calc(50svh - 55vmin) !important;
 	}
 	#header .title{
 		font-size: 24vmin;
@@ -409,7 +409,7 @@ section{
 	}
 	#header .tt{
 		left: calc(50vw - 42vmin) !important;
-		top: calc(50vh - 14vmin) !important;
+		top: calc(50svh - 14vmin) !important;
 	}
 }
 @media screen and (max-width:600px){
@@ -419,8 +419,8 @@ section{
 	}
 	#works .tt{
 		transform: rotate(0deg);
-		top: 5vh;
-		left: 5vh;
+		top: 5svh;
+		left: 5svh;
 	}
 	#works .title{
 		font-size: 20vw;
@@ -434,17 +434,17 @@ section{
 	#work-box{
 		width: 90vw;
 		left: 5vw;
-		top: 24vh;
+		top: 24svh;
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50vh - 52vmin) !important;
+		top: calc(50svh - 52vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50vh - 11vmin);
+		top: calc(50svh - 11vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -467,7 +467,7 @@ section{
 @media screen and (max-height:600px){
 	#header .number{
 		font-size: 90vmin;
-		top: calc(50vh - 55vmin) !important;
+		top: calc(50svh - 55vmin) !important;
 	}
 	#header .title{
 		font-size: 24vmin;
@@ -479,17 +479,17 @@ section{
 	}
 	#header .tt{
 		left: calc(50vw - 42vmin) !important;
-		top: calc(50vh - 14vmin) !important;
+		top: calc(50svh - 14vmin) !important;
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50vh - 52vmin) !important;
+		top: calc(50svh - 52vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50vh - 11vmin);
+		top: calc(50svh - 11vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -503,21 +503,21 @@ section{
 }
 @media screen and (max-height:480px){
 	#works .number{
-		font-size: 90vh;
-		bottom: -35vh;
+		font-size: 90svh;
+		bottom: -35svh;
 	}
 	#works .tt{
 		left: -30px;
 	}
 	#works .title{
-		font-size: 20vh;
+		font-size: 20svh;
 	}
 	#works .subtitle{
-		font-size: 10vh;
-		padding-left: 20vh;
+		font-size: 10svh;
+		padding-left: 20svh;
 	}
 	.child-box{
-		width: calc(27vw - 12vh);
+		width: calc(27vw - 12svh);
 	}
 	.c-title{
 		font-size: 5vw;
@@ -526,11 +526,11 @@ section{
 		left: 2vw;
 	}
 	#linkbox{
-		height: 100vh;
+		height: 100svh;
 		top: 0;
 	}
 	#linkbox .item{
-		height: 25vh;
-		line-height: 25vh;
+		height: 25svh;
+		line-height: 25svh;
 	}
 }
