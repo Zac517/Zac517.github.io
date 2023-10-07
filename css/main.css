@@ -130,7 +130,7 @@ section{
 #header .subtitle{
 	font-size: 59px;
 	padding-left:8px;
-	line-height:0px;
+	line-height: 10px;
 }
 #header .number{
 	margin: auto;
@@ -193,7 +193,7 @@ section{
 .c-subtitle{
 	font-size: 20px;
 	padding-left: 0px;
-	line-height: 10px;
+	line-height: 20px;
 	color: rgba(97, 97, 105, 0.5);
 	font-weight: 700;
 }
