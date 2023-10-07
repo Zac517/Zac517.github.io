@@ -4,6 +4,7 @@ html,body{
 @font-face {
 	font-family: 'neue';
 	src: url(../font/BebasNeue-Regular.ttf);
+	font-display: swap;
 }
 *{
 	padding: 0;
