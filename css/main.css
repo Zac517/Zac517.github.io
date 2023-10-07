@@ -242,7 +242,7 @@ section{
 
 #linkbox .item {
     height: 120px;
-    line-height: 132px;
+    line-height: 131px;
     transition: all .2s;
     overflow: hidden;
 }
@@ -264,7 +264,7 @@ section{
     z-index: 0;
     transition: all .15s;
     height: 100%;
-	background-color: rgba(97, 97, 105, 0.5);
+	background-color: rgba(97, 97, 105, 0.6);
 }
 #linkbox .item:hover .bg {
     background-color: var(--background-color);
