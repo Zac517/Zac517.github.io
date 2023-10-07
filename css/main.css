@@ -210,7 +210,7 @@ section{
 	top: calc(50svh - 420px);
 }
 #social .tt{
-	right: calc(10vw - 40px);
+	right: 8vmin;
 	top: calc(50svh - 108px);
 }
 #social .title{
@@ -242,7 +242,7 @@ section{
 
 #linkbox .item {
     height: 120px;
-    line-height: 120px;
+    line-height: 132px;
     transition: all .2s;
     overflow: hidden;
 }
@@ -324,9 +324,9 @@ section{
 		width: 60vw;
 	}
 	.child-box{
-		height: 18svh;
+		height: 20svh;
 		width: 100%;
-		margin: 2svh 0;
+		margin: 1svh 0;
 	}
 }
 @media screen and (max-width:960px) {
