@@ -1,5 +1,10 @@
 /*imform*/
-console.log(" %c Zac's personal homepage %c v2.0.0 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c jquery.min.js %c v3.3.1 ", "color: #FFFFFF !important; background: #107a8b; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c NodeCursor.js %c v1.0.0 ", "color: #FFFFFF !important; background: #2cb978; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c parallax.min.js %c v3.1.0 ", "color: #FFFFFF !important; background: #83e85a; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c jquery-onepage-scroll.js %c v1.3.1 ", "color: #FFFFFF !important; background: #ffd615; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c busuanzi.pure.mini.js %c v2.3.0 ", "color: #FFFFFF !important; background: #ff8a5c; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c Zac's personal homepage %c v2.0.1 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
 　　　　　　　　　　　　　＿＿＿　　 ~ヽ
 　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶
@@ -70,8 +75,3 @@ $("#main").onepage_scroll({
                                    // the browser's width is less than 600, the fallback will kick in.
   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
-
-function write(text){
-  const clipboard = navigator.clipboard;
-  navigator.clipboard.writeText(text);
-}

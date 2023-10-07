@@ -49,7 +49,8 @@ section{
     width: 6px;
 	transform: translate(-1px,-1px);
     position: absolute;
-    background-color: #ffffff;
+    background-color: transparent;
+	backdrop-filter: invert(100%);
     border-radius: 50%;
     top: 0;
     left: 0;
@@ -58,10 +59,6 @@ section{
     -moz-transition: opacity 300ms linear;
     -o-transition: opacity 300ms linear;
     transition: opacity 300ms linear;
-	mix-blend-mode: exclusion;
-}
-.viewing-page-2 .cursor::before,.viewing-page-4 .cursor::before{
-	background-color: #282939;
 }
 .cursor.expand::before {
     opacity: 0;
@@ -98,7 +95,7 @@ section{
 #main{
 	z-index:1;
 }
-.number,.title,.subtitle,.tt,.c-tt,.c-title,.c-subtitle,#statistics{
+.number,.title,.subtitle,.tt,.c-tt,.c-title,.c-subtitle,#statistics,#information{
 	font-family: 'neue';
 	width: fit-content;
 	letter-spacing: 0.05em;
@@ -194,7 +191,7 @@ section{
 	font-size: 20px;
 	padding-left: 0px;
 	line-height: 20px;
-	color: rgba(97, 97, 105, 0.5);
+	color: rgba(97, 97, 105, 0.3);
 	font-weight: 700;
 }
 
@@ -242,7 +239,7 @@ section{
 
 #linkbox .item {
     height: 120px;
-    line-height: 131px;
+    line-height: 126px;
     transition: all .2s;
     overflow: hidden;
 }
@@ -280,6 +277,8 @@ section{
 	transition: 0.6s;
 }
 
+
+
 #footer .number{
 	left: 100px;
 	top: -300px;
@@ -300,12 +299,39 @@ section{
 #statistics{
 	position: absolute;
 	width: fit-content;
-	right: 100px;
-	bottom: 40px;
+	right: 40px;
+	bottom: 100px;
 	font-size: 60px;
 	letter-spacing: 0px;
 	line-height: 50px;
 	text-align: right;
+}
+#information{
+	position: absolute;
+	width: 100vw;
+	left: 0px;
+	bottom: 0px;
+	font-size: 24px;
+	letter-spacing: 0px;
+	line-height: 28px;
+	background-color: #282939;
+	padding: 20px 24px;
+	color: rgba(190, 190, 195, 0.7);
+}
+.id{
+	color: white;
+	display: inline-block;
+	font-size: 24px;
+}
+.link{
+	color: rgba(190, 190, 195, 0.7);
+	transition: all 0.5s;
+	position: absolute;
+	right: 24px;
+	top: 20px;
+}
+.link:hover{
+	color: #fff;
 }
 .tx{
 	color: #bebec3;
@@ -317,6 +343,9 @@ section{
 	bottom: -12px;
 	display: inline-block;
 }
+
+
+
 @media screen and (max-width:1000px) and (min-height:480px){
 	#work-box{
 		width: 60vw;
@@ -355,7 +384,7 @@ section{
 	}
 	#statistics{
 		right: 8vmin;
-		bottom: 4vmin;
+		bottom: calc(4vmin + 70px);
 		font-size: 8vmin;
 		line-height: 7vmin;
 	}
@@ -385,7 +414,7 @@ section{
 	}
 	#statistics{
 		right: 8vmin;
-		bottom: 4vmin;
+		bottom: calc(4vmin + 70px);
 		font-size: 8vmin;
 		line-height: 7vmin;
 	}
@@ -395,6 +424,9 @@ section{
 		bottom: -0.8vmin;
 	}
 }
+
+
+
 @media screen and (max-width:720px){
 	#header .number{
 		font-size: 90vmin;
@@ -439,13 +471,13 @@ section{
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50svh - 52vmin) !important;
+		top: calc(50svh - 53vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50svh - 11vmin);
+		top: calc(50svh - 11.8vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -464,7 +496,6 @@ section{
 		flex-basis: 40vw;
 	}
 }
-
 @media screen and (max-height:600px){
 	#header .number{
 		font-size: 90vmin;
@@ -484,13 +515,13 @@ section{
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50svh - 52vmin) !important;
+		top: calc(50svh - 53vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50svh - 11vmin);
+		top: calc(50svh - 11.8vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -532,6 +563,6 @@ section{
 	}
 	#linkbox .item{
 		height: 25svh;
-		line-height: 25svh;
+		line-height: 26.5svh;
 	}
 }
