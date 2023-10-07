@@ -264,7 +264,7 @@ section{
     z-index: 0;
     transition: all .15s;
     height: 100%;
-	background-color: rgba(97, 97, 105, 0.6);
+	background-color: rgba(97, 97, 105, 0.5);
 }
 #linkbox .item:hover .bg {
     background-color: var(--background-color);
@@ -330,6 +330,9 @@ section{
 @media screen and (max-width:960px) {
 	#linkbox{
 		left: 0;
+	}
+	#linkbox .item .bg {
+		background-color: rgba(97, 97, 105, 0.8);
 	}
 }
 @media screen and (max-width:800px){
