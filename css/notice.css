@@ -1,0 +1,37 @@
+.nf{
+    position: fixed;
+	width: 100vw;
+	left: 0px;
+	top: -60px;
+	font-size: 18px;
+	letter-spacing: 0px;
+	line-height: 23px;
+	padding: 20px 24px 17px 24px;
+    transform: translateY(0);
+    font-family: 'neue';
+    font-weight: 700;
+    transition: all 0.5s;
+    z-index: 80;
+}
+.show.nf{
+    transform: translateY(60px);
+}
+.nb{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation-timing-function: linear;
+}
+.show .nb{
+    animation-name: widen;
+}
+.nt{
+    text-align: center;
+}
+@keyframes widen {
+    0%{width: 0}
+    100%{width: 100%}
+}

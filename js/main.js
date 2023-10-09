@@ -4,7 +4,7 @@ console.log(" %c NodeCursor.js %c v1.0.0 ", "color: #FFFFFF !important; backgrou
 console.log(" %c parallax.min.js %c v3.1.0 ", "color: #FFFFFF !important; background: #83e85a; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(" %c jquery-onepage-scroll.js %c v1.3.1 ", "color: #FFFFFF !important; background: #ffd615; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(" %c busuanzi.pure.mini.js %c v2.3.0 ", "color: #FFFFFF !important; background: #ff8a5c; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
-console.log(" %c Zac's personal homepage %c v2.0.1 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c Zac's personal homepage %c v2.0.2 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
 　　　　　　　　　　　　　＿＿＿　　 ~ヽ
 　　　　　　，‘　 ...::::::::::::::::::::::::::::｀丶
@@ -58,7 +58,7 @@ $( function() {
 });
 }
 
-document.addEventListener('nameofevent', { passive: false });
+/*onepage*/
 $("#main").onepage_scroll({
   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",

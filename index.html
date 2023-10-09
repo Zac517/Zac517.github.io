@@ -10,9 +10,10 @@
 	<link rel="shortcut icon" href="https://www.z4a.net/images/2022/10/13/avatar-1.webp" type="image/x-icon" />
 	<title>Zac</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/notice.css">
 	<link rel="stylesheet" type="text/css" href="css/onepage-scroll.css">
 </head>
-<body>
+<body id="body">
 	<div class="node" id="node"></div>
 	<div class="cursor" id="cursor"></div>
 	<div id="main">
@@ -57,19 +58,19 @@
 				<div class="subtitle">for social</div>
 			</div>
 				<div id="linkbox">
-					<a href="javascript:" class="hover" onclick="navigator.clipboard.writeText('zac15333543418');document.getElementById('w').innerHTML = 'Copied';">
+					<a href="javascript:" class="hover" onclick="navigator.clipboard.writeText('zac15333543418');notice('已复制到剪贴板','var(--theme-color)',3000)">
 						<div class="item">
 							<div class="bg" style="--background-color:#1AAD19"></div>
 							<div class="inner"><span id="w">Wechat</span></div>
 						</div>
 					</a>
-					<a href="javascript:" class="hover" onclick="navigator.clipboard.writeText('1271470655');document.getElementById('q').innerHTML = 'Copied';">
+					<a href="javascript:" class="hover" onclick="navigator.clipboard.writeText('1271470655');notice('已复制到剪贴板','var(--theme-color)',3000)">
 						<div class="item">
 							<div class="bg" style="--background-color:#23a0f0"></div>
 							<div class="inner"><span id="q">QQ</span></div>
 						</div>
 					</a>
-					<a href="javascript:" class="hover" onclick="navigator.clipboard.writeText('1271470655@qq.com');document.getElementById('e').innerHTML = 'Copied';">
+					<a href="javascript:" class="hover" onclick="navigator.clipboard.writeText('1271470655@qq.com');notice('已复制到剪贴板','var(--theme-color)',3000)">
 						<div class="item">
 							<div class="bg" style="--background-color:#278ea5"></div>
 							<div class="inner"><span id="e">Email</span></div>
@@ -99,7 +100,7 @@
 							<div class="inner"><span>Github</span></div>
 						</div>
 					</a>
-					<a href="https://zac.social" target="_blank" class="hover">
+					<a href="javascript:" class="hover"  onclick="notice('暂时关闭 πーπ','rgba(97, 97, 105, 0.8)',3000)">
 						<div class="item">
 							<div class="bg" style="--background-color: var(--theme-color);"></div>
 							<div class="inner"><span>Blog</span></div>
@@ -126,5 +127,6 @@
 <script src="js/cursor.js"></script>
 <script src="js/jquery.onepage-scroll.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="js/notice.js"></script>
 <script src="js/main.js"></script>
 </html>

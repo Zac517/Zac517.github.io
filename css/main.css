@@ -318,9 +318,9 @@ section{
 	bottom: 0px;
 	font-size: 24px;
 	letter-spacing: 0px;
-	line-height: 28px;
+	line-height: 23px;
 	background-color: #282939;
-	padding: 20px 24px;
+	padding: 20px 24px 17px 24px;
 	color: rgba(190, 190, 195, 0.7);
 }
 .id{
