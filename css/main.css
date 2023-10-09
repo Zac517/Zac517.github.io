@@ -192,7 +192,7 @@ section{
 	font-size: 40px;
 }
 .c-subtitle{
-	font-size: 20px;
+	font-size: calc(0.5vmax + 16px);
 	padding-left: 0px;
 	line-height: 20px;
 	color: rgba(97, 97, 105, 0.5);
