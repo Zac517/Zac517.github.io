@@ -14,8 +14,8 @@ html,body{
 	cursor: none;
 	color: #fff;
 	position: relative;
-	--theme-color: rgb(165, 214, 167);
-	--theme-color-opacity: rgba(165, 214, 167, 0.5);
+	--theme-color: #f35b68;
+	--theme-color-opacity: rgba(243, 91, 104, 0.5);
 }
 a {text-decoration: none;}
 ::selection {
@@ -26,6 +26,7 @@ a {text-decoration: none;}
 section{
 	pointer-events: all !important;
 	overflow: hidden;
+	height: 100vh;
 }
 
 
@@ -57,10 +58,6 @@ section{
     top: 0;
     left: 0;
     opacity: 1;
-    -webkit-transition: opacity 300ms linear;
-    -moz-transition: opacity 300ms linear;
-    -o-transition: opacity 300ms linear;
-    transition: opacity 300ms linear;
 }
 .cursor.expand::before {
     opacity: 0;
@@ -96,6 +93,8 @@ section{
 
 #main{
 	z-index:1;
+	height: 100vh;
+	overflow-y: scroll;
 }
 .number,.title,.subtitle,.tt,.c-tt,.c-title,.c-subtitle,#statistics,#information{
 	font-family: 'neue';
