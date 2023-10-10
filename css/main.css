@@ -26,7 +26,7 @@ a {text-decoration: none;}
 section{
 	pointer-events: all !important;
 	overflow: hidden;
-	height: 100svh;
+	height: 100dvh;
 }
 
 
@@ -133,10 +133,10 @@ section{
 }
 #header .number{
 	margin: auto;
-	top: calc(50svh - 420px) !important;
+	top: calc(50dvh - 420px) !important;
 }
 #header .tt{
-	top: calc(50svh - 120px) !important;
+	top: calc(50dvh - 120px) !important;
 	left: calc(50vw - 350px) !important;
 }
 
@@ -149,7 +149,7 @@ section{
 }
 #works .tt{
 	transform: rotate(-90deg);
-	top: calc(50svh - 40px);
+	top: calc(50dvh - 40px);
 	left: calc(20vw - 200px);
 }
 #works .title{
@@ -165,11 +165,11 @@ section{
 	width: fit-content;
 	width: -moz-fit-content;
 	position: absolute;
-	top: 15svh;
+	top: 15dvh;
 	right: 5vw;
 }
 .child-box{
-	height: 70svh;
+	height: 70dvh;
 	width: 18vw;
 	margin: 0px 2vw;
 	background-color: #282939;
@@ -181,7 +181,7 @@ section{
 }
 .c-tt{
 	transform: rotate(0deg);
-	bottom: 4svh;
+	bottom: 4dvh;
 	left: 30px;
 	top: auto;
 	position: absolute;
@@ -207,11 +207,11 @@ section{
 }
 #social .number{
 	right: -100px;
-	top: calc(50svh - 420px);
+	top: calc(50dvh - 420px);
 }
 #social .tt{
 	right: 8vmin;
-	top: calc(50svh - 108px);
+	top: calc(50dvh - 108px);
 }
 #social .title{
 	font-size: 120px;
@@ -226,7 +226,7 @@ section{
 	position: absolute;
 	height: 480px;
 	width: 600px;
-	top:calc(50svh - 240px);
+	top:calc(50dvh - 240px);
 	left: calc(30vw - 288px);
 }
 
@@ -297,7 +297,7 @@ section{
 }
 #footer .tt{
 	left: calc(30vw - 180px);
-	top: calc(20svh - 60px);
+	top: calc(20dvh - 60px);
 }
 #statistics{
 	position: absolute;
@@ -355,9 +355,9 @@ section{
 		width: 60vw;
 	}
 	.child-box{
-		height: 20svh;
+		height: 20dvh;
 		width: 100%;
-		margin: 1svh 0;
+		margin: 1dvh 0;
 	}
 }
 @media screen and (max-width:960px) {
@@ -434,7 +434,7 @@ section{
 @media screen and (max-width:720px){
 	#header .number{
 		font-size: 90vmin;
-		top: calc(50svh - 55vmin) !important;
+		top: calc(50dvh - 55vmin) !important;
 	}
 	#header .title{
 		font-size: 24vmin;
@@ -446,7 +446,7 @@ section{
 	}
 	#header .tt{
 		left: calc(50vw - 42vmin) !important;
-		top: calc(50svh - 14vmin) !important;
+		top: calc(50dvh - 14vmin) !important;
 	}
 }
 @media screen and (max-width:600px){
@@ -456,8 +456,8 @@ section{
 	}
 	#works .tt{
 		transform: rotate(0deg);
-		top: 5svh;
-		left: 5svh;
+		top: 5dvh;
+		left: 5dvh;
 	}
 	#works .title{
 		font-size: 20vw;
@@ -471,17 +471,17 @@ section{
 	#work-box{
 		width: 90vw;
 		left: 5vw;
-		top: 24svh;
+		top: 24dvh;
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50svh - 53vmin) !important;
+		top: calc(50dvh - 53vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50svh - 11.8vmin);
+		top: calc(50dvh - 11.8vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -503,7 +503,7 @@ section{
 @media screen and (max-height:600px){
 	#header .number{
 		font-size: 90vmin;
-		top: calc(50svh - 55vmin) !important;
+		top: calc(50dvh - 55vmin) !important;
 	}
 	#header .title{
 		font-size: 24vmin;
@@ -515,17 +515,17 @@ section{
 	}
 	#header .tt{
 		left: calc(50vw - 42vmin) !important;
-		top: calc(50svh - 14vmin) !important;
+		top: calc(50dvh - 14vmin) !important;
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50svh - 53vmin) !important;
+		top: calc(50dvh - 53vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50svh - 11.8vmin);
+		top: calc(50dvh - 11.8vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -539,21 +539,21 @@ section{
 }
 @media screen and (max-height:480px){
 	#works .number{
-		font-size: 90svh;
-		bottom: -35svh;
+		font-size: 90dvh;
+		bottom: -35dvh;
 	}
 	#works .tt{
 		left: -30px;
 	}
 	#works .title{
-		font-size: 20svh;
+		font-size: 20dvh;
 	}
 	#works .subtitle{
-		font-size: 10svh;
-		padding-left: 20svh;
+		font-size: 10dvh;
+		padding-left: 20dvh;
 	}
 	.child-box{
-		width: calc(27vw - 12svh);
+		width: calc(27vw - 12dvh);
 	}
 	.c-title{
 		font-size: 5vw;
@@ -562,11 +562,11 @@ section{
 		left: 2vw;
 	}
 	#linkbox{
-		height: 100svh;
+		height: 100dvh;
 		top: 0;
 	}
 	#linkbox .item{
-		height: 25svh;
-		line-height: 26.5svh;
+		height: 25dvh;
+		line-height: 26.5dvh;
 	}
 }
