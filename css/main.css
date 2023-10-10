@@ -93,8 +93,6 @@ section{
 
 #main{
 	z-index:1;
-	height: 100vh;
-	overflow-y: scroll;
 }
 .number,.title,.subtitle,.tt,.c-tt,.c-title,.c-subtitle,#statistics,#information{
 	font-family: 'neue';
@@ -282,6 +280,9 @@ section{
 
 
 
+#footer{
+	height: 100lvh !important;
+}
 #footer .number{
 	left: 100px;
 	top: -300px;

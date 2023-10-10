@@ -98,21 +98,3 @@ function scrollToNearestSection() {
     behavior: "smooth"
   });
 }
-
-const animateElement = document.querySelector('.child-box');
-console.log(animateElement);
-// 创建 Intersection Observer 实例
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // 元素进入可视窗口
-      animateElement.classList.add('active');
-    } else {
-      // 元素离开可视窗口
-      animateElement.classList.remove('active');
-    }
-  });
-});
-
-// 监听目标元素
-observer.observe(animateElement);
