@@ -2,6 +2,7 @@
 console.log(" %c jquery.min.js %c v3.3.1 ", "color: #FFFFFF !important; background: #107a8b; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(" %c NodeCursor.js %c v1.0.0 ", "color: #FFFFFF !important; background: #2cb978; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(" %c parallax.min.js %c v3.1.0 ", "color: #FFFFFF !important; background: #83e85a; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
+console.log(" %c jquery-onepage-scroll.js %c v1.3.1 ", "color: #FFFFFF !important; background: #ffd615; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(" %c busuanzi.pure.mini.js %c v2.3.0 ", "color: #FFFFFF !important; background: #ff8a5c; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(" %c Zac's personal homepage %c v2.0.2 ", "color: #FFFFFF !important; background: #FF6666; padding:5px;", "background: #1c2b36; padding:5px;color:white !important");
 console.log(` %c
@@ -57,44 +58,19 @@ $( function() {
 });
 }
 
-const mainDiv = document.getElementById('main');
-// 获取所有section元素
-const sections = mainDiv.querySelectorAll('section');
-// 设置滚动结束的延迟时间，单位毫秒
-const delay = 50;
-// 初始化滚动状态和定时器
-let scrolling = false;
-let scrollTimer = null;
-// 监听鼠标滚动事件
-mainDiv.addEventListener('scroll', function() {
-  // 清除上一个滚动结束的定时器
-  clearTimeout(scrollTimer);
-  // 设置滚动状态为正在滚动
-  scrolling = true;
-  // 在延迟时间后，触发滚动结束的函数
-  scrollTimer = setTimeout(function() {
-    scrolling = false;
-    scrollToNearestSection();
-  }, delay);
+$("#main").onepage_scroll({
+  sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+  easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                   // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+  animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+  pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+  updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+  beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+  afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+  loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+  keyboard: true,                  // You can activate the keyboard controls
+  responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                   // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                   // the browser's width is less than 600, the fallback will kick in.
+  direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
-// 滚动到最近的section
-function scrollToNearestSection() {
-  // 获取当前滚动位置
-  const scrollTop = mainDiv.scrollTop;
-  // 初始化最近的section和最小距离
-  let nearestSection = sections[0];
-  let minDistance = Math.abs(scrollTop - sections[0].offsetTop);
-  // 遍历所有section，找到距离最近的一个
-  sections.forEach(function(section) {
-    const distance = Math.abs(scrollTop - section.offsetTop);
-    if (distance < minDistance) {
-      minDistance = distance;
-      nearestSection = section;
-    }
-  });
-  // 滚动到最近的section
-  mainDiv.scrollTo({
-    top: nearestSection.offsetTop,
-    behavior: "smooth"
-  });
-}

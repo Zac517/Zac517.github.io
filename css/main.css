@@ -1,6 +1,4 @@
-html,body{
-	height: -webkit-fill-available !important;
-}
+
 @font-face {
 	font-family: 'neue';
 	src: url(../font/BebasNeue-Regular.ttf);
@@ -26,10 +24,12 @@ a {text-decoration: none;}
 section{
 	pointer-events: all !important;
 	overflow: hidden;
-	height: 100dvh;
+	height: 100svh;
 }
 
-
+body,html{
+	
+}
 
 .cursor {
     pointer-events: none;
@@ -280,9 +280,6 @@ section{
 
 
 
-#footer{
-	height: 100lvh !important;
-}
 #footer .number{
 	left: 100px;
 	top: -300px;
