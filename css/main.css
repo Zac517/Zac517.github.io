@@ -273,9 +273,11 @@ body,html{
     width: 90px;
     font-size: 40px;
 	transition: 0.3s;
+	color: rgba(255,255,255,0.6);
 }
 #linkbox .item:hover span{
 	transition: 0.6s;
+	color: white;
 }
 
 
