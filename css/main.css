@@ -24,11 +24,7 @@ a {text-decoration: none;}
 section{
 	pointer-events: all !important;
 	overflow: hidden;
-	height: 100svh;
-}
-
-body,html{
-	
+	height: 100vh;
 }
 
 .cursor {
@@ -131,10 +127,10 @@ body,html{
 }
 #header .number{
 	margin: auto;
-	top: calc(50dvh - 420px) !important;
+	top: calc(50vh - 420px) !important;
 }
 #header .tt{
-	top: calc(50dvh - 120px) !important;
+	top: calc(50vh - 120px) !important;
 	left: calc(50vw - 350px) !important;
 }
 
@@ -147,7 +143,7 @@ body,html{
 }
 #works .tt{
 	transform: rotate(-90deg);
-	top: calc(50dvh - 40px);
+	top: calc(50vh - 40px);
 	left: calc(20vw - 200px);
 }
 #works .title{
@@ -163,11 +159,11 @@ body,html{
 	width: fit-content;
 	width: -moz-fit-content;
 	position: absolute;
-	top: 15dvh;
+	top: 15vh;
 	right: 5vw;
 }
 .child-box{
-	height: 70dvh;
+	height: 70vh;
 	width: 18vw;
 	margin: 0px 2vw;
 	background-color: #282939;
@@ -179,7 +175,7 @@ body,html{
 }
 .c-tt{
 	transform: rotate(0deg);
-	bottom: 4dvh;
+	bottom: 4vh;
 	left: 30px;
 	top: auto;
 	position: absolute;
@@ -192,10 +188,13 @@ body,html{
 	font-size: calc(0.5vmax + 16px);
 	padding-left: 0px;
 	line-height: 20px;
-	color: rgba(97, 97, 105, 0.5);
+	color: rgb(97, 97, 105);
 	font-weight: 700;
+	transition: 0.5s;
 }
-
+.child-box:hover .c-subtitle{
+	color: #bebec3;
+}
 
 
 #social{
@@ -205,11 +204,11 @@ body,html{
 }
 #social .number{
 	right: -100px;
-	top: calc(50dvh - 420px);
+	top: calc(50vh - 420px);
 }
 #social .tt{
 	right: 8vmin;
-	top: calc(50dvh - 108px);
+	top: calc(50vh - 108px);
 }
 #social .title{
 	font-size: 120px;
@@ -222,14 +221,15 @@ body,html{
 	display: flex;
 	flex-wrap: wrap;
 	position: absolute;
-	height: 480px;
-	width: 600px;
-	top:calc(50dvh - 240px);
+	height: 100vh;
+	width: 480px;
+	padding: calc(50vh - 240px) 0;
 	left: calc(30vw - 288px);
+	background-color: rgba(97, 97, 105, 0.5);
 }
 
 #linkbox a {
-	flex-basis: 220px;
+	flex-basis: 200px;
 	flex-grow: 1;
 	transition: 0.3s;
 }
@@ -244,11 +244,12 @@ body,html{
     transition: all .2s;
     overflow: hidden;
 }
-.item span{
-	position: absolute;
+#linkbox a:nth-child(odd) .item span{
 	left: 5vmin;
-	letter-spacing: 0.5vmin;
-	font-family: 'neue';
+}
+#linkbox a:nth-child(even) .item span{
+	right: 5vmin;
+	text-align: right;
 }
 #linkbox .item .inner {
     z-index: 5;
@@ -262,7 +263,6 @@ body,html{
     z-index: 0;
     transition: all .15s;
     height: 100%;
-	background-color: rgba(97, 97, 105, 0.5);
 }
 #linkbox .item:hover .bg {
     background-color: var(--background-color);
@@ -270,10 +270,13 @@ body,html{
 
 #linkbox .item span {
     display: inline-block;
-    width: 90px;
+    width: 120px;
     font-size: 40px;
 	transition: 0.3s;
 	color: rgba(255,255,255,0.6);
+	position: absolute;
+	font-family: 'neue';
+	letter-spacing: 0.5vmin;
 }
 #linkbox .item:hover span{
 	transition: 0.6s;
@@ -297,7 +300,7 @@ body,html{
 }
 #footer .tt{
 	left: calc(30vw - 180px);
-	top: calc(20dvh - 60px);
+	top: calc(20vh - 60px);
 }
 #statistics{
 	position: absolute;
@@ -355,9 +358,9 @@ body,html{
 		width: 60vw;
 	}
 	.child-box{
-		height: 20dvh;
+		height: 20vh;
 		width: 100%;
-		margin: 1dvh 0;
+		margin: 1vh 0;
 	}
 }
 @media screen and (max-width:960px) {
@@ -434,7 +437,7 @@ body,html{
 @media screen and (max-width:720px){
 	#header .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 55vmin) !important;
+		top: calc(50vh - 55vmin) !important;
 	}
 	#header .title{
 		font-size: 24vmin;
@@ -446,7 +449,7 @@ body,html{
 	}
 	#header .tt{
 		left: calc(50vw - 42vmin) !important;
-		top: calc(50dvh - 14vmin) !important;
+		top: calc(50vh - 14vmin) !important;
 	}
 }
 @media screen and (max-width:600px){
@@ -456,8 +459,8 @@ body,html{
 	}
 	#works .tt{
 		transform: rotate(0deg);
-		top: 5dvh;
-		left: 5dvh;
+		top: 5vh;
+		left: 5vh;
 	}
 	#works .title{
 		font-size: 20vw;
@@ -471,17 +474,17 @@ body,html{
 	#work-box{
 		width: 90vw;
 		left: 5vw;
-		top: 24dvh;
+		top: 24vh;
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 53vmin) !important;
+		top: calc(50vh - 53vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50dvh - 11.8vmin);
+		top: calc(50vh - 11.8vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -494,6 +497,7 @@ body,html{
 	}
 	#linkbox{
 		width: 100vw;
+		background-color: transparent;
 		left: 0;
 	}
 	#linkbox a{
@@ -503,7 +507,7 @@ body,html{
 @media screen and (max-height:600px){
 	#header .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 55vmin) !important;
+		top: calc(50vh - 55vmin) !important;
 	}
 	#header .title{
 		font-size: 24vmin;
@@ -515,17 +519,17 @@ body,html{
 	}
 	#header .tt{
 		left: calc(50vw - 42vmin) !important;
-		top: calc(50dvh - 14vmin) !important;
+		top: calc(50vh - 14vmin) !important;
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 53vmin) !important;
+		top: calc(50vh - 53vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
 	}
 	#social .tt{
-		top: calc(50dvh - 11.8vmin);
+		top: calc(50vh - 11.8vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
@@ -539,21 +543,21 @@ body,html{
 }
 @media screen and (max-height:480px){
 	#works .number{
-		font-size: 90dvh;
-		bottom: -35dvh;
+		font-size: 90vh;
+		bottom: -35vh;
 	}
 	#works .tt{
 		left: -30px;
 	}
 	#works .title{
-		font-size: 20dvh;
+		font-size: 20vh;
 	}
 	#works .subtitle{
-		font-size: 10dvh;
-		padding-left: 20dvh;
+		font-size: 10vh;
+		padding-left: 20vh;
 	}
 	.child-box{
-		width: calc(27vw - 12dvh);
+		width: calc(27vw - 12vh);
 	}
 	.c-title{
 		font-size: 5vw;
@@ -562,11 +566,11 @@ body,html{
 		left: 2vw;
 	}
 	#linkbox{
-		height: 100dvh;
+		height: 100vh;
 		top: 0;
 	}
 	#linkbox .item{
-		height: 25dvh;
-		line-height: 26.5dvh;
+		height: 25vh;
+		line-height: 26.5vh;
 	}
 }
