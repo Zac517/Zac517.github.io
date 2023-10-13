@@ -222,14 +222,14 @@ section{
 	flex-wrap: wrap;
 	position: absolute;
 	height: 100vh;
-	width: 480px;
+	width: calc(40vw + 100px);
+	max-width: 100vw;
+	min-width: 520px;
 	padding: calc(50vh - 240px) 0;
 	left: calc(30vw - 288px);
-	background-color: rgba(97, 97, 105, 0.5);
 }
-
 #linkbox a {
-	flex-basis: 200px;
+	flex-basis: 40%;
 	flex-grow: 1;
 	transition: 0.3s;
 }
@@ -244,13 +244,6 @@ section{
     transition: all .2s;
     overflow: hidden;
 }
-#linkbox a:nth-child(odd) .item span{
-	left: 5vmin;
-}
-#linkbox a:nth-child(even) .item span{
-	right: 5vmin;
-	text-align: right;
-}
 #linkbox .item .inner {
     z-index: 5;
 	height: 100%;
@@ -263,6 +256,7 @@ section{
     z-index: 0;
     transition: all .15s;
     height: 100%;
+	background-color: rgba(97, 97, 105, 0.5);
 }
 #linkbox .item:hover .bg {
     background-color: var(--background-color);
@@ -277,6 +271,7 @@ section{
 	position: absolute;
 	font-family: 'neue';
 	letter-spacing: 0.5vmin;
+	left: 5vmin;
 }
 #linkbox .item:hover span{
 	transition: 0.6s;
@@ -499,9 +494,7 @@ section{
 		width: 100vw;
 		background-color: transparent;
 		left: 0;
-	}
-	#linkbox a{
-		flex-basis: 40vw;
+		min-width: unset;
 	}
 }
 @media screen and (max-height:600px){
