@@ -224,7 +224,7 @@ html,body{
 	flex-wrap: wrap;
 	position: absolute;
 	height: 100dvh;
-	width: calc(40vw + 100px);
+	width: calc(10vw + 540px);
 	max-width: 100vw;
 	min-width: 520px;
 	padding: calc(50dvh - 240px) 0;
