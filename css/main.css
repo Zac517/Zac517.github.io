@@ -467,7 +467,7 @@ html,body{
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 53vmin) !important;
+		top: calc(50dvh - 48.5vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
@@ -544,7 +544,7 @@ html,body{
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 53vmin) !important;
+		top: calc(50dvh - 48.5vmin) !important;
 	}
 	#social .tt{
 		top: calc(50dvh - 11.8vmin);
