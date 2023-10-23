@@ -489,7 +489,7 @@ html,body{
 		width: 100vw;
 		background-color: transparent;
 		left: 0;
-		padding: calc(50vh - 240px) 0;
+		padding: calc(50dvh - 240px) 0;
 		
 	}
 	#linkbox a{
