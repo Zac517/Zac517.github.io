@@ -116,6 +116,7 @@ section{
 
 html,body{
 	height: 99.9dvh;
+	overflow: hidden;
 }
 
 #header{
