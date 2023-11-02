@@ -25,6 +25,8 @@ section{
 	pointer-events: all !important;
 	overflow: hidden;
 	height: 100dvh;
+	scroll-snap-stop: always;
+	scroll-snap-align: start;
 }
 
 .cursor {
@@ -89,6 +91,9 @@ section{
 
 #main{
 	z-index:1;
+	height: 100dvh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
 }
 .number,.title,.subtitle,.tt,.c-tt,.c-title,.c-subtitle,#statistics,#information{
 	font-family: 'neue';
@@ -198,7 +203,9 @@ html,body{
 	color: #bebec3;
 }
 
-
+.blank{
+	background-color: rgba(97, 97, 105, 0.5);
+}
 #social{
 	background-size: cover;
 	background-position: center;
@@ -206,11 +213,11 @@ html,body{
 }
 #social .number{
 	right: calc(40vw - 434px);
-	top: calc(50dvh - 420px);
+	top: calc(50dvh - 412px);
 }
 #social .tt{
 	right: calc(40vw - 222px);
-	top: calc(50dvh - 108px);
+	top: calc(50dvh - 100px);
 }
 #social .title{
 	font-size: 120px;
@@ -349,16 +356,20 @@ html,body{
 	display: inline-block;
 }
 
-
+@media screen and (max-width: 1100px){
+	.blank{
+		background-color: transparent;
+	}
+}
 @media screen and (max-width: 1100px) and (min-width: 600px) {
 	#linkbox{
 		padding: calc(50dvh - 240px) 0;
 	}
 	.blank{
-		width: calc(80vw - 225px) !important;
+		width: calc(90vw - 380px) !important;
 	}
 	#linkbox a{
-		flex-basis: calc(80px + 8vw) !important;
+		flex-basis: calc(110px + 8vw) !important;
 	}
 	#social .number{
 		right: calc(50vw - 335px);
@@ -467,7 +478,7 @@ html,body{
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 48.5vmin) !important;
+		top: calc(50dvh - 53vmin) !important;
 	}
 	#social .number{
 		right: -12vmin;
@@ -544,10 +555,10 @@ html,body{
 	}
 	#social .number{
 		font-size: 90vmin;
-		top: calc(50dvh - 48.5vmin) !important;
+		top: calc(50dvh - 54vmin) !important;
 	}
 	#social .tt{
-		top: calc(50dvh - 11.8vmin);
+		top: calc(50dvh - 12.9vmin);
 	}
 	#social .title{
 		font-size: 18vmin;
