@@ -136,11 +136,12 @@ html, body {
 	width: -moz-fit-content;
 	right: 40px;
 	bottom: 90px;
-	font-size: 50px;
+	font-size: 6vmin;
 	letter-spacing: 0px;
-	line-height: 36px;
+	line-height: 4vmin;
 	text-align: right;
 }
+
 #information {
 	position: absolute;
 	width: 100vw;
@@ -150,7 +151,7 @@ html, body {
 	letter-spacing: 0px;
 	line-height: 23px;
 	background-color: #282939;
-	padding: 20px 24px 17px 24px;
+	padding: 20px 24px 17px 16px;
 	color: rgba(190, 190, 195, 0.7);
 }
 .id {
@@ -163,9 +164,9 @@ html, body {
 }
 .num {
 	color: #282939;
-	font-size: 80px;
-	margin: 20px;
-	bottom: -12px;
+	font-size: 10vmin;
+	margin: 2vmin;
+	bottom: -1.5vmin;
 	display: inline-block;
 }
 
