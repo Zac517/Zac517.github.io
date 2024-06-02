@@ -1,188 +1,29 @@
+/*全局样式*/
 * {
+    position: relative;
     transition: all 0.5s;
+    font-family: 'Microsoft YaHei', sans-serif;
+    box-sizing: border-box;
 }
 
-/*隐藏滚动条*/
 ::-webkit-scrollbar {
     display: none;
 }
 
 a {
+    color: white;
     text-decoration: none;
-    color: white;
 }
 
-body {
-    margin: 0;
-}
-
-#sidebar {
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    background-color: rgba(42, 42, 42, 0.95);
-    overflow: hidden;
-    z-index: 99;
-}
-
-#btm {
-    height: 60px;
-    width: 60px;
-    display: none !important;
-    position: fixed;
-}
-
-.line {
-    height: 2px;
-    width: 24px;
-    background-color: white;
-    display: inline-block;
-    position: absolute;
-    transition: all 0.5s;
-}
-
-/*关闭时样式*/
-.close #top-line {
-    transform: translate(18px, 20px);
-}
-
-.close #mid-line {
-    transform: translate(18px, 29px);
-}
-
-.close #btm-line {
-    transform: translate(18px, 38px);
-}
-
-/*打开时样式*/
-.open #top-line {
-    transform: translate(18px, 29px) rotate(45deg);
-}
-
-.open #mid-line {
-    transform: translate(18px, 29px);
-    opacity: 0;
-}
-
-.open #btm-line {
-    transform: translate(18px, 29px) rotate(-45deg);
-}
-
-#sidebar div, #logo, #list, #list li {
-    display: inline-block;
-}
-
-#sidebar img {
-    height: 50px;
-    margin-top: 5px;
-}
-
-#logo {
-    height: 60px;
-    width:200px;
-    font-size: 24px;
-    color: white;
-    line-height: 60px;
-    text-align: center;
-    margin-left: calc(35vw - 200px);
-}
-
-#list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-}
-
-#list li {
-    height: 100%;
-    line-height: 60px;
-    font-size: 14px;
-    width: calc(30px + 7vw);
-}
-
-#list a:hover {
-    color: rgb(230 134 100);
-}
-
-@media screen and (max-width: 720px) {
-    #btm {
-        display: inline-block !important;
-    }
-    #logo {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        margin-left: 0;
-    }
-    #sidebar.open {
-        height: 370px;
-        width: 100%;
-        background-color: #161616;
-    }
-    #list {
-        width: 100%;
-        padding: 20px 30px;
-        box-sizing: border-box;
-        position: relative;
-    }
-    #list li {
-        display: block;
-        height: 50px;
-        line-height: 50px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        width: 100%;
-    }
-    .left {
-        margin-left: 0;
-    }
-    
-    .right {
-        margin-right: 0;
-        margin-left: auto;
-    }
-    .tlbox {
-        width: 100% !important;
-        margin: 40px 0 !important;
-    }
-    #timeline {
-        display: none;
-    }
-    .card {
-        flex-basis: 100%;
-    }
-    .ads {
-        flex-basis: 100% !important;
-        padding: 0 !important;
-    }
-}
-
-#content {
-    padding: 20px;
-    color: black;
-    position: relative;
-}
-
-#content h2, #content h3, #content h4{
-    text-align: center;
+h2, h3, h4 {
     font-weight: 400;
+    letter-spacing: 0.1em;
 }
 
-#content p {
-    text-align: center;
-    width: 100%;
-    max-width: 720px;
-    position: relative;
-    margin: 20px auto; 
+p {
+    letter-spacing: 0.1em;
+    font-weight: 300;
     line-height: 30px;
-    letter-spacing: 1px;
-    font-weight: 300;
-    text-indent: 2em;
-}
-
-#footer p {
-    font-weight: 300;
 }
 
 hr {
@@ -203,118 +44,396 @@ hr {
     }
 }
 
-#content h2, #content p , #content img{
-    animation: fadein 1s;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+body {
+    margin: 0;
 }
 
-#header {
-    height: 36vw;
-    width: 100%;
-    min-height: 30vh;
-    background-position: center;
-    background-size: cover;
-}
+    /*顶部栏样式*/
+    #topbar {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        z-index: 99;
+        background-color: rgba(42, 42, 42, 0.9);
+        overflow: hidden;
+    }
 
-#content img {
-    width: 100%;
-    max-width: 900px;
-    position: relative;
-    margin: 40px auto; 
-    display: block;
-}
+        /*菜单按钮样式*/
+        #btm {
+            display: none;
+            position: absolute;
+            height: 60px;
+            width: 60px;
+        }
 
-#footer {
-    height: 60px;
-    width: 100%;
-    background-color: rgba(42, 42, 42);
-    bottom: 0;
-    text-align: center;
-    line-height: 60px;
-    color: white;
-    font-size: 14px;
-}
+            .line {
+                height: 2px;
+                width: 24px;
+                background-color: white;
+            }
 
-#timeline {
-    width: 1px;
-    height: calc(100% - 160px);
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-left: calc(50% - 20px);
-    margin-top: 20px;
-}
+            /*关闭时样式*/
+            .close #top-line {
+                transform: translate(18px, 20px);
+            }
 
-.tlbox {
-    width: 36%;
-    margin: 40px 0;
-}
+            .close #mid-line {
+                transform: translate(18px, 27px);
+            }
 
-.left {
-    text-align: right;
-    margin-left: calc(10% - 20px);
-}
+            .close #btm-line {
+                transform: translate(18px, 34px);
+            }
 
-.right {
-    text-align: left;
-    margin-right: calc(10% - 20px);
-    margin-left: auto;
-}
+            /*打开时样式*/
+            .open #top-line {
+                transform: translate(18px, 29.7px) rotate(45deg);
+            }
 
-#cardf {
-    width: 100%;
-    position: relative;
-    max-width: 1000px;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-}
+            .open #mid-line {
+                transform: translate(18px, 27px);
+                opacity: 0;
+            }
 
-.card {
-    display: inline-block;
-    width: 49%;
-    position: relative;
-    vertical-align: top;
-}
+            .open #btm-line {
+                transform: translate(18px, 25.7px) rotate(-45deg);
+            }
 
-.card p {
-    text-align: left !important;
-}
+        #logof {
+            display: inline-block;
+            margin-left: calc(24vw - 150px);
+        }
 
-.card img {
-    display: inline-block !important;
-    width: 45% !important;
-    margin: 0 2% !important;
-    object-fit: contain;
-    height: 100%;
-}
+            #logo {
+                height: 60px;
+                padding: 5px;
+            }
 
-#adf {
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1400px;
-    position: relative;
-    margin: 0 auto 40px auto;
-    display: flex;
-}
+        #list {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 60px;
+            margin: 0 calc(24vw - 150px) 0 0;
+            list-style-type: none;
+            vertical-align: top;
+        }
 
-.ads {
-    flex-basis: calc(50% - 60px);
-    flex-grow: 1;
-    padding: 20px;
-}
+            #list li {
+                display: inline-block;
+                height: 100%;
+                width: calc(40px + 5vw);
+                line-height: 60px;
+                font-size: 14px;
+                text-align: right;
+            }
 
-.ads p, .ads h2{
-    text-align: left !important;
-}
+                #list a:hover {
+                    color: rgb(230 134 100);
+                }
 
-.ads p {
-    font-size: 14px;
-    text-indent: 0 !important;
-}
+    /*头部样式*/
+    #header {
+        height: 36vw;
+        width: 100%;
+        min-height: 30vh;
+        background-position: center;
+        background-size: cover;
+    }
 
-.ad {
-    height: 50vw;
-    max-height: 400px;
-    background-color: #efefef;
-}
+    /*内容样式*/
+        #content h2, #content h3, #content h4, #content p , #content img{
+            animation: fadein 1s;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+        }
+
+        /*公告模块样式*/
+        #adf {
+            display: flex;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+            .ads {
+                flex-basis: calc(50% - 60px);
+                flex-grow: 1;
+                padding: 20px;
+            }
+
+                .ads p, .ads h2{
+                    text-align: left;
+                }
+
+                .ads p {
+                    font-size: 14px;
+                }
+
+                .ad {
+                    height: 50vw;
+                    max-height: 400px;
+                    background-color: #efefef;
+                }
+        
+        /*文本模块样式*/
+        #text {
+            width: 100%;
+            max-width: 720px;
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+            #text p {
+                text-indent: 2em; 
+            }
+
+            #text img {
+                width: 100%;
+                max-width: 900px;
+                margin: 40px auto; 
+                display: block;
+            }
+
+        /*商店模块样式*/
+
+        #shopf {
+            display: grid;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 40px 20px;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(calc(100px + 5vw), 1fr));
+        }
+
+            .shop {
+                margin-bottom: 10px;
+            }
+
+                .simg {
+                    height: calc(130px + 5vw);
+                    background-color: #efefef;
+                    flex-basis: 200px;
+                    flex-grow: 1;
+                    margin-bottom: 5px;
+                }
+
+                .shop p {
+                    font-size: 14px;
+                    margin: 0;
+                }
+
+                .shop h2 {
+                    margin: 0;
+                    letter-spacing: 0;
+                }
+        
+        /*网格文本样式*/
+        #gtext {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+            .gtextm {
+                display: grid;
+                margin-bottom: 40px;
+                gap: 20px;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+
+                .gtexts {
+                    padding: 0 20px 20px 20px;
+                    border: 1px solid #e0e0e0;
+                }
+
+                .gtexts:hover {
+                    border-color: rgb(230 134 100);
+                }
+        
+        /*服务反馈样式*/        
+        #cardf {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+            
+            .card {
+                display: inline-block;
+                width: 49%;
+                vertical-align: top;
+            }
+            
+                .card img {
+                    width: 45%;
+                    margin: 0 2%;
+                    object-fit: contain;
+                    height: 100%;
+                }
+
+        /*商家入驻样式*/
+        #rcardf {
+            width: calc(100% - 40px);
+            max-width: 1000px;
+            margin: 20px auto;
+            border: 1px solid #e0e0e0;
+        }
+
+            #rimg {
+                background-color: #efefef;
+            }
+
+            .rcardm {
+                display: inline-block;
+                width: 49%;
+                height: 360px;
+                vertical-align: top;
+                padding: 40px;
+            }
+
+                .rcards {
+                    height: 120px;
+                    vertical-align: top;
+                }
+
+                    .num {
+                        position: absolute;
+                        top: 0;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 15px;
+                        color: white;
+                        background-color: rgb(230 134 100);
+                        text-align: center;
+                        line-height: 30px;
+                    }
+
+                    .rcards h4 {
+                        margin: 5px 40px;
+                        position: absolute;
+                    }
+
+                    .rcards p {
+                        position: absolute;
+                        margin: 0 0 20px 40px;
+                        top: 36px;
+                        font-size: 14px;
+                    }
+
+                    #vline {
+                        position: absolute;
+                        left: 55px;
+                        top: 86px;
+                        height: 60px;
+                        width: 1px;
+                        background-color: #e0e0e0;
+                    }
+
+                    .btm {
+                        position: relative;
+                        bottom: 20px;
+                        margin: 0 auto;
+                        height: 40px;
+                        width: 200px;
+                        background-color: white;
+                        border: 2px solid rgb(230 134 100);
+                        color: rgb(230 134 100);
+                        text-align: center;
+                        line-height: 36px;
+                        font-size: 14px;
+                    }
+                    
+                    .btm:hover {
+                        background-color: rgb(230 134 100);
+                        color: white;
+                    }
+        
+        .tips {
+            font-size: 14px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto 60px auto;
+            padding: 0 20px;
+        }
+    
+    /*底部栏样式*/
+    #footer {
+        height: 60px;
+        width: 100%;
+        background-color: rgba(42, 42, 42);
+        bottom: 0;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+    }
+
+        #footer p {
+            line-height: 60px;
+            font-weight: 300;
+        }
+
+    @media screen and (max-width: 720px) {
+        #topbar.open {
+            height: 100%;
+            width: 100%;
+            background-color: #161616;
+        }
+
+            #btm {
+                display: inline-block;
+            }
+
+            #logof {
+                margin-left: calc(50vw - 57px);
+            }
+
+            #list {
+                position: relative;
+                height: auto;
+                width: 100%;
+                padding: 0 30px;
+                box-sizing: border-box;
+                
+            }
+
+            #list li {
+                display: block;
+                height: 50px;
+                width: 100%;
+                line-height: 50px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                text-align: left;
+            }
+
+        .card {
+            flex-basis: 100%;
+        }
+
+        .ads {
+            flex-basis: 100%;
+            padding: 0 0 20px 0;
+        }
+
+        .rcardm {
+            width: 100%;
+            height: 320px;
+            padding: 20px;
+        }
+
+                #vline {
+                    top: 66px;
+                    left: 35px;
+                }
+
+        #rimg {
+            height: 60vw;
+        }
+    }

@@ -1,8 +1,8 @@
-var sidebar = document.getElementById('sidebar');
+var topbar = document.getElementById('topbar');
 function change() {
-    if (sidebar.className == 'close') {
-        sidebar.className = 'open';
+    if (topbar.className == 'close') {
+        topbar.className = 'open';
     } else {
-        sidebar.className = 'close';
+        topbar.className = 'close';
     }
 }
